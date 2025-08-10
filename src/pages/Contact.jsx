@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="max-w-[670px] py-10 flex flex-col items-start gap-y-10"
+      className="max-w-[670px] py-10 flex flex-col items-start gap-y-10 relative"
     >
       <div className="space-y-2">
         <h3 className="text-3xl font-semibold">
@@ -120,6 +120,9 @@ const Contact = () => {
           </p>
         </div>
       </div>
+      <div className="absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
+                <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[40%] left-[70%]" />
+                <div className="md:hidden absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[70%] left-[10%]" />
     </div>
   );
 };

@@ -14,7 +14,7 @@ const Projects = () => {
   return (
     <section
       id="project"
-      className="max-w-[670px] pt-10 flex flex-col items-start justify-start gap-y-10 "
+      className="max-w-[670px] pt-10 flex flex-col items-start justify-start gap-y-10 relative "
     >
       <div className="flex flex-col items-start justify-start gap-5">
         <div className="space-y-2">
@@ -242,6 +242,9 @@ const Projects = () => {
           </div>
         </div>
       </div>
+      <div className="absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
+            <div className="absolute w-[200px] h-[200px] bg-cyan-700 opacity-30 rounded-full blur-[130px] top-[40%] left-[70%]" />
+            <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[130px] top-[80%] left-[10%]" />
     </section>
   );
 };

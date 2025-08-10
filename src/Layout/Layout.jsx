@@ -23,6 +23,7 @@ const Layout = () => {
         <Contact />
         <hr className="w-full border-gray-300/10 mt-10" />
         <Footer />
+     
       </main>
     </>
   );
