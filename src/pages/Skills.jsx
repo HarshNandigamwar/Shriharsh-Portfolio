@@ -61,7 +61,7 @@ const Skills = () => {
     },
     {
       name: "Mongoose",
-      icon: <img src="/public/mongoose.png" className="h-6 w-6" />,
+      icon: <img src="../assets/mongoose.png" className="h-6 w-6" />,
     },
     {
       name: "Firebase",
@@ -84,7 +84,7 @@ const Skills = () => {
     },
     {
       name: "Postman",
-      icon: <img src="/public/postman.png" className="h-6 w-6" />,
+      icon: <img src="../assets/postman.png" className="h-6 w-6" />,
     },
     {
       name: "VS Code",
@@ -112,19 +112,19 @@ const Skills = () => {
   let SoftSkill = [
     {
       name: "Problem Solving",
-      icon: <img src="/public/problem2.jpg" className="h-6 w-6" />,
+      icon: <img src="../assets/problem2.jpg" className="h-6 w-6" />,
     },
     {
       name: "Communication",
-      icon: <img src="/public/comunication.jpg" className="h-6 w-6" />,
+      icon: <img src="../assets/comunication.jpg" className="h-6 w-6" />,
     },
     {
       name: "Teamwork",
-      icon: <img src="/public/teamwork.png" className="h-6 w-6" />,
+      icon: <img src="../assets/teamwork.png" className="h-6 w-6" />,
     },
     {
       name: "Self Learning",
-      icon: <img src="/public/Self.png" className="h-6 w-6" />,
+      icon: <img src="../assets/Self.png" className="h-6 w-6" />,
     },
   ];
 

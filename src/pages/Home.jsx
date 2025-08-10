@@ -29,7 +29,7 @@ const Home = () => {
 
         <div className="mt-4">
           <a
-            href="/public/Shriharsh_Nandigamwar_resume.pdf"
+            href="../assets/Shriharsh_Nandigamwar_resume.pdf"
             download="Shriharsh_Nandigamwar_resume.pdf"
           >
             {" "}

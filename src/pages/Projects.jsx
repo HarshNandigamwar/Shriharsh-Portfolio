@@ -9,7 +9,7 @@ const Projects = () => {
       title: "Sigma AI",
       description:
         "It Is A smart and interactive chatbot designed to provide quick, accurate, and engaging responses to users.",
-      Image: "/public/sigma ai.jpg",
+      Image: "../assets/sigma ai.jpg",
       tags: ["HTML", "Tailwind CSS", "JavaScript"],
       LiveLink: "https://sigma-ai-by-shriharsh.netlify.app/",
       githubLink: "https://github.com/HarshNandigamwar/Sigma-AI",
@@ -20,7 +20,7 @@ const Projects = () => {
       title: "Currency Converter",
       description:
         "Quickly convert currencies on-the-go Get up-to-date exchange rates for countries worldwide.",
-      Image: "/public/currency converter .jpg",
+      Image: "../assets/currency converter .jpg",
       tags: ["HTML", "Tailwind CSS", "JavaScript"],
       LiveLink: "https://shriharsh-currency-converter.netlify.app/",
       githubLink: "https://github.com/HarshNandigamwar/Currency-Converter",
@@ -31,7 +31,7 @@ const Projects = () => {
       title: "Weather app",
       description:
         "Check the weather forecast anytime anywhere. Get accurate and up-to-date weather updates for your location.",
-      Image: "/public/weather app.jpg",
+      Image: "../assets/weather app.jpg",
       tags: ["HTML", "Tailwind CSS", "JavaScript"],
       LiveLink: "https://weather-app-shriharsh.netlify.app/",
       githubLink: "https://github.com/HarshNandigamwar/Weather-App",
@@ -41,7 +41,7 @@ const Projects = () => {
       title: "E-Commerce app",
       description:
         "This is a dynamic E-Commerce web application built with React.js, designed to deliver a smooth and engaging shopping experience.",
-      Image: "/public/SigmaMart.png",
+      Image: "../assets/SigmaMart.png",
       tags: ["React.js", "Tailwind CSS"],
       LiveLink: "https://sigma-mart.vercel.app/",
       githubLink: "https://github.com/HarshNandigamwar/Sigma-mart",
