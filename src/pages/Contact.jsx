@@ -34,7 +34,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="max-w-[670px] py-10 flex flex-col items-start gap-y-10 relative"
+      className="max-w-[670px] py-10 flex flex-col items-start gap-y-10 "
     >
       <div className="space-y-2">
         <h3 className="text-3xl font-semibold">
@@ -46,7 +46,7 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className="w-full p-8 rounded-sm border bg-[#0a0a0a] border-gray-500/10 hover:border-gray-500/20 transition-all duration-300">
+      <div className="w-full p-3 rounded-sm border bg-[#1a1a1a]/20 backdrop-blur-sm border-gray-500/10 hover:border-gray-500/20 transition-all duration-300">
         <div className="flex flex-col items-center justify-center gap-4">
           <form
             className="contactForm m-[1.5rem] flex flex-col items-center justify-center w-[100%] lg:w-[600px]  "
@@ -120,9 +120,7 @@ const Contact = () => {
           </p>
         </div>
       </div>
-      <div className="absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
-                <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[40%] left-[70%]" />
-                <div className="md:hidden absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[70%] left-[10%]" />
+      
     </div>
   );
 };

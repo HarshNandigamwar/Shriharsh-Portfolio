@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <section
       id="intro"
-      className="max-w-[670px] flex flex-col items-start justify-center relative"
+      className="max-w-[670px] flex flex-col items-start justify-center"
     >
       <div className="space-y-6 ">
         <div className="space-y-5 sm:space-y-6">
@@ -28,7 +28,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="mt-4">
+        <div className="mt-4 w-[110px]">
           <a
             href={Resume}
             download="Shriharsh_Nandigamwar_resume.pdf"
@@ -38,10 +38,6 @@ const Home = () => {
           </a>
         </div>
       </div>
-    
-            <div className="absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
-            <div className="absolute w-[200px] h-[200px] bg-cyan-700 opacity-30 rounded-full blur-[130px] top-[40%] left-[70%]" />
-           
     </section>
   );
 };

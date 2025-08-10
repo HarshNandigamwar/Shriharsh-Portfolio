@@ -14,7 +14,7 @@ const Projects = () => {
   return (
     <section
       id="project"
-      className="max-w-[670px] pt-10 flex flex-col items-start justify-start gap-y-10 relative "
+      className="max-w-[670px] pt-10 flex flex-col items-start justify-start gap-y-10  "
     >
       <div className="flex flex-col items-start justify-start gap-5">
         <div className="space-y-2">
@@ -30,7 +30,7 @@ const Projects = () => {
       <div className="w-full space-y-6">
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-1 gap-2 w-full text-center">
           {/* SigmaAI   */}
-          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group">
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 backdrop-blur-sm">
             <div className="flex sm:flex-row flex-col w-full">
               <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
                 <img
@@ -81,7 +81,7 @@ const Projects = () => {
             </div>
           </div>
           {/* CC   */}
-          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group">
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 backdrop-blur-sm">
             <div className="flex sm:flex-row flex-col w-full">
               <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
                 <img
@@ -134,7 +134,7 @@ const Projects = () => {
             </div>
           </div>
           {/* Weather app   */}
-          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group">
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 backdrop-blur-sm">
             <div className="flex sm:flex-row flex-col w-full">
               <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
                 <img
@@ -187,7 +187,7 @@ const Projects = () => {
             </div>
           </div>
           {/* E-Commerce app */}
-          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group">
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 backdrop-blur-sm">
             <div className="flex sm:flex-row flex-col w-full">
               <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
                 <img
@@ -242,9 +242,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className="absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[10%] left-[10%]" />
-            <div className="absolute w-[200px] h-[200px] bg-cyan-700 opacity-30 rounded-full blur-[130px] top-[40%] left-[70%]" />
-            <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[130px] top-[80%] left-[10%]" />
+      
     </section>
   );
 };

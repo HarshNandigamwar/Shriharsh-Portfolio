@@ -123,7 +123,7 @@ const Skills = () => {
   return (
     <section
       id="skill"
-      className=" max-w-[670px] flex flex-col items-start justify-start gap-5 mt-10 relative"
+      className=" max-w-[670px] flex flex-col items-start justify-start gap-5 mt-10 "
     >
       <div className="flex flex-col items-start justify-start gap-5">
         <div className="space-y-2">
@@ -199,10 +199,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[20%] left-[10%]" />
-      <div className="hidden md:flex absolute w-[200px] h-[200px] bg-purple-700 opacity-40 rounded-full blur-[150px] top-[60%] left-[70%]" />
-      <div className="flex md:hidden absolute w-[200px] h-[200px] bg-purple-700 opacity-40 rounded-full blur-[150px] top-[40%] left-[70%]" />
-      <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[70%] left-[10%]" />
+      
     </section>
   );
 };

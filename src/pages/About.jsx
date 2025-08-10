@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="max-w-[670px] pt-10 flex flex-col items-start justify-start gap-y-8 relative"
+      className="max-w-[670px] pt-10 flex flex-col items-start justify-start gap-y-8 "
     >
       <div className="flex flex-col items-start justify-start gap-5">
         <div className="space-y-2">
@@ -14,7 +14,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="p-6 rounded-sm border border-gray-800/50 bg-[#0a0a0a]  transition-all duration-300 w-full">
+      <div className="p-6 rounded-sm border border-gray-800/50 bg-[#1a1a1a]/20 backdrop-blur-sm  transition-all duration-300 w-full">
         <div className="space-y-6">
           <div className="space-y-4">
             <h4 className="text-lg font-medium text-white flex items-center gap-2">
@@ -47,8 +47,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="absolute w-[200px] h-[200px] bg-blue-700 opacity-30 rounded-full blur-[150px] top-[20%] left-[10%]" />
-            <div className="absolute w-[200px] h-[200px] bg-cyan-700 opacity-30 rounded-full blur-[150px] top-[60%] left-[70%]" />
     </section>
   );
 };

@@ -6,14 +6,14 @@ function LoadingButton({ loading, children, type, ...props }) {
     <button
       type={type}
       className={`flex items-center justify-center px-4 py-2 rounded mt-4 mb-5 bg-black/30 border border-gray-500/30 text-white font-semibold shadow hover:border-gray-500/50 transition-all duration-300 disabled:opacity-60 ${
-        loading ? "cursor-not-allowed" : ""
+        loading ? "cursor-progress" : ""
       }`}
       disabled={loading}
       {...props}
     >
       {loading && (
         <svg
-          className="animate-spin h-5 w-5 mr-2 text-white"
+          className="animate-spin h-5 w-5 mr-2 text-emerald-400"
           viewBox="0 0 24 24"
           fill="none"
         >
@@ -32,7 +32,7 @@ function LoadingButton({ loading, children, type, ...props }) {
           />
         </svg>
       )}
-      {loading ? "Loading..." : children}
+      {loading ? "submitting..." : children}
     </button>
   );
 }
