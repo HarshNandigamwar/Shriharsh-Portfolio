@@ -1,5 +1,6 @@
 import React from "react";
 import CustomBtn from "../components/CustomBtn/CustomBtn";
+import Resume from '../assets/Shriharsh_Nandigamwar_resume.pdf'
 const Home = () => {
   return (
     <section
@@ -29,7 +30,7 @@ const Home = () => {
 
         <div className="mt-4">
           <a
-            href="../assets/Shriharsh_Nandigamwar_resume.pdf"
+            href={Resume}
             download="Shriharsh_Nandigamwar_resume.pdf"
           >
             {" "}

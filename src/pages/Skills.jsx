@@ -61,7 +61,12 @@ const Skills = () => {
     },
     {
       name: "Mongoose",
-      icon: <img src="../assets/mongoose.png" className="h-6 w-6" />,
+      icon: (
+        <img
+          src="https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png"
+          className="h-6 w-6"
+        />
+      ),
     },
     {
       name: "Firebase",
@@ -84,7 +89,12 @@ const Skills = () => {
     },
     {
       name: "Postman",
-      icon: <img src="../assets/postman.png" className="h-6 w-6" />,
+      icon: (
+        <img
+          src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/480/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png"
+          className="h-6 w-6"
+        />
+      ),
     },
     {
       name: "VS Code",
@@ -109,27 +119,12 @@ const Skills = () => {
       ),
     },
   ];
-  let SoftSkill = [
-    {
-      name: "Problem Solving",
-      icon: <img src="../assets/problem2.jpg" className="h-6 w-6" />,
-    },
-    {
-      name: "Communication",
-      icon: <img src="../assets/comunication.jpg" className="h-6 w-6" />,
-    },
-    {
-      name: "Teamwork",
-      icon: <img src="../assets/teamwork.png" className="h-6 w-6" />,
-    },
-    {
-      name: "Self Learning",
-      icon: <img src="../assets/Self.png" className="h-6 w-6" />,
-    },
-  ];
 
   return (
-    <section id="skill" className=" max-w-[670px] flex flex-col items-start justify-start gap-5 mt-10">
+    <section
+      id="skill"
+      className=" max-w-[670px] flex flex-col items-start justify-start gap-5 mt-10"
+    >
       <div className="flex flex-col items-start justify-start gap-5">
         <div className="space-y-2">
           <h3 className="text-3xl font-semibold">
@@ -189,26 +184,6 @@ const Skills = () => {
           </h4>
           <div className="flex flex-wrap gap-2">
             {Tools.map((data) => (
-              <div
-                key={data.name}
-                className="inline-flex items-center gap-2 rounded-sm bg-[#0a0a0a] border border-slate-500/10 px-3 py-1.5 transition-all duration-300 hover:border-slate-500/10 hover:bg-[#111111] cursor-pointer "
-              >
-                <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
-                  {data.icon}
-                </span>
-                <span className="text-sm font-medium text-gray-200">
-                  {data.name}
-                </span>
-              </div>
-            ))}
-          </div>
-          {/* Soft skill   */}
-          <h4 className="text-lg font-medium text-[#08090a] dark:text-white flex items-center gap-2">
-            <span className="h-1 w-1 rounded-full bg-[#08090a] dark:bg-slate-100"></span>
-            <span className="text-2xl"> Soft skills</span>
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {SoftSkill.map((data) => (
               <div
                 key={data.name}
                 className="inline-flex items-center gap-2 rounded-sm bg-[#0a0a0a] border border-slate-500/10 px-3 py-1.5 transition-all duration-300 hover:border-slate-500/10 hover:bg-[#111111] cursor-pointer "

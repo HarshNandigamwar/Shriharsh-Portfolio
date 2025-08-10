@@ -1,52 +1,15 @@
 import React from "react";
 import { BsGithub } from "react-icons/bs";
 import { BiExport } from "react-icons/bi";
-
+import SigmaAIImg from "../assets/sigma ai.jpg";
+import CC from "../assets/currency converter .jpg";
+import WeatherImg from "../assets/weather app.jpg";
+import Ecom from "../assets/SigmaMart.png";
 const Projects = () => {
-  let Project = [
-    {
-      id: "1",
-      title: "Sigma AI",
-      description:
-        "It Is A smart and interactive chatbot designed to provide quick, accurate, and engaging responses to users.",
-      Image: "../assets/sigma ai.jpg",
-      tags: ["HTML", "Tailwind CSS", "JavaScript"],
-      LiveLink: "https://sigma-ai-by-shriharsh.netlify.app/",
-      githubLink: "https://github.com/HarshNandigamwar/Sigma-AI",
-    },
-
-    {
-      id: "2",
-      title: "Currency Converter",
-      description:
-        "Quickly convert currencies on-the-go Get up-to-date exchange rates for countries worldwide.",
-      Image: "../assets/currency converter .jpg",
-      tags: ["HTML", "Tailwind CSS", "JavaScript"],
-      LiveLink: "https://shriharsh-currency-converter.netlify.app/",
-      githubLink: "https://github.com/HarshNandigamwar/Currency-Converter",
-    },
-
-    {
-      id: "3",
-      title: "Weather app",
-      description:
-        "Check the weather forecast anytime anywhere. Get accurate and up-to-date weather updates for your location.",
-      Image: "../assets/weather app.jpg",
-      tags: ["HTML", "Tailwind CSS", "JavaScript"],
-      LiveLink: "https://weather-app-shriharsh.netlify.app/",
-      githubLink: "https://github.com/HarshNandigamwar/Weather-App",
-    },
-    {
-      id: "4",
-      title: "E-Commerce app",
-      description:
-        "This is a dynamic E-Commerce web application built with React.js, designed to deliver a smooth and engaging shopping experience.",
-      Image: "../assets/SigmaMart.png",
-      tags: ["React.js", "Tailwind CSS"],
-      LiveLink: "https://sigma-mart.vercel.app/",
-      githubLink: "https://github.com/HarshNandigamwar/Sigma-mart",
-    },
-  ];
+  let SigmaAI = ["HTML", "Tailwind CSS", "JavaScript"];
+  let Cc = ["HTML", "Tailwind CSS", "JavaScript"];
+  let weather = ["HTML", "Tailwind CSS", "JavaScript"];
+  let SigmaMart = ["React.js", "Tailwind CSS"];
 
   return (
     <section
@@ -66,65 +29,217 @@ const Projects = () => {
       </div>
       <div className="w-full space-y-6">
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-1 gap-2 w-full text-center">
-          {Project.map((data) => {
-            return (
-              <div
-                key={data.id}
-                className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group"
-              >
-                <div className="flex sm:flex-row flex-col w-full">
-                  <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
-                    <img
-                      src={data.Image}
-                      alt={data.title}
-                      className="object-cover p-1 rounded-sm"
-                    />
-                  </div>
-                  <div className="w-full sm:w-[60%] flex flex-col p-5 space-y-3">
-                    <h3 className="text-white text-xl font-semibold">
-                      {data.title}
-                    </h3>
-                    <p className="text-[#A1A1AA] text-sm font-normal line-clamp-4">
-                      {data.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 pt-2">
-                      {data.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2 py-1 text-xs rounded-sm font-medium bg-[#0a0a0a] border border-gray-500/10 text-white"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="pt-2 flex justify-between items-center">
-                      <div className="flex gap-2">
-                        <div className="relative px-1 py-1 text-xs font-medium text-gray-300/70 group-hover:text-gray-300/90 transition-all duration-300 flex items-center gap-3">
-                          {/* GitHub   */}
-                          <a
-                            href={data.githubLink}
-                            className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center"
-                            title="Source Code"
-                          >
-                            <BsGithub className="h-5 w-5" />
-                          </a>
-                          {/* Live Demo  */}
-                          <a
-                            href={data.LiveLink}
-                            className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2"
-                            title="Live Demo"
-                          >
-                            <BiExport className="h-5 w-5" />{" "}
-                            <span>Live Demo</span>
-                          </a>
-                        </div>
-                      </div>
+          {/* SigmaAI   */}
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group">
+            <div className="flex sm:flex-row flex-col w-full">
+              <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
+                <img
+                  src={SigmaAIImg}
+                  alt="Sigma AI"
+                  className="object-cover p-1 rounded-sm"
+                />
+              </div>
+              <div className="w-full sm:w-[60%] flex flex-col p-5 space-y-3">
+                <h3 className="text-white text-xl font-semibold">Sigma AI</h3>
+                <p className="text-[#A1A1AA] text-sm font-normal line-clamp-4">
+                  It Is A smart and interactive chatbot designed to provide
+                  quick, accurate, and engaging responses to users.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {SigmaAI.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-1 text-xs rounded-sm font-medium bg-[#0a0a0a] border border-gray-500/10 text-white"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="pt-2 flex justify-between items-center">
+                  <div className="flex gap-2">
+                    <div className="relative px-1 py-1 text-xs font-medium text-gray-300/70 group-hover:text-gray-300/90 transition-all duration-300 flex items-center gap-3">
+                      {/* GitHub   */}
+                      <a
+                        href="https://github.com/HarshNandigamwar/Sigma-AI"
+                        className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center"
+                        title="Source Code"
+                      >
+                        <BsGithub className="h-5 w-5" />
+                      </a>
+                      {/* Live Demo  */}
+                      <a
+                        href="https://sigma-ai-by-shriharsh.netlify.app/"
+                        className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2"
+                        title="Live Demo"
+                      >
+                        <BiExport className="h-5 w-5" /> <span>Live Demo</span>
+                      </a>
                     </div>
                   </div>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          </div>
+          {/* CC   */}
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group">
+            <div className="flex sm:flex-row flex-col w-full">
+              <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
+                <img
+                  src={CC}
+                  alt="Currency Converter"
+                  className="object-cover p-1 rounded-sm"
+                />
+              </div>
+              <div className="w-full sm:w-[60%] flex flex-col p-5 space-y-3">
+                <h3 className="text-white text-xl font-semibold">
+                  Currency Converter
+                </h3>
+                <p className="text-[#A1A1AA] text-sm font-normal line-clamp-4">
+                  Quickly convert currencies on-the-go Get up-to-date exchange
+                  rates for countries worldwide.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {Cc.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-1 text-xs rounded-sm font-medium bg-[#0a0a0a] border border-gray-500/10 text-white"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="pt-2 flex justify-between items-center">
+                  <div className="flex gap-2">
+                    <div className="relative px-1 py-1 text-xs font-medium text-gray-300/70 group-hover:text-gray-300/90 transition-all duration-300 flex items-center gap-3">
+                      {/* GitHub   */}
+                      <a
+                        href="https://github.com/HarshNandigamwar/Currency-Converter"
+                        className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center"
+                        title="Source Code"
+                      >
+                        <BsGithub className="h-5 w-5" />
+                      </a>
+                      {/* Live Demo  */}
+                      <a
+                        href="https://shriharsh-currency-converter.netlify.app/"
+                        className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2"
+                        title="Live Demo"
+                      >
+                        <BiExport className="h-5 w-5" /> <span>Live Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Weather app   */}
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group">
+            <div className="flex sm:flex-row flex-col w-full">
+              <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
+                <img
+                  src={WeatherImg}
+                  alt="Weather app"
+                  className="object-cover p-1 rounded-sm"
+                />
+              </div>
+              <div className="w-full sm:w-[60%] flex flex-col p-5 space-y-3">
+                <h3 className="text-white text-xl font-semibold">
+                  Weather app
+                </h3>
+                <p className="text-[#A1A1AA] text-sm font-normal line-clamp-4">
+                  Check the weather forecast anytime anywhere. Get accurate and
+                  up-to-date weather updates for your location.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {weather.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-1 text-xs rounded-sm font-medium bg-[#0a0a0a] border border-gray-500/10 text-white"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="pt-2 flex justify-between items-center">
+                  <div className="flex gap-2">
+                    <div className="relative px-1 py-1 text-xs font-medium text-gray-300/70 group-hover:text-gray-300/90 transition-all duration-300 flex items-center gap-3">
+                      {/* GitHub   */}
+                      <a
+                        href="https://github.com/HarshNandigamwar/Weather-App"
+                        className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center"
+                        title="Source Code"
+                      >
+                        <BsGithub className="h-5 w-5" />
+                      </a>
+                      {/* Live Demo  */}
+                      <a
+                        href="https://weather-app-shriharsh.netlify.app/"
+                        className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2"
+                        title="Live Demo"
+                      >
+                        <BiExport className="h-5 w-5" /> <span>Live Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* E-Commerce app */}
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group">
+            <div className="flex sm:flex-row flex-col w-full">
+              <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
+                <img
+                  src={Ecom}
+                  alt="E-Commerce app"
+                  className="object-cover p-1 rounded-sm"
+                />
+              </div>
+              <div className="w-full sm:w-[60%] flex flex-col p-5 space-y-3">
+                <h3 className="text-white text-xl font-semibold">
+                  E-Commerce app
+                </h3>
+                <p className="text-[#A1A1AA] text-sm font-normal line-clamp-4">
+                  This is a dynamic E-Commerce web application built with
+                  React.js, designed to deliver a smooth and engaging shopping
+                  experience.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {SigmaMart.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-1 text-xs rounded-sm font-medium bg-[#0a0a0a] border border-gray-500/10 text-white"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="pt-2 flex justify-between items-center">
+                  <div className="flex gap-2">
+                    <div className="relative px-1 py-1 text-xs font-medium text-gray-300/70 group-hover:text-gray-300/90 transition-all duration-300 flex items-center gap-3">
+                      {/* GitHub   */}
+                      <a
+                        href="https://github.com/HarshNandigamwar/Sigma-mart"
+                        className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center"
+                        title="Source Code"
+                      >
+                        <BsGithub className="h-5 w-5" />
+                      </a>
+                      {/* Live Demo  */}
+                      <a
+                        href="https://sigma-mart.vercel.app/"
+                        className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2"
+                        title="Live Demo"
+                      >
+                        <BiExport className="h-5 w-5" /> <span>Live Demo</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
