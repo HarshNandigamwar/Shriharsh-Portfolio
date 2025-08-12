@@ -30,7 +30,7 @@ const Projects = () => {
       <div className="w-full space-y-6">
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-1 gap-2 w-full text-center">
           {/* SigmaAI   */}
-          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20">
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-purple-500/50 transition-all duration-300 ease-in-out hover:border-purple-500 w-full cursor-pointer group bg-[#1e1e1e]/20">
             <div className="flex sm:flex-row flex-col w-full">
               <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
                 <img
@@ -82,7 +82,7 @@ const Projects = () => {
             </div>
           </div>
           {/* CC   */}
-          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 ">
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-purple-500/50 transition-all duration-300 ease-in-out hover:border-purple-500 w-full cursor-pointer group bg-[#1e1e1e]/20 ">
             <div className="flex sm:flex-row flex-col w-full">
               <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
                 <img
@@ -136,7 +136,7 @@ const Projects = () => {
             </div>
           </div>
           {/* Weather app   */}
-          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 ">
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-purple-500/50 transition-all duration-300 ease-in-out hover:border-purple-500 w-full cursor-pointer group bg-[#1e1e1e]/20 ">
             <div className="flex sm:flex-row flex-col w-full">
               <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
                 <img
@@ -190,7 +190,7 @@ const Projects = () => {
             </div>
           </div>
           {/* E-Commerce app */}
-          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 ">
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-purple-500/50 transition-all duration-300 ease-in-out hover:border-purple-500 w-full cursor-pointer group bg-[#1e1e1e]/20 ">
             <div className="flex sm:flex-row flex-col w-full">
               <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
                 <img

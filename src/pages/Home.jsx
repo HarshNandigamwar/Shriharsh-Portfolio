@@ -20,7 +20,7 @@ const Home = () => {
           <p className="text-sm sm:text-base font-normal text-[#A1A1AA] max-w-2xl">
             I specialize in building web apps with{" "}
             <span className="text-slate-100 font-semibold">
-              React, JavaScript, Tailwind CSS, Node.js and more.
+              <span className="text-purple-500">React, JavaScript, Tailwind CSS, Node.js</span> and more.
             </span>{" "}
             Always excited to tackle new challenges where I can create value and
             grow as a coder. Let&apos;s connect if you&apos;ve got a project
@@ -28,7 +28,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="mt-4 w-[110px]">
+        <div title="Download Resume" className="mt-4 w-[110px]">
           <a
             href={Resume}
             download="Shriharsh_Nandigamwar_resume.pdf"

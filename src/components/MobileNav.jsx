@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BiSolidSend } from "react-icons/bi";
 const MobileNav = () => {
   let sections = [
@@ -16,13 +16,16 @@ const MobileNav = () => {
             <div className="flex flex-col space-y-1">
               {sections.map((section) => (
                 <a href={section.link} key={section.id}>
-                  <div className="flex items-center justify-between pl-4 px-1.5 py-2 border border-gray-500/30 rounded-[8px] mb-2 hover:bg-[#191a1a]">
+                  <div className="flex items-center justify-between pl-4 px-1.5 py-2  text-purple-300 border border-purple-400 rounded-[8px] mb-2 hover:bg-[#191a1a]">
                     <div>{section.label}</div>
                     <BiSolidSend />
                   </div>
                 </a>
               ))}
             </div>
+            <span className="text-gray-700 flex items-center justify-center">
+              Menu close in 3 second...
+            </span>
           </div>
         </div>
       </div>

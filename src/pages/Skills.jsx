@@ -138,7 +138,7 @@ const Skills = () => {
       <div className="w-full space-y-5">
         <div className="space-y-3">
           {/* Frontend */}
-          <h4 className="text-lg font-medium text-[#08090a] dark:text-white flex items-center gap-2">
+          <h4 className="text-lg font-medium text-white flex items-center gap-2">
             <span className="h-1 w-1 rounded-full bg-[#08090a] dark:bg-slate-100"></span>
             <span className="text-2xl">Frontend</span>
           </h4>
@@ -146,9 +146,10 @@ const Skills = () => {
             {Frontend.map((data) => (
               <div
                 key={data.name}
-                className="inline-flex items-center gap-2 rounded-sm bg-[#0a0a0a] border border-slate-500/10 px-3 py-1.5 transition-all duration-300 hover:border-slate-500/10 hover:bg-[#111111] cursor-pointer "
+                title={data.name}
+                className="inline-flex items-center gap-2 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer "
               >
-                <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
+                <span  className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
                   {data.icon}
                 </span>
                 <span className="text-sm font-medium text-gray-200">
@@ -166,7 +167,8 @@ const Skills = () => {
             {Backend.map((data) => (
               <div
                 key={data.name}
-                className="inline-flex items-center gap-2 rounded-sm bg-[#0a0a0a] border border-slate-500/10 px-3 py-1.5 transition-all duration-300 hover:border-slate-500/10 hover:bg-[#111111] cursor-pointer "
+                title={data.name}
+                className="inline-flex items-center gap-2 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer "
               >
                 <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
                   {data.icon}
@@ -186,7 +188,8 @@ const Skills = () => {
             {Tools.map((data) => (
               <div
                 key={data.name}
-                className="inline-flex items-center gap-2 rounded-sm bg-[#0a0a0a] border border-slate-500/10 px-3 py-1.5 transition-all duration-300 hover:border-slate-500/10 hover:bg-[#111111] cursor-pointer "
+                title={data.name}
+                className="inline-flex items-center gap-2 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer "
               >
                 <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
                   {data.icon}

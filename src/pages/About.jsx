@@ -14,11 +14,11 @@ const About = () => {
         </div>
       </div>
 
-      <div className="p-6 rounded-sm border border-gray-800/50 bg-[#1a1a1a]/20 backdrop-blur-sm  transition-all duration-300 w-full">
+      <div className="p-6 rounded-sm border border-purple-500/50 bg-[#1e1e1e]/20 transition-all duration-300 w-full">
         <div className="space-y-6">
           <div className="space-y-4">
             <h4 className="text-lg font-medium text-white flex items-center gap-2">
-              <span className="h-1 w-1 rounded-full bg-emerald-500"></span>
+              <span className="h-1 w-1 rounded-full bg-purple-500"></span>
               Who I Am
             </h4>
             <p className="text-sm text-white leading-relaxed">

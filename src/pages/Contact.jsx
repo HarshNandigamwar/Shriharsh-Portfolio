@@ -28,6 +28,10 @@ const Contact = () => {
       console.log("Error", data);
       setResult(data.message);
       toast.error("Form submission failed.", { autoClose: 3000 });
+      setLoading(false);
+      setTimeout(() => {
+        setResult("");
+      }, 3000);
     }
   };
 
@@ -46,22 +50,22 @@ const Contact = () => {
         </p>
       </div>
 
-      <div className="w-full p-3 rounded-sm border bg-[#1a1a1a]/20 backdrop-blur-sm border-gray-500/10 hover:border-gray-500/20 transition-all duration-300">
+      <div className="w-full p-3 rounded-sm border bg-[#1e1e1e]/20 border-purple-500/50 hover:border-purple-500 transition-all duration-300">
         <div className="flex flex-col items-center justify-center gap-4">
           <form
             className="contactForm m-[1.5rem] flex flex-col items-center justify-center w-[100%] lg:w-[600px]  "
             onSubmit={onSubmit}
           >
             <input
-            id="name"
+              id="name"
               type="text"
               className="name font-medium w-full max-w-[40rem] m-[0.5rem] p-[10px] text-white  rounded-[0.5rem] bg-black/30 border border-gray-500/10 hover:border-gray-500/50 transition-all duration-300  "
               placeholder="name"
               name="name"
               required
             />
-                     <input
-            id="email"
+            <input
+              id="email"
               type="email"
               className="email font-medium w-full max-w-[40rem] m-[0.5rem] p-[10px] text-white  rounded-[0.5rem] bg-black/30 border border-gray-500/10 hover:border-gray-500/50 transition-all duration-300"
               placeholder="email"
@@ -70,7 +74,7 @@ const Contact = () => {
             />
 
             <textarea
-            id="message"
+              id="message"
               name="message"
               placeholder="message"
               rows={5}
@@ -78,7 +82,7 @@ const Contact = () => {
               required
             ></textarea>
 
-            <span>{result}</span>
+            <span className="text-red-500">{result}</span>
 
             <LoadingButton
               type={"submit"}
@@ -93,7 +97,6 @@ const Contact = () => {
               >
                 <img
                   src="https://skillicons.dev/icons?i=linkedin"
-  
                   alt="linkedin"
                   className="h-9 w-9"
                 />
@@ -105,10 +108,7 @@ const Contact = () => {
                   className="h-9 w-9"
                 />
               </a>
-              <a
-                href="https://x.com/Harsh477011?s=09"
-                target="_blank"
-              >
+              <a href="https://x.com/Harsh477011?s=09" target="_blank">
                 <img
                   src="https://skillicons.dev/icons?i=twitter"
                   className="h-9 w-9"
@@ -123,7 +123,6 @@ const Contact = () => {
           </p>
         </div>
       </div>
-      
     </div>
   );
 };

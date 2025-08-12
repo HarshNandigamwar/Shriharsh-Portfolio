@@ -2,7 +2,7 @@ import React from "react";
 import "../CustomBtn/CustomBtn.css";
 const CustomBtn = () => {
   return (
-    <div>
+    <div className="mainBTN">
       <button className="btn-53">
         <div className="original">Resume </div>
         <div className="letters">

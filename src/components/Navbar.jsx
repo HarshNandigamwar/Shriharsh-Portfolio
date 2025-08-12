@@ -21,9 +21,9 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-3 sm:top-6 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between w-[95%] max-w-[670px] py-2 px-4 rounded-sm transition-all duration-300 overflow-hidden bg-[#0a0a0a]/60 backdrop-blur-sm border border-gray-500/30 cursor-pointer ">
+      <nav className="fixed top-3 sm:top-6 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between w-[95%] max-w-[670px] py-2 px-4 rounded-sm transition-all duration-300 overflow-hidden bg-[#0a0a0a]/60 backdrop-blur-sm border border-purple-500 cursor-pointer ">
         <div className="flex-shrink-0 relative">
-          <div className="w-25 h-9 flex items-center justify-center font-bold text-[20px] ml-2">
+          <div className="w-25 h-9 flex items-center justify-center font-bold text-[20px] ml-2 text-purple-400">
             {logo}
           </div>
         </div>
@@ -34,7 +34,7 @@ const Navbar = () => {
               <a
                 href={section.link}
                 key={section.id}
-                className="px-3 py-1.5 text-sm rounded-[5px] transition-all duration-300 relative overflow-hidden text-white border border-gray-500/30 cursor-pointer hover:bg-[#191a1a] font-normal ml-1"
+                className="px-3 py-1.5 text-sm rounded-[5px] transition-all duration-300 relative overflow-hidden text-purple-300 border border-gray-500/30 cursor-pointer hover:bg-[#191a1a] font-normal ml-1"
               >
                 <div className="absolute inset-0 opacity-20">
                   <div className="absolute inset-0 bg-gradient-to-r via-slate-500/30 to-transparent" />
