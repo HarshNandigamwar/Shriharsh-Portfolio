@@ -49,7 +49,7 @@ const Projects = () => {
                   {SigmaAI.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 text-xs rounded-sm font-medium bg-[#0a0a0a] border border-gray-500/10 text-white"
+                      className="px-4 py-2 text-[12px] rounded-sm font-medium bg-[#0a0a0a] border border-gray-500/10 text-white"
                     >
                       {tag}
                     </span>
