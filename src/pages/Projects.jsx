@@ -30,7 +30,7 @@ const Projects = () => {
       <div className="w-full space-y-6">
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-1 gap-2 w-full text-center">
           {/* SigmaAI   */}
-          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 backdrop-blur-sm">
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20">
             <div className="flex sm:flex-row flex-col w-full">
               <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
                 <img
@@ -49,6 +49,7 @@ const Projects = () => {
                   {SigmaAI.map((tag) => (
                     <span
                       key={tag}
+                      title={tag}
                       className="px-4 py-2 text-[12px] rounded-sm font-medium bg-[#0a0a0a] border border-gray-500/10 text-white"
                     >
                       {tag}
@@ -81,7 +82,7 @@ const Projects = () => {
             </div>
           </div>
           {/* CC   */}
-          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 backdrop-blur-sm">
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 ">
             <div className="flex sm:flex-row flex-col w-full">
               <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
                 <img
@@ -102,6 +103,7 @@ const Projects = () => {
                   {Cc.map((tag) => (
                     <span
                       key={tag}
+                      title={tag}
                       className="px-4 py-2 text-[12px] rounded-sm font-medium bg-[#0a0a0a] border border-gray-500/10 text-white"
                     >
                       {tag}
@@ -134,7 +136,7 @@ const Projects = () => {
             </div>
           </div>
           {/* Weather app   */}
-          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 backdrop-blur-sm">
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 ">
             <div className="flex sm:flex-row flex-col w-full">
               <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
                 <img
@@ -155,6 +157,7 @@ const Projects = () => {
                   {weather.map((tag) => (
                     <span
                       key={tag}
+                      title={tag}
                       className="px-4 py-2 text-[12px] rounded-sm font-medium bg-[#0a0a0a] border border-gray-500/10 text-white"
                     >
                       {tag}
@@ -187,7 +190,7 @@ const Projects = () => {
             </div>
           </div>
           {/* E-Commerce app */}
-          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 backdrop-blur-sm">
+          <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-gray-500/10 transition-all duration-300 ease-in-out hover:border-gray-500/20 w-full cursor-pointer group bg-[#1a1a1a]/20 ">
             <div className="flex sm:flex-row flex-col w-full">
               <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
                 <img
@@ -209,6 +212,7 @@ const Projects = () => {
                   {SigmaMart.map((tag) => (
                     <span
                       key={tag}
+                      title={tag}
                       className="px-4 py-2 text-[12px] rounded-sm font-medium bg-[#0a0a0a] border border-gray-500/10 text-white"
                     >
                       {tag}
@@ -242,7 +246,6 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      
     </section>
   );
 };

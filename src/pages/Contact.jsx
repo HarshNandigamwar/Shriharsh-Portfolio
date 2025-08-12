@@ -53,23 +53,26 @@ const Contact = () => {
             onSubmit={onSubmit}
           >
             <input
+            id="name"
               type="text"
               className="name font-medium w-full max-w-[40rem] m-[0.5rem] p-[10px] text-white  rounded-[0.5rem] bg-black/30 border border-gray-500/10 hover:border-gray-500/50 transition-all duration-300  "
-              placeholder="Name"
+              placeholder="name"
               name="name"
               required
             />
-            <input
-              type="text"
+                     <input
+            id="email"
+              type="email"
               className="email font-medium w-full max-w-[40rem] m-[0.5rem] p-[10px] text-white  rounded-[0.5rem] bg-black/30 border border-gray-500/10 hover:border-gray-500/50 transition-all duration-300"
-              placeholder="Email"
+              placeholder="email"
               name="email"
               required
             />
 
             <textarea
+            id="message"
               name="message"
-              placeholder="Message"
+              placeholder="message"
               rows={5}
               className="msg font-medium w-full max-w-[40rem] m-[0.5rem] p-[10px] text-white  rounded-[0.5rem] bg-black/30 border border-gray-500/10 hover:border-gray-500/50 transition-all duration-300"
               required
