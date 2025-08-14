@@ -16,7 +16,7 @@ const MobileNav = () => {
             <div className="flex flex-col space-y-1">
               {sections.map((section) => (
                 <a href={section.link} key={section.id}>
-                  <div className="flex items-center justify-between pl-4 px-1.5 py-2  text-purple-300 border border-purple-400 rounded-[8px] mb-2 hover:bg-[#191a1a]">
+                  <div className="flex items-center justify-between pl-4 px-1.5 py-2 transition-all duration-300  text-purple-300 border border-purple-400 rounded-[8px] mb-2 hover:bg-[#191a1a] hover:scale-102">
                     <div>{section.label}</div>
                     <BiSolidSend />
                   </div>

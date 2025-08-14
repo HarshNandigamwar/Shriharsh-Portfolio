@@ -34,7 +34,7 @@ const Navbar = () => {
               <a
                 href={section.link}
                 key={section.id}
-                className="px-3 py-1.5 text-sm rounded-[5px] transition-all duration-300 relative overflow-hidden text-purple-300 border border-gray-500/30 cursor-pointer hover:bg-[#191a1a] font-normal ml-1"
+                className="px-3 py-1.5 text-sm rounded-[5px] transition-all duration-300 relative overflow-hidden text-purple-300 border border-gray-500/30 cursor-pointer hover:bg-[#191a1a] font-normal ml-1 hover:scale-105"
               >
                 <div className="absolute inset-0 opacity-20">
                   <div className="absolute inset-0 bg-gradient-to-r via-slate-500/30 to-transparent" />

@@ -1,5 +1,5 @@
 import React from "react";
-
+import BlinkDot from "../components/BlinkDot";
 const About = () => {
   return (
     <section
@@ -9,7 +9,7 @@ const About = () => {
       <div className="flex flex-col items-start justify-start gap-5">
         <div className="space-y-2">
           <h3 className="text-3xl font-semibold">
-            <span>About Me</span>
+            <span className="text-purple-300">About Me</span>
           </h3>
         </div>
       </div>
@@ -18,7 +18,8 @@ const About = () => {
         <div className="space-y-6">
           <div className="space-y-4">
             <h4 className="text-lg font-medium text-white flex items-center gap-2">
-              <span className="h-1 w-1 rounded-full bg-purple-500"></span>
+              {/* <span className="h-1 w-1 rounded-full bg-purple-500"></span> */}
+         <BlinkDot/>
               Who I Am
             </h4>
             <p className="text-sm text-white leading-relaxed">

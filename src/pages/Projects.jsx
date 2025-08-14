@@ -18,8 +18,8 @@ const Projects = () => {
     >
       <div className="flex flex-col items-start justify-start gap-5">
         <div className="space-y-2">
-          <h3 className="text-3xl font-semibold">
-            My <span className="text-slate-200">Projects</span>
+          <h3 className="text-3xl font-semibold text-purple-300">
+            My <span>Projects</span>
           </h3>
           <p className="text-[#A1A1AA] text-sm">
             Explore some of the projects I&apos;ve worked on. These showcase my
@@ -40,7 +40,7 @@ const Projects = () => {
                 />
               </div>
               <div className="w-full sm:w-[60%] flex flex-col p-5 space-y-3">
-                <h3 className="text-white text-xl font-semibold">Sigma AI</h3>
+                <h3 className="text-purple-400 font-bold text-xl ">Sigma AI</h3>
                 <p className="text-[#A1A1AA] text-sm font-normal line-clamp-4">
                   It Is A smart and interactive chatbot designed to provide
                   quick, accurate, and engaging responses to users.
@@ -92,7 +92,7 @@ const Projects = () => {
                 />
               </div>
               <div className="w-full sm:w-[60%] flex flex-col p-5 space-y-3">
-                <h3 className="text-white text-xl font-semibold">
+                <h3 className="text-purple-400 font-bold text-xl ">
                   Currency Converter
                 </h3>
                 <p className="text-[#A1A1AA] text-sm font-normal line-clamp-4">
@@ -146,7 +146,7 @@ const Projects = () => {
                 />
               </div>
               <div className="w-full sm:w-[60%] flex flex-col p-5 space-y-3">
-                <h3 className="text-white text-xl font-semibold">
+                <h3 className="text-purple-400 font-bold text-xl ">
                   Weather app
                 </h3>
                 <p className="text-[#A1A1AA] text-sm font-normal line-clamp-4">
@@ -200,7 +200,7 @@ const Projects = () => {
                 />
               </div>
               <div className="w-full sm:w-[60%] flex flex-col p-5 space-y-3">
-                <h3 className="text-white text-xl font-semibold">
+                <h3 className="text-purple-400 font-bold text-xl ">
                   E-Commerce app
                 </h3>
                 <p className="text-[#A1A1AA] text-sm font-normal line-clamp-4">

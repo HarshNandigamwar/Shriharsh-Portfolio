@@ -13,17 +13,16 @@ const Layout = () => {
       <Navbar />
       <main className="flex min-h-screen flex-col items-center justify-between pt-40 pl-5 pr-5">
         <Home />
-        <hr className="w-full border-gray-300/10 mt-10" />
+        <hr className="w-full border-purple-300/10 mt-10" />
         <About />
-        <hr className="w-full border-gray-300/10 mt-10" />
+        <hr className="w-full border-purple-300/10 mt-10" />
         <Skills />
-        <hr className="w-full border-gray-300/10 mt-10" />
+        <hr className="w-full border-purple-300/10 mt-10" />
         <Project />
-        <hr className="w-full border-gray-300/10 mt-10" />
+        <hr className="w-full border-purple-300/10 mt-10" />
         <Contact />
-        <hr className="w-full border-gray-300/10 mt-10" />
+        <hr className="w-full border-purple-300/10 mt-10" />
         <Footer />
-     
       </main>
     </>
   );

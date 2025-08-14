@@ -5,7 +5,10 @@ import {
   SiMongodb,
   SiRedux,
   SiFirebase,
+  SiC,
 } from "react-icons/si";
+import { DiJava, DiPython } from "react-icons/di";
+import { BsBootstrap } from "react-icons/bs";
 import { IoLogoJavascript } from "react-icons/io";
 import {
   FaCss3,
@@ -18,9 +21,10 @@ import {
 } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { VscVscode } from "react-icons/vsc";
+import BlinkDot from "../components/BlinkDot";
 
 const Skills = () => {
-  let Frontend = [
+  let Language = [
     {
       name: "HTML",
       icon: <FaHtml5 color="#E34F26" className="h-6 w-6" />,
@@ -34,16 +38,39 @@ const Skills = () => {
       icon: <IoLogoJavascript color="#F7DF1E" className="h-6 w-6" />,
     },
     {
+      name: "C",
+      icon: <SiC color="#1572B6" className="h-6 w-6" />,
+    },
+    {
+      name: "C++",
+      icon: <SiCplusplus color="#1572B6" className="h-6 w-6" />,
+    },
+    {
+      name: "Python",
+      icon: <DiPython color="#3776AB" className="h-6 w-6" />,
+    },
+    {
+      name: "Java",
+      icon: <DiJava color="#EA2D" className="h-6 w-6" />,
+    },
+  ];
+
+  let Frontend = [
+    {
+      name: "Tailwind CSS",
+      icon: <RiTailwindCssFill color="#06B6D4" className="h-6 w-6" />,
+    },
+    {
+      name: "Bootstrap",
+      icon: <BsBootstrap color="#7952B3" className="h-6 w-6" />,
+    },
+    {
       name: "React.js",
       icon: <FaReact color="#61DAFB" className="h-6 w-6" />,
     },
     {
       name: "Redux Toolkit",
       icon: <SiRedux color="#764ABC" className="h-6 w-6" />,
-    },
-    {
-      name: "Tailwind CSS",
-      icon: <RiTailwindCssFill color="#06B6D4" className="h-6 w-6" />,
     },
   ];
   let Backend = [
@@ -54,6 +81,10 @@ const Skills = () => {
     {
       name: "Express.js",
       icon: <SiExpress color="#ffffff" className="h-6 w-6" />,
+    },
+    {
+      name: "Firebase",
+      icon: <SiFirebase color="#FF9100" className="h-6 w-6" />,
     },
     {
       name: "MongoDB",
@@ -67,10 +98,6 @@ const Skills = () => {
           className="h-6 w-6"
         />
       ),
-    },
-    {
-      name: "Firebase",
-      icon: <SiFirebase color="#FF9100" className="h-6 w-6" />,
     },
     {
       name: "REST API",
@@ -88,6 +115,10 @@ const Skills = () => {
       icon: <FaGithub color="#ffffff" className="h-6 w-6" />,
     },
     {
+      name: "VS Code",
+      icon: <VscVscode color="#007ACC" className="h-6 w-6" />,
+    },
+    {
       name: "Postman",
       icon: (
         <img
@@ -96,10 +127,7 @@ const Skills = () => {
         />
       ),
     },
-    {
-      name: "VS Code",
-      icon: <VscVscode color="#007ACC" className="h-6 w-6" />,
-    },
+
     {
       name: "Vercel",
       icon: (
@@ -128,7 +156,7 @@ const Skills = () => {
       <div className="flex flex-col items-start justify-start gap-5">
         <div className="space-y-2">
           <h3 className="text-3xl font-semibold">
-            <span className="text-slate-200">Skills</span> I have
+            <span className="text-purple-300">Skills I have</span>
           </h3>
           <p className="text-[#A1A1AA] text-sm">
             Technologies and tools I&apos;ve worked with and enjoy using.
@@ -137,19 +165,41 @@ const Skills = () => {
       </div>
       <div className="w-full space-y-5">
         <div className="space-y-3">
+          {/* Languages  */}
+          <h4 className="text-lg font-medium text-white flex items-center gap-2">
+            <BlinkDot />
+            <span className="text-2xl">Languages</span>
+          </h4>
+          <div className="flex flex-wrap gap-2">
+            {Language.map((data) => (
+              <div
+                key={data.name}
+                title={data.name}
+                className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105"
+              >
+                <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
+                  {data.icon}
+                </span>
+                <span className="text-sm font-medium text-gray-200">
+                  {data.name}
+                </span>
+              </div>
+            ))}
+          </div>
+
           {/* Frontend */}
           <h4 className="text-lg font-medium text-white flex items-center gap-2">
-            <span className="h-1 w-1 rounded-full bg-[#08090a] dark:bg-slate-100"></span>
-            <span className="text-2xl">Frontend</span>
+            <BlinkDot />
+            <span className="text-2xl">Libraries & Frameworks</span>
           </h4>
           <div className="flex flex-wrap gap-2">
             {Frontend.map((data) => (
               <div
                 key={data.name}
                 title={data.name}
-                className="inline-flex items-center gap-2 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer "
+                className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
               >
-                <span  className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
+                <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
                   {data.icon}
                 </span>
                 <span className="text-sm font-medium text-gray-200">
@@ -159,8 +209,8 @@ const Skills = () => {
             ))}
           </div>
           {/* Backend  */}
-          <h4 className="text-lg font-medium text-[#08090a] dark:text-white flex items-center gap-2">
-            <span className="h-1 w-1 rounded-full bg-[#08090a] dark:bg-slate-100"></span>
+          <h4 className="text-lg font-medium text-white flex items-center gap-2">
+            <BlinkDot />
             <span className="text-2xl">Backend</span>
           </h4>
           <div className="flex flex-wrap gap-2">
@@ -168,7 +218,7 @@ const Skills = () => {
               <div
                 key={data.name}
                 title={data.name}
-                className="inline-flex items-center gap-2 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer "
+                className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
               >
                 <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
                   {data.icon}
@@ -179,9 +229,10 @@ const Skills = () => {
               </div>
             ))}
           </div>
+
           {/* Tools   */}
           <h4 className="text-lg font-medium text-[#08090a] dark:text-white flex items-center gap-2">
-            <span className="h-1 w-1 rounded-full bg-[#08090a] dark:bg-slate-100"></span>
+            <BlinkDot />
             <span className="text-2xl">Tools</span>
           </h4>
           <div className="flex flex-wrap gap-2">
@@ -189,7 +240,7 @@ const Skills = () => {
               <div
                 key={data.name}
                 title={data.name}
-                className="inline-flex items-center gap-2 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer "
+                className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
               >
                 <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
                   {data.icon}
@@ -202,7 +253,6 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      
     </section>
   );
 };

@@ -41,8 +41,8 @@ const Contact = () => {
       className="max-w-[670px] py-10 flex flex-col items-start gap-y-10 "
     >
       <div className="space-y-2">
-        <h3 className="text-3xl font-semibold">
-          Let&apos;s <span className="text-slate-200">Connect</span>
+        <h3 className="text-3xl font-semibold text-purple-300">
+          Let&apos;s <span className="text-purple-300">Connect</span>
         </h3>
         <p className="text-[#A1A1AA] text-sm">
           I&apos;m always excited to collaborate on interesting projects or just
