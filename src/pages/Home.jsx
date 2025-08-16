@@ -18,11 +18,10 @@ const Home = () => {
             A Full Stack Developer passionate about crafting seamless digital
             experiences
           </p>
-
           <p className="text-sm sm:text-base font-normal text-[#A1A1AA] max-w-2xl">
             I specialize in building web apps with{" "}
-            <span className="text-slate-100 font-semibold">
-              <span className="text-purple-500">
+            <span className="text-[#A1A1AA] ">
+              <span className="text-purple-500 font-semibold">
                 React, JavaScript, Tailwind CSS, Node.js
               </span>{" "}
               and more.
@@ -32,7 +31,6 @@ const Home = () => {
             that could use my skills!
           </p>
         </div>
-
         <div title="Download Resume" className="mt-4 w-[110px]">
           <a href={Resume} download="Shriharsh_Nandigamwar_resume.pdf">
             {" "}

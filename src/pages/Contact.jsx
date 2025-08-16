@@ -3,7 +3,6 @@ import LoadingButton from "../components/LoadingButton";
 import { toast } from "react-toastify";
 const Contact = () => {
   const form = useRef();
-
   const [result, setResult] = React.useState("");
   const [loading, setLoading] = React.useState(false);
   const onSubmit = async (event) => {
@@ -41,7 +40,7 @@ const Contact = () => {
       className="max-w-[670px] py-10 flex flex-col items-start gap-y-10 "
     >
       <div className="space-y-2">
-        <h3 className="text-3xl font-semibold text-purple-300">
+        <h3 className="text-3xl font-mono font-bold text-purple-300">
           Let&apos;s <span className="text-purple-300">Connect</span>
         </h3>
         <p className="text-[#A1A1AA] text-sm">

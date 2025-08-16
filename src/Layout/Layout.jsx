@@ -7,6 +7,7 @@ import Project from "../pages/Projects";
 // import Experience from "../pages/Experience";
 import Contact from "../pages/Contact";
 import About from "../pages/About";
+
 const Layout = () => {
   return (
     <>

@@ -1,4 +1,7 @@
 import React from "react";
+import Reveal from "../utils/Reveal.jsx";
+import mongoose from "../assets/mongoose.png";
+import thunder from "../assets/thunderClinet.png";
 import {
   SiCplusplus,
   SiExpress,
@@ -47,14 +50,13 @@ const Skills = () => {
     },
     {
       name: "Python",
-      icon: <DiPython color="#3776AB" className="h-6 w-6" />,
+      icon: <DiPython color="#306998" className="h-6 w-6" />,
     },
     {
       name: "Java",
       icon: <DiJava color="#EA2D" className="h-6 w-6" />,
     },
   ];
-
   let Frontend = [
     {
       name: "Tailwind CSS",
@@ -92,19 +94,13 @@ const Skills = () => {
     },
     {
       name: "Mongoose",
-      icon: (
-        <img
-          src="https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png"
-          className="h-6 w-6"
-        />
-      ),
+      icon: <img src={mongoose} className="h-6 w-6" />,
     },
     {
       name: "REST API",
-      icon: <FaNetworkWired color="#06B6D4" className="h-6 w-6" />,
+      icon: <FaNetworkWired color="#06B6D4" className="h-6 w-8" />,
     },
   ];
-
   let Tools = [
     {
       name: "Git",
@@ -126,6 +122,10 @@ const Skills = () => {
           className="h-6 w-6"
         />
       ),
+    },
+    {
+      name: "Thunder Client",
+      icon: <img src={thunder} className="h-7 w-8" />,
     },
 
     {
@@ -155,7 +155,7 @@ const Skills = () => {
     >
       <div className="flex flex-col items-start justify-start gap-5">
         <div className="space-y-2">
-          <h3 className="text-3xl font-semibold">
+          <h3 className="text-3xl font-mono font-bold">
             <span className="text-purple-300">Skills I have</span>
           </h3>
           <p className="text-[#A1A1AA] text-sm">
@@ -172,18 +172,20 @@ const Skills = () => {
           </h4>
           <div className="flex flex-wrap gap-2">
             {Language.map((data) => (
-              <div
-                key={data.name}
-                title={data.name}
-                className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105"
-              >
-                <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
-                  {data.icon}
-                </span>
-                <span className="text-sm font-medium text-gray-200">
-                  {data.name}
-                </span>
-              </div>
+              <Reveal stagger={0.08}>
+                <div
+                  key={data.name}
+                  title={data.name}
+                  className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105"
+                >
+                  <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
+                    {data.icon}
+                  </span>
+                  <span className="text-sm font-medium text-gray-200">
+                    {data.name}
+                  </span>
+                </div>
+              </Reveal>
             ))}
           </div>
 
@@ -194,18 +196,20 @@ const Skills = () => {
           </h4>
           <div className="flex flex-wrap gap-2">
             {Frontend.map((data) => (
-              <div
-                key={data.name}
-                title={data.name}
-                className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
-              >
-                <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
-                  {data.icon}
-                </span>
-                <span className="text-sm font-medium text-gray-200">
-                  {data.name}
-                </span>
-              </div>
+              <Reveal stagger={0.08}>
+                <div
+                  key={data.name}
+                  title={data.name}
+                  className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
+                >
+                  <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
+                    {data.icon}
+                  </span>
+                  <span className="text-sm font-medium text-gray-200">
+                    {data.name}
+                  </span>
+                </div>
+              </Reveal>
             ))}
           </div>
           {/* Backend  */}
@@ -215,18 +219,20 @@ const Skills = () => {
           </h4>
           <div className="flex flex-wrap gap-2">
             {Backend.map((data) => (
-              <div
-                key={data.name}
-                title={data.name}
-                className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
-              >
-                <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
-                  {data.icon}
-                </span>
-                <span className="text-sm font-medium text-gray-200">
-                  {data.name}
-                </span>
-              </div>
+              <Reveal stagger={0.08}>
+                <div
+                  key={data.name}
+                  title={data.name}
+                  className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
+                >
+                  <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
+                    {data.icon}
+                  </span>
+                  <span className="text-sm font-medium text-gray-200">
+                    {data.name}
+                  </span>
+                </div>
+              </Reveal>
             ))}
           </div>
 
@@ -237,18 +243,20 @@ const Skills = () => {
           </h4>
           <div className="flex flex-wrap gap-2">
             {Tools.map((data) => (
-              <div
-                key={data.name}
-                title={data.name}
-                className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
-              >
-                <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
-                  {data.icon}
-                </span>
-                <span className="text-sm font-medium text-gray-200">
-                  {data.name}
-                </span>
-              </div>
+              <Reveal stagger={0.08}>
+                <div
+                  key={data.name}
+                  title={data.name}
+                  className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
+                >
+                  <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
+                    {data.icon}
+                  </span>
+                  <span className="text-sm font-medium text-gray-200">
+                    {data.name}
+                  </span>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>

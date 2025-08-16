@@ -5,7 +5,38 @@ body {
   overflow-x: hidden;
   background-color: #0a0a0a;
   color: #ffffff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 html {
   scroll-behavior: smooth;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px; /* Width of vertical scrollbar */
+  height: 10px; /* Height of horizontal scrollbar */
+}
+
+/* Track (background of scrollbar) */
+::-webkit-scrollbar-track {
+  background: #0d0d0d; /* Dark/black background */
+  border-radius: 10px;
+}
+
+/* Scroll thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8000ff, #4b0082); /* Purple gradient */
+  border-radius: 10px;
+  border: 2px solid #0d0d0d; /* Creates spacing effect */
+}
+
+/* Hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #a64dff, #8000ff);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* thin / auto */
+  scrollbar-color: #8000ff #0d0d0d; /* thumb color | track color */
 }
