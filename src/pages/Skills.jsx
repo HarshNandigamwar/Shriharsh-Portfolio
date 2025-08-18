@@ -10,7 +10,6 @@ import {
   SiFirebase,
   SiC,
 } from "react-icons/si";
-import { DiJava, DiPython } from "react-icons/di";
 import { BsBootstrap } from "react-icons/bs";
 import { IoLogoJavascript } from "react-icons/io";
 import {
@@ -42,7 +41,7 @@ const Skills = () => {
     },
     {
       name: "C",
-      icon: <SiC color="#1572B6" className="h-6 w-6" />,
+      icon: <img src="https://skillicons.dev/icons?i=c" className="h-8 w-8" />,
     },
     {
       name: "C++",
@@ -50,11 +49,13 @@ const Skills = () => {
     },
     {
       name: "Python",
-      icon: <DiPython color="#306998" className="h-6 w-6" />,
+      icon: <img src="https://skillicons.dev/icons?i=py" className="h-8 w-8" />,
     },
     {
       name: "Java",
-      icon: <DiJava color="#EA2D" className="h-6 w-6" />,
+      icon: (
+        <img src="https://skillicons.dev/icons?i=java" className="h-8 w-8" />
+      ),
     },
   ];
   let Frontend = [
