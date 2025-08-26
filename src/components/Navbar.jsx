@@ -4,11 +4,11 @@ import MobileNav from "./MobileNav";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  function CloseNav() {
-    setTimeout(() => {
-      setIsMenuOpen(false);
-    }, 3000);
-  }
+  // function CloseNav() {
+  //   setTimeout(() => {
+  //     setIsMenuOpen(false);
+  //   }, 3000);
+  // }
 
   let logo = "<Shriharsh/>";
   let sections = [
@@ -51,10 +51,7 @@ const Navbar = () => {
           {isMenuOpen ? (
             <BiX className="w-6 h-6 text-white transition-transform duration-200 transform rotate-0 hover:rotate-90" />
           ) : (
-            <BiMenu
-              className="w-6 h-6 text-white transition-transform duration-200 transform hover:scale-110"
-              onClick={CloseNav}
-            />
+            <BiMenu className="w-6 h-6 text-white transition-transform duration-200 transform hover:scale-110" />
           )}
         </button>
       </nav>

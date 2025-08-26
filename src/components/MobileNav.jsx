@@ -23,9 +23,6 @@ const MobileNav = () => {
                 </a>
               ))}
             </div>
-            <span className="text-gray-700 flex items-center justify-center">
-              Menu close in 3 second...
-            </span>
           </div>
         </div>
       </div>
