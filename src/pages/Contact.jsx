@@ -120,6 +120,12 @@ const Contact = () => {
           <p className="inline-block px-4 py-2 text-[13px] text-[#A1A1AA] bg-[#141414] rounded-sm ">
             💬 I typically respond within 30 Minutes!
           </p>
+          <p className="inline-block px-4 py-2 text-[13px] text-[#A1A1AA] bg-[#141414] rounded-sm ">
+            💌 nandigamwarharsh@gmail.com
+          </p>
+          <p className="inline-block px-4 py-2 text-[13px] text-[#A1A1AA] bg-[#141414] rounded-sm ">
+            💬 I typically respond within 30 Minutes!
+          </p>
         </div>
       </div>
     </div>
