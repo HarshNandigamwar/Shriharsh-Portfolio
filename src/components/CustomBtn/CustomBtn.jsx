@@ -4,7 +4,7 @@ const CustomBtn = () => {
   return (
     <div className="mainBTN">
       <button className="btn-53">
-        <div className="original">Resume </div>
+        <div className="original">Shriharsh .CV@latest</div>
         <div className="letters">
           <span>D</span>
           <span>o</span>
