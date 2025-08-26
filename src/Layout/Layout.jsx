@@ -6,6 +6,7 @@ import Skills from "../pages/Skills";
 import Project from "../pages/Projects";
 import Contact from "../pages/Contact";
 import About from "../pages/About";
+import GithubChart from "../components/GithubChart";
 
 const Layout = () => {
   return (
@@ -19,6 +20,8 @@ const Layout = () => {
         <Skills />
         <hr className="w-full border-purple-300/10 mt-10" />
         <Project />
+        <hr className="w-full border-purple-300/10 mt-10" />
+        <GithubChart/>
         <hr className="w-full border-purple-300/10 mt-10" />
         <Contact />
         <hr className="w-full border-purple-300/10 mt-10" />
