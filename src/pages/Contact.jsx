@@ -89,6 +89,17 @@ const Contact = () => {
               children={"Send Message"}
             />
 
+            {/* mail and phone  */}
+            <p className="inline-block px-4 py-2 text-[13px] text-[#A1A1AA] bg-[#141414] rounded-sm ">
+              💬 I typically respond within 30 Minutes!
+            </p>
+            <p className="inline-block px-4 py-2 text-[13px] text-[#A1A1AA] bg-[#141414] rounded-sm mt-4 ">
+              💌 nandigamwarharsh@gmail.com
+            </p>
+            <p className="inline-block px-4 py-2 text-[13px] text-[#A1A1AA] bg-[#141414] rounded-sm mt-4 mb-4 ">
+              📞 +91 7517246260
+            </p>
+            {/* Social media link  */}
             <div className="flex gap-[10px]">
               <a
                 href="https://www.linkedin.com/in/shriharsh-nandigamwar-b106702b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
@@ -116,16 +127,6 @@ const Contact = () => {
               </a>
             </div>
           </form>
-
-          <p className="inline-block px-4 py-2 text-[13px] text-[#A1A1AA] bg-[#141414] rounded-sm ">
-            💬 I typically respond within 30 Minutes!
-          </p>
-          <p className="inline-block px-4 py-2 text-[13px] text-[#A1A1AA] bg-[#141414] rounded-sm ">
-            💌 nandigamwarharsh@gmail.com
-          </p>
-          <p className="inline-block px-4 py-2 text-[13px] text-[#A1A1AA] bg-[#141414] rounded-sm ">
-            💬 I typically respond within 30 Minutes!
-          </p>
         </div>
       </div>
     </div>
