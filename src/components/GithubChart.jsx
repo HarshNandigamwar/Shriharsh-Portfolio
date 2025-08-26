@@ -36,7 +36,7 @@ const GithubChart = () => {
           </div>
 
           <a href="https://github.com/HarshNandigamwar" className="mt-4">
-            <button className="flex items-center gap-2 cursor-pointer w-40 h-8 border py-2 border-gray-500/30 rounded-[3px] justify-center">
+            <button className="flex items-center gap-2 cursor-pointer w-50 h-8 border py-2 border-gray-500/30 rounded-[3px] justify-center">
               {" "}
               <FaGithub /> View Github Profile
             </button>
