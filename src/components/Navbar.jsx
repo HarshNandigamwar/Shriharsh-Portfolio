@@ -4,12 +4,6 @@ import MobileNav from "./MobileNav";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // function CloseNav() {
-  //   setTimeout(() => {
-  //     setIsMenuOpen(false);
-  //   }, 3000);
-  // }
-
   let logo = "<Shriharsh/>";
   let sections = [
     { id: "intro", label: "Intro", link: "#intro" },
