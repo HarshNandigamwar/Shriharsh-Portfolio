@@ -6,11 +6,13 @@ import SigmaAIImg from "../assets/sigma ai.jpg";
 import CC from "../assets/currency converter .jpg";
 import WeatherImg from "../assets/weather app.jpg";
 import Ecom from "../assets/SigmaMart.png";
+import BookImg from '../assets/bookstore.png'
 const Projects = () => {
   let SigmaAI = ["HTML", "Tailwind CSS", "JavaScript", "Gemini API"];
   let Cc = ["HTML", "Tailwind CSS", "JavaScript", "Currency API"];
   let weather = ["HTML", "Tailwind CSS", "JavaScript", "Weather API"];
   let SigmaMart = ["React.js", "Tailwind CSS", "DummyJSON API"];
+  let BookStore = ["React.js", "Tailwind CSS", "Firebase"];
 
   return (
     <section
@@ -74,6 +76,62 @@ const Projects = () => {
                         {/* Live Demo  */}
                         <a
                           href="https://sigma-ai-by-shriharsh.netlify.app/"
+                          className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2"
+                          title="Live Demo"
+                        >
+                          <BiExport className="h-5 w-5" />{" "}
+                          <span>Live Demo</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+          {/* BookStore   */}
+          <Reveal>
+            <div className="max-w-[670px] flex overflow-hidden rounded-sm border border-purple-500/50 transition-all duration-300 ease-in-out hover:border-purple-500 w-full cursor-pointer group bg-[#1e1e1e]/20">
+              <div className="flex sm:flex-row flex-col w-full">
+                <div className="relative h-[240px] w-full sm:w-[40%] overflow-hidden flex flex-col items-center justify-center">
+                  <img
+                    src={BookImg}
+                    alt="Sigma AI"
+                    className="object-cover p-1 rounded-sm"
+                  />
+                </div>
+                <div className="w-full sm:w-[60%] flex flex-col p-5 space-y-3">
+                  <h3 className="text-purple-400 text-xl font-mono font-bold">
+                    BookStore
+                  </h3>
+                  <p className="text-[#A1A1AA] text-sm font-normal line-clamp-4">
+                  A full-stack Bookstore application built with React, Tailwind CSS, Firebase, and Cloudinary. This project allows users to sign up, log in (Email/Google), add books with images, view a responsive grid of books, and download book covers.
+                  </p>
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {BookStore.map((tag) => (
+                      <span
+                        key={tag}
+                        title={tag}
+                        className="px-4 py-2 text-[12px] rounded-sm font-medium bg-[#0a0a0a] border border-gray-500/10 text-white"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="pt-2 flex justify-between items-center">
+                    <div className="flex gap-2">
+                      <div className="relative px-1 py-1 text-xs font-medium text-gray-300/70 group-hover:text-gray-300/90 transition-all duration-300 flex items-center gap-3">
+                        {/* GitHub   */}
+                        <a
+                          href="https://github.com/HarshNandigamwar/BookStore_WebApp"
+                          className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center"
+                          title="Source Code"
+                        >
+                          <BsGithub className="h-5 w-5" />
+                        </a>
+                        {/* Live Demo  */}
+                        <a
+                          href="https://bookstoreshriharshnandigamwar.netlify.app/"
                           className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2"
                           title="Live Demo"
                         >
