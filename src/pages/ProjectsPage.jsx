@@ -8,9 +8,9 @@ import Ecom1 from "../assets/Ecom/Ecom1.png";
 import Ecom2 from "../assets/Ecom/Ecom2.png";
 import Ecom3 from "../assets/Ecom/Ecom3.png";
 // Weather app
-import Weather1 from "../assets/weather/weather1.png";
-import Weather2 from "../assets/weather/weather2.png";
-import Weather3 from "../assets/weather/weather3.jpg";
+import Weather1 from "../assets/Weather/weather1.png";
+import Weather2 from "../assets/Weather/weather2.png";
+import Weather3 from "../assets/Weather/weather3.jpg";
 //Currency Converter
 import CurrencyConverter1 from "../assets/Currency Converter/Currency Converter1.jpg";
 import CurrencyConverter2 from "../assets/Currency Converter/Currency Converter2.png";
