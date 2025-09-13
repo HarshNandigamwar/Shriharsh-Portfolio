@@ -5,7 +5,7 @@ import Reveal from "../utils/Reveal.jsx";
 const About = () => {
   return (
     <section
-      id="about"
+      id="About"
       className="max-w-[670px] pt-10 flex flex-col items-start justify-start gap-y-8 "
     >
       <div className="flex flex-col items-start justify-start gap-5">

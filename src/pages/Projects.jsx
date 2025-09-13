@@ -6,7 +6,7 @@ import SigmaAIImg from "../assets/sigma ai.jpg";
 import CC from "../assets/currency converter .jpg";
 import WeatherImg from "../assets/weather app.jpg";
 import Ecom from "../assets/SigmaMart.png";
-import BookImg from '../assets/bookstore.png'
+import BookImg from "../assets/bookstore.png";
 const Projects = () => {
   let SigmaAI = ["HTML", "Tailwind CSS", "JavaScript", "Gemini API"];
   let Cc = ["HTML", "Tailwind CSS", "JavaScript", "Currency API"];
@@ -68,16 +68,19 @@ const Projects = () => {
                         {/* GitHub   */}
                         <a
                           href="https://github.com/HarshNandigamwar/Sigma-AI"
-                          className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center"
+                          className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center transition-all duration-300 hover:scale-102"
                           title="Source Code"
+                          target="_blank"
                         >
                           <BsGithub className="h-5 w-5" />
                         </a>
                         {/* Live Demo  */}
                         <a
                           href="https://sigma-ai-by-shriharsh.netlify.app/"
-                          className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2"
+                          met
+                          className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2 transition-all duration-300 hover:scale-102"
                           title="Live Demo"
+                          target="_blank"
                         >
                           <BiExport className="h-5 w-5" />{" "}
                           <span>Live Demo</span>
@@ -105,7 +108,11 @@ const Projects = () => {
                     BookStore
                   </h3>
                   <p className="text-[#A1A1AA] text-sm font-normal line-clamp-4">
-                  A full-stack Bookstore application built with React, Tailwind CSS, Firebase, and Cloudinary. This project allows users to sign up, log in (Email/Google), add books with images, view a responsive grid of books, and download book covers.
+                    A full-stack Bookstore application built with React,
+                    Tailwind CSS, Firebase, and Cloudinary. This project allows
+                    users to sign up, log in (Email/Google), add books with
+                    images, view a responsive grid of books, and download book
+                    covers.
                   </p>
                   <div className="flex flex-wrap gap-2 pt-2">
                     {BookStore.map((tag) => (
@@ -124,16 +131,18 @@ const Projects = () => {
                         {/* GitHub   */}
                         <a
                           href="https://github.com/HarshNandigamwar/BookStore_WebApp"
-                          className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center"
+                          className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center transition-all duration-300 hover:scale-102"
                           title="Source Code"
+                          target="_blank"
                         >
                           <BsGithub className="h-5 w-5" />
                         </a>
                         {/* Live Demo  */}
                         <a
                           href="https://bookstoreshriharshnandigamwar.netlify.app/"
-                          className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2"
+                          className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2 transition-all duration-300 hover:scale-102"
                           title="Live Demo"
+                          target="_blank"
                         >
                           <BiExport className="h-5 w-5" />{" "}
                           <span>Live Demo</span>
@@ -181,16 +190,18 @@ const Projects = () => {
                         {/* GitHub   */}
                         <a
                           href="https://github.com/HarshNandigamwar/Currency-Converter"
-                          className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center"
+                          className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center transition-all duration-300 hover:scale-102"
                           title="Source Code"
+                          target="_blank"
                         >
                           <BsGithub className="h-5 w-5" />
                         </a>
                         {/* Live Demo  */}
                         <a
                           href="https://shriharsh-currency-converter.netlify.app/"
-                          className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2"
+                          className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2 transition-all duration-300 hover:scale-102"
                           title="Live Demo"
+                          target="_blank"
                         >
                           <BiExport className="h-5 w-5" />{" "}
                           <span>Live Demo</span>
@@ -238,16 +249,18 @@ const Projects = () => {
                         {/* GitHub   */}
                         <a
                           href="https://github.com/HarshNandigamwar/Weather-App"
-                          className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center"
+                          className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center transition-all duration-300 hover:scale-102"
                           title="Source Code"
+                          target="_blank"
                         >
                           <BsGithub className="h-5 w-5" />
                         </a>
                         {/* Live Demo  */}
                         <a
                           href="https://weather-app-shriharsh.netlify.app/"
-                          className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2"
+                          className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2 transition-all duration-300 hover:scale-102"
                           title="Live Demo"
+                          target="_blank"
                         >
                           <BiExport className="h-5 w-5" />{" "}
                           <span>Live Demo</span>
@@ -296,16 +309,18 @@ const Projects = () => {
                         {/* GitHub   */}
                         <a
                           href="https://github.com/HarshNandigamwar/Sigma-mart"
-                          className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center"
+                          className="cursor-pointer w-8 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center transition-all duration-300 hover:scale-102"
                           title="Source Code"
+                          target="_blank"
                         >
                           <BsGithub className="h-5 w-5" />
                         </a>
                         {/* Live Demo  */}
                         <a
                           href="https://sigma-mart.vercel.app/"
-                          className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2"
+                          className="cursor-pointer w-30 h-8 border border-gray-500/10 rounded-[3px] flex items-center justify-center gap-2 transition-all duration-300 hover:scale-102"
                           title="Live Demo"
+                          target="_blank"
                         >
                           <BiExport className="h-5 w-5" />{" "}
                           <span>Live Demo</span>
