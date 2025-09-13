@@ -177,7 +177,7 @@ const Skills = () => {
                 <div
                   key={data.name}
                   title={data.name}
-                  className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105"
+                  className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
                 >
                   <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
                     {data.icon}
