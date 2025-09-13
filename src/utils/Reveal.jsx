@@ -1,71 +1,52 @@
-import { useRef, useEffect } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+import { motion } from "framer-motion";
 
 export default function Reveal({
   children,
   once = false,
-  y = 40, // smaller offset for faster look
-  duration = 0.1, // quicker animation
+  y = 40,
+  duration = 0.1,
   delay = 0.1,
-  ease = "power2.out", // faster easing curve
-  stagger = 0.1, // quick stagger
+  ease = "easeOut",
+  stagger = 0.1,
 }) {
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const el = containerRef.current;
-    const targets = gsap.utils.toArray(el.children);
-
-    gsap.set(targets, {
-      opacity: 0,
-      y,
-      willChange: "opacity, transform",
-    });
-
-    const trigger = ScrollTrigger.create({
-      trigger: el,
-      start: "top 85%",
-      end: "bottom 10%",
-      once,
-      onEnter: () => {
-        gsap.to(targets, {
-          opacity: 1,
-          y: 0,
-          duration,
-          delay,
-          ease,
-          stagger,
-        });
-      },
-      onEnterBack: () => {
-        if (!once) {
-          gsap.to(targets, {
-            opacity: 1,
-            y: 0,
-            duration,
-            delay,
-            ease,
-            stagger,
-          });
-        }
-      },
-      onLeave: () => {
-        if (!once) {
-          gsap.set(targets, { opacity: 0, y });
-        }
-      },
-      onLeaveBack: () => {
-        if (!once) {
-          gsap.set(targets, { opacity: 0, y });
-        }
-      },
-    });
-
-    return () => trigger.kill();
-  }, [once, y, duration, delay, ease, stagger]);
-
-  return <div ref={containerRef}>{children}</div>;
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once, amount: 0.15 }} // amount ~ start position
+      transition={{ staggerChildren: stagger }}
+    >
+      {Array.isArray(children)
+        ? children.map((child, i) => (
+            <motion.div
+              key={i}
+              variants={{
+                hidden: { opacity: 0, y },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration, delay, ease },
+                },
+              }}
+            >
+              {child}
+            </motion.div>
+          ))
+        : (
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration, delay, ease },
+              },
+            }}
+          >
+            {children}
+          </motion.div>
+        )}
+    </motion.div>
+  );
 }

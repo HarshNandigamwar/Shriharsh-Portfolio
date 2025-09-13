@@ -3,10 +3,10 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Home from "../pages/Home";
 import Skills from "../pages/Skills";
-import Project from "../pages/Projects";
 import Contact from "../pages/Contact";
 import About from "../pages/About";
 import GithubChart from "../components/GithubChart";
+import Projects from "../pages/ProjectsPage";
 
 const Layout = () => {
   return (
@@ -19,9 +19,9 @@ const Layout = () => {
         <hr className="w-full border-purple-300/10 mt-10" />
         <Skills />
         <hr className="w-full border-purple-300/10 mt-10" />
-        <Project />
+        <Projects />
         <hr className="w-full border-purple-300/10 mt-10" />
-        <GithubChart/>
+        <GithubChart />
         <hr className="w-full border-purple-300/10 mt-10" />
         <Contact />
         <hr className="w-full border-purple-300/10 mt-10" />
