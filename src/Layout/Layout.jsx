@@ -12,7 +12,7 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <main className="flex flex-col items-center pl-4 overflow-x-hidden ">
+      <main className="flex flex-col items-center pl-2 overflow-x-hidden ">
         <Home />
         <About />
         <Skills />
