@@ -8,7 +8,6 @@ import {
   SiMongodb,
   SiRedux,
   SiFirebase,
-  SiC,
 } from "react-icons/si";
 import { BsBootstrap } from "react-icons/bs";
 import { IoLogoJavascript } from "react-icons/io";
@@ -152,16 +151,15 @@ const Skills = () => {
   return (
     <section
       id="skill"
-      className=" max-w-[670px] flex flex-col items-start justify-start gap-5 mt-10 "
+      className="w-full flex flex-col items-center ml-10 gap-5 mt-15 lg:ml-35 "
     >
-      <div className="flex flex-col items-start justify-start gap-5">
+      <div className="flex flex-col items-center justify-center gap-5">
         <div className="space-y-2">
-          <h3 className="text-3xl font-mono font-bold">
-            <span className="text-purple-300">Skills I have</span>
+          <h3 className="text-3xl font-bold">
+            <span className="text-[35px] md:text-[40px] font-bold aladin-regular text-purple-500">
+              Skills & Technologies
+            </span>
           </h3>
-          <p className="text-[#A1A1AA] text-sm">
-            Technologies and tools I&apos;ve worked with and enjoy using.
-          </p>
         </div>
       </div>
       <div className="w-full space-y-5">
@@ -169,20 +167,20 @@ const Skills = () => {
           {/* Languages  */}
           <h4 className="text-lg font-medium text-white flex items-center gap-2">
             <BlinkDot />
-            <span className="text-2xl">Languages</span>
+            <span className="text-4xl font-bold">Languages</span>
           </h4>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3 lg:gap-5">
             {Language.map((data) => (
               <Reveal stagger={0.08}>
                 <div
                   key={data.name}
                   title={data.name}
-                  className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
+                  className="inline-flex items-center gap-3 rounded-xl bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
                 >
                   <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
                     {data.icon}
                   </span>
-                  <span className="text-sm font-medium text-gray-200">
+                  <span className="text-sm lg:text-2xl font-bold text-gray-200">
                     {data.name}
                   </span>
                 </div>
@@ -190,46 +188,47 @@ const Skills = () => {
             ))}
           </div>
 
-          {/* Frontend */}
-          <h4 className="text-lg font-medium text-white flex items-center gap-2">
+          {/* Libraries & Frameworks*/}
+          <h4 className="text-lg font-medium text-white flex items-center gap-2 mt-10">
             <BlinkDot />
-            <span className="text-2xl">Libraries & Frameworks</span>
+            <span className="text-4xl font-bold">Libraries & Frameworks</span>
           </h4>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3 lg:gap-5">
             {Frontend.map((data) => (
               <Reveal stagger={0.08}>
                 <div
                   key={data.name}
                   title={data.name}
-                  className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
+                  className="inline-flex items-center gap-3 rounded-xl bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
                 >
                   <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
                     {data.icon}
                   </span>
-                  <span className="text-sm font-medium text-gray-200">
+                  <span className="text-sm lg:text-2xl font-bold text-gray-200">
                     {data.name}
                   </span>
                 </div>
               </Reveal>
             ))}
           </div>
+
           {/* Backend  */}
-          <h4 className="text-lg font-medium text-white flex items-center gap-2">
+          <h4 className="text-lg font-medium text-white flex items-center gap-2 mt-10">
             <BlinkDot />
-            <span className="text-2xl">Backend</span>
+            <span className="text-4xl font-bold">Backend</span>
           </h4>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3 lg:gap-5">
             {Backend.map((data) => (
               <Reveal stagger={0.08}>
                 <div
                   key={data.name}
                   title={data.name}
-                  className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
+                  className="inline-flex items-center gap-3 rounded-xl bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
                 >
                   <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
                     {data.icon}
                   </span>
-                  <span className="text-sm font-medium text-gray-200">
+                  <span className="text-sm lg:text-2xl font-bold text-gray-200">
                     {data.name}
                   </span>
                 </div>
@@ -238,22 +237,22 @@ const Skills = () => {
           </div>
 
           {/* Tools   */}
-          <h4 className="text-lg font-medium text-[#08090a] dark:text-white flex items-center gap-2">
+          <h4 className="text-lg font-medium text-white flex items-center gap-2 mt-10">
             <BlinkDot />
-            <span className="text-2xl">Tools</span>
+            <span className="text-4xl font-bold">Tools</span>
           </h4>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-3 lg:gap-5">
             {Tools.map((data) => (
               <Reveal stagger={0.08}>
                 <div
                   key={data.name}
                   title={data.name}
-                  className="inline-flex items-center gap-3 rounded-sm bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
+                  className="inline-flex items-center gap-3 rounded-xl bg-[#0a0a0a] border border-purple-500/50 px-3 py-1.5 transition-all duration-300 hover:border-purple-500 hover:bg-[#111111] cursor-pointer hover:scale-105 "
                 >
                   <span className="flex items-center justify-center size-10 p-1 rounded-sm bg-[#191a1a] text-xs font-medium text-slate-200">
                     {data.icon}
                   </span>
-                  <span className="text-sm font-medium text-gray-200">
+                  <span className="text-sm lg:text-2xl font-bold text-gray-200">
                     {data.name}
                   </span>
                 </div>

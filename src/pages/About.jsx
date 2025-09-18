@@ -1,54 +1,115 @@
-import React, { useEffect } from "react";
-import BlinkDot from "../components/BlinkDot";
-import Reveal from "../utils/Reveal.jsx";
+import React from "react";
+import MotionWrapper from "../utils/MotionWrapper";
 
 const About = () => {
   return (
-    <section
+    <div
       id="About"
-      className="max-w-[670px] pt-10 flex flex-col items-start justify-start gap-y-8 "
+      className="w-full h-auto overflow-x-hidden overflow-y-hidden flex gap-5 flex-col md:flex-row items-center justify-center px-[50px] py-[10vh] pb-[50px] relative mt-0 md:mt-[50px]"
     >
-      <div className="flex flex-col items-start justify-start gap-5">
-        <div className="space-y-2">
-          <h3 className="text-3xl font-mono font-bold">
-            <span className="text-purple-300">About Me</span>
-          </h3>
+      <div className=" flex flex-col-reverse md:flex-row gap-5 md:gap-0 xl:gap-5 lg:h-[75vh] ">
+        <div className="flex flex-col gap-5 w-full px-2 md:w-[48vw] xl:w-[43vw] ">
+          {/* Experience */}
+          <MotionWrapper direction="-x">
+            <div className="flex flex-col gap-[10px] w-[100%] p-[15px] rounded-[15px] border border-purple-500 ">
+              <h1 className="text-[35px] md:text-[40px] font-bold aladin-regular text-purple-500">
+                Experience
+              </h1>
+
+              <h2 className="text-[19px] text-purple-500 russo-one-regular">
+                SkillCraft Technology
+                <p className="text-[17px]">Feb 2025 – March 2025</p>
+              </h2>
+
+              <p className="text-[16px] md:text-[18px] text-justify">
+                During my internship at{" "}
+                <span className="font-bold">SkillCraft Technology</span>, I was
+                recognized for my strong work ethic, professionalism, and
+                dedication to web development. I consistently exceeded
+                expectations, demonstrated problem-solving skills, and delivered
+                quality results. My mentor appreciated my passion for learning
+                and ability to handle complex projects effectively.
+              </p>
+            </div>
+          </MotionWrapper>
+
+          {/* Certifications */}
+          <MotionWrapper direction="y">
+            <div className=" w-[100%] p-[15px] rounded-[15px] border border-purple-500 flex flex-col gap-[10px]  ">
+              <h1 className="text-[35px] md:text-[40px] font-bold aladin-regular text-purple-500">
+                Certifications
+              </h1>
+              <div className="text-[18px] leading-[30px]">
+                <h3>
+                  <b className="text-purple-300">IBM:</b> Web Development
+                  Fundamentals
+                </h3>
+                <h3>
+                  <b className="text-purple-300">AWS:</b> Solutions Architecture
+                  job Simulation
+                </h3>
+                <h3>
+                  <b className="text-purple-300">Accenture :</b> Developer &
+                  Technology Job Simulation
+                </h3>
+              </div>
+            </div>
+          </MotionWrapper>
+        </div>
+
+        <div className="w-[100vw] md:w-[48vw] xl:w-[43vw] h-auto px-2 flex flex-col gap-5 ">
+          {/* About   */}
+          <MotionWrapper direction="x">
+            <div className="w-[100%] p-[15px] rounded-[15px] border border-purple-500 flex flex-col gap-[10px]">
+              <h1 className="text-[35px] md:text-[40px] font-bold aladin-regular text-purple-500">
+                About Me
+              </h1>
+
+              <p className="text-[16px] md:text-[18px] text-justify">
+                I’m <span className="font-bold">Shriharsh Nandigamwar</span>, a
+                dedicated Full Stack Developer with a strong passion for
+                building fast, functional, and visually engaging web
+                applications.
+              </p>
+
+              <p className="text-[16px] md:text-[18px] text-justify">
+                I enjoy working across the modern web stack from creating clean,
+                responsive user interfaces with{" "}
+                <span className="text-purple-500 font-semibold">React.js</span>{" "}
+                to developing secure and scalable backend systems using{" "}
+                <span className="text-purple-500 font-semibold">Node.js</span>,{" "}
+                <span className="text-purple-500 font-semibold">Express</span>,
+                and{" "}
+                <span className="text-purple-500 font-semibold">MongoDB</span>.
+              </p>
+
+              <p className="text-[16px] md:text-[18px] text-justify">
+                I have a keen interest in building real-world projects, solving
+                meaningful problems through code, and collaborating with other
+                developers. I also believe in continuous learning to stay up to
+                date with the latest technologies and best practices in the
+                ever-changing tech world.
+              </p>
+            </div>
+          </MotionWrapper>
+
+          {/* Education */}
+          <MotionWrapper direction="y">
+            <div className=" w-[100%] p-[15px] rounded-[15px] border border-purple-500 flex flex-col gap-[10px]  ">
+              <h1 className="text-[35px] md:text-[40px] font-bold aladin-regular text-purple-500">
+                Education
+              </h1>
+              <div className="text-[15px] md:text-[18px] leading-[30px]">
+                <p className="font-semibold">
+                  Bachelor of Science in Information Technology
+                </p>
+                <p>Gondwana University, Gadchiroli</p>
+              </div>
+            </div>
+          </MotionWrapper>
         </div>
       </div>
-      <Reveal>
-        <div className="p-6 rounded-sm border border-purple-500/50 bg-[#1e1e1e]/20 transition-all duration-300 w-full">
-          <div className="space-y-6">
-            <div className="space-y-4">
-              <h4 className="text-lg font-medium text-white flex items-center gap-2">
-                <BlinkDot />
-                Who I Am
-              </h4>
-              <p className="text-sm text-white leading-relaxed">
-                I&apos;m a passionate full-stack developer with a keen eye for
-                design and a love for creating seamless user experiences.
-              </p>
-              <p className="text-sm text-[#A1A1AA] leading-relaxed">
-                My approach combines technical expertise with creative
-                problem-solving, ensuring that every project I work on is not
-                only functional but also visually appealing and user-friendly.
-              </p>
-            </div>
-            <div className="space-y-4">
-              <p className="text-sm text-[#A1A1AA] leading-relaxed">
-                With expertise across the full web development stack, I
-                specialize in building clean and intuitive front-end interfaces
-                using React.js, while also developing scalable and secure
-                back-end solutions with Node.js, Express, and MongoDB.
-              </p>
-              <p className="text-sm text-[#A1A1AA] leading-relaxed">
-                I&apos;m also passionate about mentoring and sharing knowledge.
-                I regularly contribute to open-source projects.
-              </p>
-            </div>
-          </div>
-        </div>
-      </Reveal>
-    </section>
+    </div>
   );
 };
 

@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import LoadingButton from "../components/LoadingButton";
 import { toast } from "react-toastify";
+import { motion } from "framer-motion";
+import Reveal from "../utils/Reveal";
 const Contact = () => {
   const form = useRef();
   const [result, setResult] = React.useState("");
@@ -35,21 +37,18 @@ const Contact = () => {
   };
 
   return (
-    <div
-      id="contact"
-      className="max-w-[670px] py-10 flex flex-col items-start gap-y-10 "
-    >
+    <div id="contact" className="py-10 flex flex-col items-center gap-y-10 ">
       <div className="space-y-2">
-        <h3 className="text-3xl font-mono font-bold text-purple-300">
-          Let&apos;s <span className="text-purple-300">Connect</span>
+        <h3 className="text-[35px] md:text-[40px] font-bold aladin-regular text-purple-500 text-center">
+          Let&apos;s Connect
         </h3>
-        <p className="text-[#A1A1AA] text-sm">
+        <p className="text-[#A1A1AA] text-sm text-center">
           I&apos;m always excited to collaborate on interesting projects or just
           have a great tech conversation!
         </p>
       </div>
 
-      <div className="w-full p-3 rounded-sm border bg-[#1e1e1e]/20 border-purple-500/50 hover:border-purple-500 transition-all duration-300">
+      <div className="w-full p-3 rounded-xl border border-purple-500 ">
         <div className="flex flex-col items-center justify-center gap-4">
           <form
             className="contactForm m-[1.5rem] flex flex-col items-center justify-center w-[100%] lg:w-[600px]  "
@@ -58,16 +57,17 @@ const Contact = () => {
             <input
               id="name"
               type="text"
-              className="name font-medium w-full max-w-[40rem] m-[0.5rem] p-[10px] text-white  rounded-[0.5rem] bg-black/30 border border-gray-500/10 hover:border-gray-500/50 transition-all duration-300  "
-              placeholder="name"
+              className="name font-medium w-full max-w-[40rem] m-[0.5rem] p-[10px] text-white  rounded-xl bg-black/30 border border-purple-500 hover:border-gray-500/50 transition-all duration-300 placeholder-purple-500"
+              placeholder="Name"
               name="name"
               required
             />
+
             <input
               id="email"
               type="email"
-              className="email font-medium w-full max-w-[40rem] m-[0.5rem] p-[10px] text-white  rounded-[0.5rem] bg-black/30 border border-gray-500/10 hover:border-gray-500/50 transition-all duration-300"
-              placeholder="email"
+              className="email font-medium w-full max-w-[40rem] m-[0.5rem] p-[10px] text-white  rounded-xl bg-black/30 border border-purple-500 hover:border-gray-500/50 transition-all duration-300 placeholder-purple-500"
+              placeholder="Email"
               name="email"
               required
             />
@@ -75,9 +75,9 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              placeholder="message"
+              placeholder="Message"
               rows={5}
-              className="msg font-medium w-full max-w-[40rem] m-[0.5rem] p-[10px] text-white  rounded-[0.5rem] bg-black/30 border border-gray-500/10 hover:border-gray-500/50 transition-all duration-300"
+              className="msg font-medium w-full max-w-[40rem] m-[0.5rem] p-[10px] text-white  rounded-xl bg-black/30 border border-purple-500 hover:border-gray-500/50 transition-all duration-300 placeholder-purple-500"
               required
             ></textarea>
 
@@ -89,42 +89,53 @@ const Contact = () => {
               children={"Send Message"}
             />
 
-            {/* mail and phone  */}
+            {/* mail */}
             <p className="inline-block px-4 py-2 text-[13px] text-[#A1A1AA] bg-[#141414] rounded-sm ">
               💬 I typically respond within 30 Minutes!
             </p>
-            <p className="inline-block px-4 py-2 text-[13px] text-[#A1A1AA] bg-[#141414] rounded-sm mt-4 ">
-              💌 nandigamwarharsh@gmail.com
-            </p>
             <p className="inline-block px-4 py-2 text-[13px] text-[#A1A1AA] bg-[#141414] rounded-sm mt-4 mb-4 ">
-              📞 +91 7517246260
+              <a href="mailto:nandigamwarharsh@gmail.com" target="_blank">
+                💌 nandigamwarharsh@gmail.com
+              </a>
             </p>
             {/* Social media link  */}
             <div className="flex gap-[10px]">
-              <a
+              {/* Linkedin  */}
+              <motion.a
                 href="https://www.linkedin.com/in/shriharsh-nandigamwar-b106702b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                 target="_blank"
+                whileTap={{ scale: 0.9 }}
               >
                 <img
                   src="https://skillicons.dev/icons?i=linkedin"
                   alt="linkedin"
-                  className="h-9 w-9"
+                  className="h-11 w-11"
                 />
-              </a>
-              <a href="https://github.com/HarshNandigamwar" target="_blank">
+              </motion.a>
+              {/* GitHub   */}
+              <motion.a
+                href="https://github.com/HarshNandigamwar"
+                target="_blank"
+                whileTap={{ scale: 0.9 }}
+              >
                 <img
                   src="https://skillicons.dev/icons?i=github"
                   alt="Github"
-                  className="h-9 w-9"
+                  className="h-11 w-11"
                 />
-              </a>
-              <a href="https://x.com/Harsh477011?s=09" target="_blank">
+              </motion.a>
+              {/* X */}
+              <motion.a
+                href="https://x.com/Harsh477011?s=09"
+                target="_blank"
+                whileTap={{ scale: 0.9 }}
+              >
                 <img
                   src="https://skillicons.dev/icons?i=twitter"
-                  className="h-9 w-9"
                   alt="X"
+                  className="h-11 w-11"
                 />
-              </a>
+              </motion.a>
             </div>
           </form>
         </div>

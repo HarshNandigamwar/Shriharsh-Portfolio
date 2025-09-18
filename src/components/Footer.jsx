@@ -9,7 +9,8 @@ const Footer = () => {
         </span>
         <div className="text-[13px]">
           {" "}
-          &#169; 2025 Shriharsh Nandigamwar. All Rights Reserved.
+          &#169; {new Date().getFullYear()} Shriharsh Nandigamwar. All Rights
+          Reserved.
         </div>
       </div>
     </div>

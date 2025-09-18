@@ -98,7 +98,7 @@ function ProjectCard({ project, index }) {
 
   return (
     <motion.div
-      className="bg-[#1e1e1e]/20 rounded-2xl shadow-xl overflow-hidden border border-purple-500/50 hover:border-purple-500 flex flex-col transform-none"
+      className="bg-[#1e1e1e]/20 rounded-xl shadow-xl overflow-hidden border border-purple-500/50 hover:border-purple-500 flex flex-col transform-none"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -178,7 +178,7 @@ function ProjectCard({ project, index }) {
           >
             Live Demo
           </a>
-          <a
+          <a 
             href={project.GithubLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -195,7 +195,7 @@ function ProjectCard({ project, index }) {
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen">
+    <div id="project" className="min-h-screen">
       {/* Hero Section */}
       <section className="text-center py-16 px-4">
         <motion.h1
@@ -204,7 +204,7 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-3xl font-mono font-bold text-purple-300">
+          <h3 className="text-[35px] md:text-[40px] font-bold aladin-regular text-purple-500">
             My Projects
           </h3>
         </motion.h1>
