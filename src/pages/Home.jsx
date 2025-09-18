@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div 
       id="intro"
-      className=" h-auto md:h-screen xl:h-screen w-screen overflow-x-hidden overflow-y-hidden relative flex flex-col-reverse xl:flex-row items-center justify-center top-10 "
+      className=" h-auto md:h-screen xl:h-screen w-screen overflow-x-hidden overflow-y-hidden relative flex flex-col-reverse xl:flex-row items-center justify-center "
     >
       {/* Left Content */}
       <motion.div
