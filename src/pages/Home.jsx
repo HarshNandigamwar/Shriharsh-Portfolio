@@ -128,7 +128,7 @@ const Home = () => {
               alt="Profile"
               className=" border-2 border-purple-500
         rounded-full 
-        h-[220px] w-[220px] 
+        h-[200px] w-[200px] 
         sm:h-[250px] sm:w-[250px] 
         md:h-[300px] md:w-[300px] 
         lg:h-[400px] lg:w-[400px] 
