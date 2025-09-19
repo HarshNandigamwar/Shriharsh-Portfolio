@@ -171,7 +171,7 @@ const Skills = () => {
           </h4>
           <div className="flex flex-wrap gap-3 lg:gap-5">
             {Language.map((data) => (
-              <Reveal stagger={0.08}>
+              <Reveal stagger={0.08} >
                 <div
                   key={data.name}
                   title={data.name}

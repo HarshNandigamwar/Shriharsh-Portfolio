@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import CustomBtn from "../components/CustomBtn/CustomBtn";
 const Home = () => {
   return (
-    <div 
+    <div
       id="intro"
       className=" h-auto md:h-screen xl:h-screen w-screen overflow-x-hidden overflow-y-hidden relative flex flex-col-reverse xl:flex-row items-center justify-center "
     >
@@ -18,7 +18,7 @@ const Home = () => {
         <div className="w-full h-auto lg:w-[60vw] lg:h-full flex items-center justify-center">
           <div className="max-w-3xl text-center relative xl:top-7 px-3">
             {/* Intro */}
-            <div className="myIntroDiv">
+            <div>
               <p className="text-3xl md:text-5xl xl:text-4xl mb-2 font-extrabold">
                 Hello, I'm
               </p>
@@ -36,11 +36,10 @@ const Home = () => {
                   <span className="text-purple-500 font-bold">
                     React, JavaScript, Tailwind CSS, Node.js
                   </span>{" "}
-                  and more.
                 </span>{" "}
-                Always excited to tackle new challenges where I can create value
-                and grow as a coder. Let&apos;s connect if you&apos;ve got a
-                project that could use my skills!
+                and more. Always excited to tackle new challenges where I can
+                create value and grow as a coder. Let&apos;s connect if
+                you&apos;ve got a project that could use my skills!
               </p>
             </div>
 
@@ -121,7 +120,7 @@ const Home = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true }}
       >
-        <div className="w-full h-[40vh] lg:w-[40vw] lg:h-full flex items-center justify-center relative xl:top-7">
+        <div className="w-full h-[40vh] lg:w-[40vw] lg:h-full flex items-center justify-center relative xl:top-7 mb-[-40px] md:mb-12">
           <div className="flex justify-center w-[50vw] lg:w-[50vw] xl:w-[50vw]">
             <img
               src="/shriharsh.jpg"

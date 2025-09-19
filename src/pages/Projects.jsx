@@ -174,16 +174,16 @@ function ProjectCard({ project, index }) {
             target="_blank"
             rel="noopener noreferrer"
             title="Live Demo"
-            className="flex-1 text-center bg-purple-400 text-[#000000] py-2 px-4 rounded-[8px] border border-gray-500/10 font-medium transition-all duration-300 hover:scale-102"
+            className="flex-1 text-center bg-purple-400 text-[#000000] py-2 px-4 rounded-[8px] border border-gray-500/10 font-medium transition-all duration-150 active:scale-95 hover:scale-102"
           >
             Live Demo
           </a>
-          <a 
+          <a
             href={project.GithubLink}
             target="_blank"
             rel="noopener noreferrer"
             title="Source Code"
-            className="flex-1 text-center bg-gray-900 text-[#A1A1AA] py-2 px-4 rounded-[8px] border border-gray-500/10 font-medium transition-all duration-300 hover:scale-102"
+            className="flex-1 text-center bg-gray-900 text-[#A1A1AA] py-2 px-4 rounded-[8px] border border-gray-500/10 font-medium transition-all duration-150 active:scale-95 hover:scale-102"
           >
             GitHub
           </a>
@@ -198,7 +198,7 @@ export default function ProjectsPage() {
     <div id="project" className="min-h-screen">
       {/* Hero Section */}
       <section className="text-center py-16 px-4">
-        <motion.h1
+        <motion.div
           className="text-4xl md:text-6xl font-extrabold mb-4"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -207,7 +207,7 @@ export default function ProjectsPage() {
           <h3 className="text-[35px] md:text-[40px] font-bold aladin-regular text-purple-500">
             My Projects
           </h3>
-        </motion.h1>
+        </motion.div>
 
         <motion.p
           className="text-base md:text-lg text-[#A1A1AA] max-w-2xl mx-auto"
