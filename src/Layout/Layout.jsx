@@ -11,11 +11,9 @@ const Layout = () => {
     <>
       <Home />
       <About />
-      <div>
-        <Skill />
-        <GitChart />
-        <Project />
-      </div>
+      <Skill />
+      <GitChart />
+      <Project />
       <Contact />
     </>
   );
