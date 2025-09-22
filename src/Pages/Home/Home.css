@@ -1,36 +1,22 @@
-/* body {
-  width: 100vw;
-  overflow-x: hidden;
-} */
 body {
   margin: 0;
   width: 100vw;
   overflow-x: hidden;
 }
+
 .new-home {
-  padding-top: 20px; /* mobile top spacing */
+  padding-top: 20px;
 }
 
 * {
   box-sizing: border-box;
 }
 
-/* .bodyContainer2 {
-  width: 30vw;
-  display: flex;
-  justify-content: center;
-} */
-
 .bodyContainer2 {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-
-/* .myImg {
-  height: 60vh;
-  border-radius: 50%;
-} */
 
 .myImg {
   height: 220px;

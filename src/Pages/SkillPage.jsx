@@ -148,46 +148,48 @@ const SkillPage = () => {
   // ];
 
   return (
-    <div
-      id="skill"
-      className="w-full h-auto overflow-x-hidden overflow-y-hidden flex flex-col gap-10 items-center justify-evenly px-4 py-[50px] lg:px-[100px] relative mt-0 md:mt-[50px]"
-    >
-      <h1 className="text-3xl sm:text-4xl lg:text-6xl text-purple-500 font-bold mb-4">
-        Skills & technologies
-      </h1>
+    <div>
+      <div
+        id="skill"
+        className="w-full h-auto overflow-x-hidden overflow-y-hidden flex flex-col gap-10 items-center justify-evenly px-4 py-[50px] lg:px-[100px] relative mt-0 md:mt-[50px]"
+      >
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl text-purple-500 font-bold mb-4">
+          Skills & technologies
+        </h1>
 
-      <div className="w-[100vw] xl:w-[90vw] h-auto rounded-3xl lg:px-10 flex flex-col gap-10">
-        {[
-          { title: "Frontend", skills: frontendSkills },
-          { title: "Backend", skills: backendSkills },
-          { title: "Tools", skills: tools },
-        ].map((section, idx) => (
-          <div className="flex flex-col gap-3 px-3 md:px-5" key={idx}>
-            <h1 className="text-3xl md:text-4xl russo-one-regular text-purple-500">
-              {section.title}
-            </h1>
-            {/* <MotionWrapper key={idx}> */}
-            <div className="flex gap-5 flex-wrap w-[100%] ">
-              {section.skills.map((data) => (
-                <div
-                  className="border-2 border-purple-500 w-auto h-15 text-center flex items-center justify-evenly p-2 xl:px-3 rounded-[12px] gap-2 lg:gap-1 cursor-pointer hover:scale-105 hover:shadow-[0px_0px_10px_#9f4aef] transition-all  "
-                  key={data.name}
-                  title={data.name}
-                >
-                  {data.logo}
-                  <p className="text-[15px] md:text-[17px]">{data.name}</p>
-                </div>
-              ))}
+        <div className="w-[100vw] xl:w-[90vw] h-auto rounded-3xl lg:px-10 flex flex-col gap-10">
+          {[
+            { title: "Frontend", skills: frontendSkills },
+            { title: "Backend", skills: backendSkills },
+            { title: "Tools", skills: tools },
+          ].map((section, idx) => (
+            <div className="flex flex-col gap-3 px-3 md:px-5" key={idx}>
+              <h1 className="text-3xl md:text-4xl russo-one-regular text-purple-500">
+                {section.title}
+              </h1>
+              {/* <MotionWrapper key={idx}> */}
+              <div className="flex gap-5 flex-wrap w-[100%] ">
+                {section.skills.map((data) => (
+                  <div
+                    className="border-2 border-purple-500 w-auto h-15 text-center flex items-center justify-evenly p-2 xl:px-3 rounded-[12px] gap-2 lg:gap-1 cursor-pointer hover:scale-105 hover:shadow-[0px_0px_10px_#9f4aef] transition-all  "
+                    key={data.name}
+                    title={data.name}
+                  >
+                    {data.logo}
+                    <p className="text-[15px] md:text-[17px]">{data.name}</p>
+                  </div>
+                ))}
+              </div>
+              {/* </MotionWrapper> */}
             </div>
-            {/* </MotionWrapper> */}
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[20%] left-[10%]" />
+        {/* <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[20%] left-[10%]" />
         <div className="hidden md:flex absolute w-[200px] h-[200px] bg-purple-700 opacity-40 rounded-full blur-[150px] top-[60%] left-[70%]" />
         <div className="flex md:hidden absolute w-[200px] h-[200px] bg-purple-700 opacity-40 rounded-full blur-[150px] top-[40%] left-[70%]" />
         <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[70%] left-[10%]" /> */}
+      </div>
     </div>
   );
 };

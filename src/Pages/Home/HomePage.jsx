@@ -1,14 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
-import ScrollToTopOnce from "../../utils/ScrollToTopOnce";
 import "./Home.css";
 import Resume from "/Shriharsh_Nandigamwar_resume.pdf";
 const HomePage = () => {
   return (
-    <>
-    {/* <ScrollToTopOnce /> */}
-    <Navbar/>
+    <div>
+      <Navbar />
       <div
         id="intro"
         className="new-home top-20 md:top-0 md:h-[100vh] xl:h-[100vh] w-[100vw] overflow-x-hidden overflow-y-hidden relative lg:top-25 xl:top-0 flex flex-col-reverse xl:flex-row newHome items-center justify-center"
@@ -138,99 +136,8 @@ const HomePage = () => {
           </div>
         </motion.div>
       </div>
-    </>
+    </div>
   );
 };
 
 export default HomePage;
-
-// import React from "react";
-// import { motion } from "framer-motion";
-// import "./Home.css";
-// import Resume from "/Shriharsh_Nandigamwar_resume.pdf";
-// import ScrollToTopOnce from "../../utils/ScrollToTopOnce";
-
-// const HomePage = () => {
-//   return (
-//     <>
-//       <ScrollToTopOnce />
-
-//       <div
-//         id="intro"
-//         className="new-home relative flex flex-col-reverse xl:flex-row items-center justify-center w-full overflow-x-hidden"
-//       >
-//         {/* Left info */}
-//         <motion.div
-//           initial={{ opacity: 0, y: 300 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6, delay: 0.4 }}
-//           viewport={{ once: true }}
-//           className="w-full lg:w-3/5 flex items-center justify-center"
-//         >
-//           <div className="max-w-3xl text-center xl:text-left p-4 xl:p-0">
-//             <div className="Intro">
-//               <p className="text-3xl md:text-5xl mb-2 font-bold">Hello, I'm</p>
-//               <h1 className="myName text-4xl md:text-6xl font-bold mb-4 text-purple-500">
-//                 Shriharsh Nandigamwar
-//               </h1>
-//               <h2 className="text-xl md:text-4xl font-medium text-[#D8B4FE] mb-6">
-//                 FullStack Developer
-//               </h2>
-//               <p className="text-[18px] md:text-[25px] lg:text-[22px] text-gray-400 mb-8">
-//                 A Full Stack Developer passionate about crafting seamless digital experiences.
-//               </p>
-//             </div>
-
-//             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
-//               <motion.a
-//                 whileTap={{ scale: 0.9 }}
-//                 href="#project"
-//                 className="seeMyWorkBtn border border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white px-6 py-3 rounded-full transition text-center"
-//               >
-//                 See My Work
-//               </motion.a>
-
-//               <motion.a
-//                 whileTap={{ scale: 0.9 }}
-//                 href="#contact"
-//                 className="border border-purple-500 text-purple-500 hover:bg-purple-500 hover:text-white px-6 py-3 rounded-full transition text-center"
-//               >
-//                 Let's Connect
-//               </motion.a>
-//             </div>
-
-//             <div className="social-buttons flex flex-wrap sm:flex-nowrap justify-center gap-5">
-//               <a href="https://github.com/HarshNandigamwar" target="_blank" className="social-button github">
-//                 {/* GitHub SVG */}
-//               </a>
-//               <a href="https://www.linkedin.com/in/shriharsh-nandigamwar-b106702b1/" target="_blank" className="social-button linkedin">
-//                 {/* LinkedIn SVG */}
-//               </a>
-//               <a href="https://x.com/Harsh477011?s=09" target="_blank" className="social-button instagram">
-//                 {/* X SVG */}
-//               </a>
-//               <motion.a whileTap={{ scale: 0.9 }} href={Resume} download="ShriharshNandigamwar_FullstackDeveloper.pdf">
-//                 <button className="button">Download CV</button>
-//               </motion.a>
-//             </div>
-//           </div>
-//         </motion.div>
-
-//         {/* Right Image */}
-//         <motion.div
-//           initial={{ opacity: 0, x: 200 }}
-//           whileInView={{ opacity: 1, x: 0 }}
-//           transition={{ duration: 0.6, delay: 0.4 }}
-//           viewport={{ once: true }}
-//           className="w-full lg:w-2/5 flex items-center justify-center mt-4 md:mt-0 mb-4"
-//         >
-//           <div className="bodyContainer2">
-//             <img src="/shriharsh.jpg" alt="Shriharsh" className="myImg" />
-//           </div>
-//         </motion.div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default HomePage;

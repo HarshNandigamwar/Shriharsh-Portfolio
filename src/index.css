@@ -10,33 +10,28 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
-/* Scrollbar styling */
+/* For Webkit browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
-  width: 10px; /* Width of vertical scrollbar */
-  height: 10px; /* Height of horizontal scrollbar */
+  width: 6px; /* very thin */
+  height: 6px; /* horizontal scrollbar if any */
 }
 
-/* Track (background of scrollbar) */
 ::-webkit-scrollbar-track {
-  background: #000000;
-  border-radius: 10px;
+  background: transparent; /* hide the track */
 }
 
-/* Scroll thumb (draggable part) */
 ::-webkit-scrollbar-thumb {
-  background: #000000;
+  background: rgba(0, 0, 0, 0.1); /* almost invisible */
   border-radius: 10px;
-  border: 2px solid #000000;
 }
 
-/* Hover effect */
+/* Optional: hover effect */
 ::-webkit-scrollbar-thumb:hover {
-  background: #000000;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 /* For Firefox */
 * {
-  scrollbar-width: thin; /* thin / auto */
-  scrollbar-color: #000000;
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
 }
