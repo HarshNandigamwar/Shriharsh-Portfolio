@@ -9,14 +9,12 @@ import Contact from "../Pages/ContactPage";
 const Layout = () => {
   return (
     <>
-      <main>
-        <Home />
-        <About />
-        <Skill />
-        <GitChart />
-        <Project />
-        <Contact />
-      </main>
+      <Home />
+      <About />
+      <Skill />
+      <GitChart />
+      <Project />
+      <Contact />
     </>
   );
 };
