@@ -2,18 +2,19 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="w-full py-10 flex flex-col items-start gap-y-10">
-      <div className="w-full flex flex-col items-center gap-4 mt-8">
+    <footer className="bg-dark-card border-t border-gray-800 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
         <span className="text-center text-sm text-purple-500">
           Made with <span className="text-red-500">❤️</span> by Shriharsh.
         </span>
-        <div className="text-[13px]">
-          {" "}
+          <p className="text-gray-400">
           &#169; {new Date().getFullYear()} Shriharsh Nandigamwar. All Rights
           Reserved.
-        </div>
+          </p>
+        </div> 
       </div>
-    </div>
+    </footer>
   );
 };
 

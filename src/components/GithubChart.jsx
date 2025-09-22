@@ -24,10 +24,10 @@ const GithubChart = () => {
       <div>
         <div className="py-10 flex flex-col items-center gap-y-10">
           <div className="space-y-2 items-center">
-            <h3 className="text-[35px] md:text-[40px] font-bold aladin-regular text-purple-500 text-center">
+            <h3 className="text-[35px] md:text-[40px] lg:text-6xl font-bold aladin-regular text-purple-500 text-center">
               GitHub Contributions
             </h3>
-            <p className="text-[#A1A1AA] text-sm">
+            <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-center">
               When I look back at where I started, the progress feels both
               inspiring, & deeply motivating to continue.
             </p>

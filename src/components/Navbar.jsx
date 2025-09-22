@@ -1,61 +1,88 @@
-import React, { useState } from "react";
-import { BiMenu, BiX } from "react-icons/bi";
-import MobileNav from "./MobileNav";
-import { motion } from "framer-motion";
-const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
-  let logo = "<Shriharsh/>";
-  let sections = [
-    { id: "intro", label: "Intro", link: "#intro" },
-    { id: "About", label: "About", link: "#About" },
-    { id: "skills", label: "Skills", link: "#skill" },
-    { id: "projects", label: "Projects", link: "#project" },
-    { id: "contact", label: "Contact", link: "#contact" },
-  ];
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const logo = "< Shriharsh />";
 
   return (
-    <>
-      <nav className="fixed top-3 sm:top-6 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between w-[95%] py-2 px-4 rounded-xl transition-all duration-300 overflow-hidden bg-[#0a0a0a]/30 backdrop-blur-sm border border-purple-500 cursor-pointer ">
-        <div className="flex-shrink-0 relative">
-          <motion.a
-            whileTap={{ scale: 0.9 }}
-            href="#intro"
-            className="w-25 h-9 flex items-center justify-center font-bold text-[20px] ml-2 text-purple-400"
-          >
+    <nav className="fixed top-0 w-full bg-opacity-80 backdrop-blur-md shadow-md z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <a href="#intro" className="text-2xl font-bold text-purple-500">
             {logo}
-          </motion.a>
-        </div>
+          </a>
 
-        <div className="flex items-center space-x-1 w-full justify-end">
-          <div className="hidden sm:flex items-center space-x-1">
-            {sections.map((section) => (
-              <a
-                href={section.link}
-                key={section.id}
-                className="px-3 py-1.5 text-sm rounded-[5px] transition-all duration-150 relative overflow-hidden text-purple-300 border border-gray-500/30 cursor-pointer hover:bg-[#191a1a] font-normal ml-1 hover:scale-105 hover:border-purple-500 active:scale-95"
-              >
-                <div className="absolute inset-0 opacity-20">
-                  <div className="absolute inset-0 bg-gradient-to-r via-slate-500/30 to-transparent" />
-                </div>
-                {section.label}
-              </a>
-            ))}
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-8 text-white font-medium">
+            <a href="#intro" className="hover:text-purple-500">
+              Home
+            </a>
+            <a href="#About" className="hover:text-purple-500">
+              About
+            </a>
+            <a href="#skill" className="hover:text-purple-500">
+              Skills
+            </a>
+            <a href="#project" className="hover:text-purple-500">
+              Projects
+            </a>
+            <a href="#contact" className="hover:text-purple-500">
+              Contact
+            </a>
+          </div>
+
+          {/* Mobile Button */}
+          <div className="md:hidden">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-white">
+              {isOpen ? <X size={26} /> : <Menu size={26} />}
+            </button>
           </div>
         </div>
-        <button
-          className="sm:hidden relative z-50 w-10 h-10 flex items-center justify-center cursor-pointer"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? (
-            <BiX className="w-6 h-6 text-white transition-transform duration-150 transform  rotate-0 hover:rotate-90" />
-          ) : (
-            <BiMenu className="w-6 h-6 text-white transition-transform duration-200 transform hover:scale-110" />
-          )}
-        </button>
-      </nav>
-      {isMenuOpen ? <MobileNav /> : <></>}
-    </>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden bg-opacity-80 backdrop-blur-md shadow-md px-4 py-3 space-y-3">
+          <a
+            href="#intro"
+            onClick={() => setIsOpen(false)}
+            className="block text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl  hover:text-purple-500 hover:scale-102"
+          >
+            Home
+          </a>
+          <a
+            href="#About"
+            onClick={() => setIsOpen(false)}
+            className="block text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl  hover:text-purple-500 hover:scale-102"
+          >
+            About
+          </a>
+          <a
+            href="#skill"
+            onClick={() => setIsOpen(false)}
+            className="block text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl  hover:text-purple-500 hover:scale-102"
+          >
+            Skills
+          </a>
+          <a
+            href="#project"
+            onClick={() => setIsOpen(false)}
+            className="block text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl  hover:text-purple-500 hover:scale-102"
+          >
+            Projects
+          </a>
+          <a
+            href="#contact"
+            onClick={() => setIsOpen(false)}
+            className="block text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl  hover:text-purple-500 hover:scale-102"
+          >
+            Contact
+          </a>
+        </div>
+      )}
+    </nav>
   );
 };
 

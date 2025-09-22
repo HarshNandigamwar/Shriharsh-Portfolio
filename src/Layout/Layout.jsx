@@ -1,26 +1,22 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import Skills from "../pages/Skills";
-import Contact from "../pages/Contact";
-import GithubChart from "../components/GithubChart";
-import Projects from "../pages/Projects";
-import Home from "../pages/Home";
-import About from "../pages/About";
+import Home from "../Pages/Home/HomePage";
+import About from "../Pages/AboutPage";
+import Skill from "../Pages/SkillPage";
+import GitChart from "../components/GithubChart";
+import Project from "../Pages/ProjectPage";
+import Contact from "../Pages/ContactPage";
 
 const Layout = () => {
   return (
     <>
-      <Navbar />
-      <main className="flex flex-col items-center pl-2 overflow-x-hidden ">
-        <Home />
-        <About />
-        <Skills />
-        <Projects />
-        <GithubChart />
-        <Contact />
-        <Footer />
-      </main>
+      <Home />
+      <About />
+      <div>
+        <Skill />
+        <GitChart />
+        <Project />
+      </div>
+      <Contact />
     </>
   );
 };

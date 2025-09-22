@@ -84,7 +84,7 @@ function ProjectCard({ project, index }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % project.images.length);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [project.images.length]);
 
@@ -204,7 +204,7 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-[35px] md:text-[40px] font-bold aladin-regular text-purple-500">
+          <h3 className="text-[35px] md:text-[40px] lg:text-6xl font-bold text-purple-500">
             My Projects
           </h3>
         </motion.div>
@@ -221,7 +221,7 @@ export default function ProjectsPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="px-4 sm:px-6 md:px-12 lg:px-20 pb-16">
+      <section className="px-3 sm:px-6 md:px-12 lg:px-20 pb-16">
         <div className="grid gap-8 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <Reveal>
