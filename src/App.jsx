@@ -10,7 +10,7 @@ const App = () => {
     <>
       {/* <ScrollToTopOnce /> */}
       <ToastContainer position="top-center" theme="dark" />
-      <Navbar />
+      {/* <Navbar /> */}
       <Layout />
       <Footer />
     </>
