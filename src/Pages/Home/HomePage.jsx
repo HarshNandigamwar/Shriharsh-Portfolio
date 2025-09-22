@@ -7,7 +7,7 @@ const HomePage = () => {
     <>
       <div
         id="intro"
-        className="new-home top-20 md:top-0 md:h-[100vh] xl:h-[100vh] w-[100vw] overflow-x-hidden overflow-y-hidden relative lg:top-25 xl:top-0 flex flex-col-reverse xl:flex-row newHome items-center justify-center"
+        className="new-home top-80 md:top-0 md:h-[100vh] xl:h-[100vh] w-[100vw] overflow-x-hidden overflow-y-hidden relative lg:top-25 xl:top-0 flex flex-col-reverse xl:flex-row newHome items-center justify-center"
       >
         {/* Left info */}
         <motion.div
