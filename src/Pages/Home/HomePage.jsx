@@ -1,11 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
+import ScrollToTopOnce from "../../utils/ScrollToTopOnce";
 import "./Home.css";
 import Resume from "/Shriharsh_Nandigamwar_resume.pdf";
 const HomePage = () => {
   return (
     <>
+    {/* <ScrollToTopOnce /> */}
     <Navbar/>
       <div
         id="intro"
