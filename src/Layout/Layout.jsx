@@ -11,9 +11,12 @@ import GitChart from "../components/GithubChart";
 import Footer from "../components/FooterPage";
 // Import from Hooks
 import SmoothScrollProvider from "../Hooks/SmoothScroll.jsx";
+// Import from utils
+import FloatingDots from "../utils/FloatingDots.jsx";
 const Layout = () => {
   return (
     <SmoothScrollProvider>
+      <FloatingDots count={5} />
       <Home />
       <About />
       <Skill />
