@@ -16,14 +16,18 @@ import FloatingDots from "../utils/FloatingDots.jsx";
 const Layout = () => {
   return (
     <SmoothScrollProvider>
-      <FloatingDots count={5} />
-      <Home />
-      <About />
-      <Skill />
-      <GitChart />
-      <Project />
-      <Contact />
-      <Footer />
+      <div className="relative">
+        <FloatingDots count={10} className="-z-10 absolute inset-0" />
+        <div className="relative z-10">
+          <Home />
+          <About />
+          <Skill />
+          <GitChart />
+          <Project />
+          <Contact />
+          <Footer />
+        </div>
+      </div>
     </SmoothScrollProvider>
   );
 };
