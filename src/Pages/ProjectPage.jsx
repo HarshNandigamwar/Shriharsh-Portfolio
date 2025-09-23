@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Reveal from "../utils/Reveal";
+import MotionWrapper from "../utils/MotionWrapper";
 // Import Images
 //E-Commerce app
 import Ecom1 from "../assets/Ecom/Ecom1.png";
@@ -224,9 +224,9 @@ export default function ProjectsPage() {
       <section className="px-3 sm:px-6 md:px-12 lg:px-20 pb-16">
         <div className="grid gap-8 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <Reveal>
+            <MotionWrapper direction="y">
               <ProjectCard key={index} project={project} index={index} />
-            </Reveal>
+            </MotionWrapper>
           ))}
         </div>
       </section>

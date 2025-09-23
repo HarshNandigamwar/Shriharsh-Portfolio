@@ -167,7 +167,7 @@ const SkillPage = () => {
               <h1 className="text-3xl md:text-4xl russo-one-regular text-purple-500">
                 {section.title}
               </h1>
-              {/* <MotionWrapper key={idx}> */}
+              <MotionWrapper key={idx}>
               <div className="flex gap-5 flex-wrap w-[100%] ">
                 {section.skills.map((data) => (
                   <div
@@ -180,7 +180,7 @@ const SkillPage = () => {
                   </div>
                 ))}
               </div>
-              {/* </MotionWrapper> */}
+              </MotionWrapper>
             </div>
           ))}
         </div>

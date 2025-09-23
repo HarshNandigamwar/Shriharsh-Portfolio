@@ -1,36 +1,73 @@
+// Import from react
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+//import lenis
+import { useLenis } from "../Hooks/SmoothScroll";
 
 const Navbar = () => {
+  const lenis = useLenis();
   const [isOpen, setIsOpen] = useState(false);
   const logo = "< Shriharsh />";
+
+  const handleScroll = (id) => {
+    const el = document.getElementById(id);
+    if (el && lenis) {
+      lenis.scrollTo(el, {
+        offset: -50, // adjust for navbar height
+        duration: 0.8, // faster scroll just for navbar clicks
+        easing: (t) => t, // linear easing for snappy feel
+      });
+    }
+  };
 
   return (
     <nav className="fixed top-0 w-full bg-opacity-80 backdrop-blur-md shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <a href="#intro" className="text-2xl font-bold text-purple-500">
+          <a
+            href="#intro"
+            className="text-2xl font-bold text-purple-500"
+            onClick={(e) => {
+              e.preventDefault();
+              handleScroll("intro");
+            }}
+          >
             {logo}
           </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 text-white font-medium">
-            <a href="#intro" className="hover:text-purple-500">
+            <button
+              className="hover:text-purple-500"
+              onClick={() => handleScroll("intro")}
+            >
               Home
-            </a>
-            <a href="#About" className="hover:text-purple-500">
+            </button>
+            <button
+              className="hover:text-purple-500"
+              onClick={() => handleScroll("About")}
+            >
               About
-            </a>
-            <a href="#skill" className="hover:text-purple-500">
+            </button>
+            <button
+              className="hover:text-purple-500"
+              onClick={() => handleScroll("skill")}
+            >
               Skills
-            </a>
-            <a href="#project" className="hover:text-purple-500">
+            </button>
+            <button
+              className="hover:text-purple-500"
+              onClick={() => handleScroll("project")}
+            >
               Projects
-            </a>
-            <a href="#contact" className="hover:text-purple-500">
+            </button>
+            <button
+              className="hover:text-purple-500"
+              onClick={() => handleScroll("contact")}
+            >
               Contact
-            </a>
+            </button>
           </div>
 
           {/* Mobile Button */}
@@ -45,41 +82,51 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-opacity-80 backdrop-blur-md shadow-md px-4 py-3 space-y-3">
-          <a
-            href="#intro"
-            onClick={() => setIsOpen(false)}
-            className="block text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl  hover:text-purple-500 hover:scale-102"
+          <button
+            onClick={() => {
+              handleScroll("intro");
+              setIsOpen(false);
+            }}
+            className="block w-full text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl  hover:text-purple-500 hover:scale-102"
           >
             Home
-          </a>
-          <a
-            href="#About"
-            onClick={() => setIsOpen(false)}
-            className="block text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl  hover:text-purple-500 hover:scale-102"
+          </button>
+          <button
+            onClick={() => {
+              handleScroll("About");
+              setIsOpen(false);
+            }}
+            className="block w-full text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl hover:text-purple-500 hover:scale-102"
           >
             About
-          </a>
-          <a
-            href="#skill"
-            onClick={() => setIsOpen(false)}
-            className="block text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl  hover:text-purple-500 hover:scale-102"
+          </button>
+          <button
+            onClick={() => {
+              handleScroll("skill");
+              setIsOpen(false);
+            }}
+            className="block w-full text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl hover:text-purple-500 hover:scale-102"
           >
             Skills
-          </a>
-          <a
-            href="#project"
-            onClick={() => setIsOpen(false)}
-            className="block text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl  hover:text-purple-500 hover:scale-102"
+          </button>
+          <button
+            onClick={() => {
+              handleScroll("project");
+              setIsOpen(false);
+            }}
+            className="block w-full text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl hover:text-purple-500 hover:scale-102"
           >
             Projects
-          </a>
-          <a
-            href="#contact"
-            onClick={() => setIsOpen(false)}
-            className="block text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl  hover:text-purple-500 hover:scale-102"
+          </button>
+          <button
+            onClick={() => {
+              handleScroll("contact");
+              setIsOpen(false);
+            }}
+            className="block w-full text-white text-center border border-purple-500 hover:border-white transition-all duration-150 active:scale-95 white mt-2 p-2 rounded-xl hover:text-purple-500 hover:scale-102"
           >
             Contact
-          </a>
+          </button>
         </div>
       )}
     </nav>

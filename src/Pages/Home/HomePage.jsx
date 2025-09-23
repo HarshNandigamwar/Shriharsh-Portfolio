@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import MotionWrapper from "../../utils/MotionWrapper";
 import Navbar from "../../components/Navbar";
 import "./Home.css";
 import Resume from "/Shriharsh_Nandigamwar_resume.pdf";
@@ -12,11 +13,8 @@ const HomePage = () => {
         className="new-home top-20 md:top-0 md:h-[100vh] xl:h-[100vh] w-[100vw] overflow-x-hidden overflow-y-hidden relative lg:top-25 xl:top-0 flex flex-col-reverse xl:flex-row newHome items-center justify-center"
       >
         {/* Left info */}
-        <motion.div
-          initial={{ opacity: 0, y: 300 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
+        <MotionWrapper
+          direction="-x"
           className="w-full h-auto lg:w-[60vw] lg:h-full flex items-center justify-center"
         >
           <div className="max-w-3xl md:h-[55vh] text-center homeData relative xl:top-7">
@@ -121,20 +119,14 @@ const HomePage = () => {
               </motion.a>
             </div>
           </div>
-        </motion.div>
+        </MotionWrapper>
 
         {/*  Right Image */}
-        <motion.div
-          initial={{ opacity: 0, x: 200 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="w-full h-[30vh] lg:w-[40vw] lg:h-full flex items-center justify-center relative xl:top-7 mt-4 md:mt-0 mb-4 md:mb-0"
-        >
+        <div className="w-full h-[30vh] lg:w-[40vw] lg:h-full flex items-center justify-center relative xl:top-7 mt-4 md:mt-0 mb-4 md:mb-0">
           <div className="bodyContainer2">
             <img src="/shriharsh.jpg" alt="N/A ＞﹏＜" className="myImg" />
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

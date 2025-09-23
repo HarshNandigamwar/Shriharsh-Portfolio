@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import GitBox from "./GitBox";
 import { FaGithub } from "react-icons/fa";
-import Reveal from "../utils/Reveal";
+import MotionWrapper from "../utils/MotionWrapper";
 import { motion } from "framer-motion";
 const GithubChart = () => {
   const [GitChartLoader, setGitChartLoader] = useState(true);
@@ -12,18 +12,18 @@ const GithubChart = () => {
 
   return GitChartLoader ? (
     <div>
-      <Reveal>
+      <MotionWrapper direction="y">
         <div className="py-10 flex flex-col items-center gap-y-10">
           <div className="border w-85 h-30 rounded-[8px] border-purple-500 flex flex-col items-center justify-center p-2.5">
             <h1>Loading GitChart Just for you . . .</h1>
             <div className="mt-2 animate-spin"> ⌛ </div>
           </div>
         </div>
-      </Reveal>
+      </MotionWrapper>
     </div>
   ) : (
     <div>
-      <Reveal>
+      <MotionWrapper direction="y">
         <div>
           <div className="py-10 flex flex-col items-center gap-y-10">
             <div className="space-y-2 items-center">
@@ -69,7 +69,7 @@ const GithubChart = () => {
             </div>
           </div>
         </div>
-      </Reveal>
+      </MotionWrapper>
     </div>
   );
 };
