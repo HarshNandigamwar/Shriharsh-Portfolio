@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-
 const colors = ["#9f4aef", "#341b4c", "#4C4CFF"];
-
 const InteractiveDots = ({ count = 30 }) => {
   const [dots, setDots] = useState([]);
   const [mousePos, setMousePos] = useState({ x: -999, y: -999 });
