@@ -58,7 +58,7 @@ const InteractiveDots = ({ count = 30 }) => {
       {dots.map((dot) => (
         <div
           key={dot.id}
-          className="absolute rounded-full "
+          className="absolute rounded-full opacity-60 "
           style={{
             width: `${dot.size}px`,
             height: `${dot.size}px`,
