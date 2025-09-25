@@ -6,7 +6,7 @@ function LoadingButton({ loading, children, type, ...props }) {
     <motion.button 
       whileTap={{ scale: 0.9 }}
       type={type}
-      className={`flex w-full items-center justify-center px-4 py-2 rounded-xl mt-4 mb-5 bg-black/30 border border-gray-700 hover:border-purple-500 text-white font-semibold shadow transition-all duration-300 cursor-pointer disabled:opacity-60 ${
+      className={`flex w-full items-center justify-center px-4 py-2 rounded-xl mt-4 mb-5 bg-black/30 border border-gray-700 hover:border-[var(--text-color)] text-[var(--maintext-color)] font-semibold shadow transition-all duration-300 cursor-pointer disabled:opacity-60 ${
         loading ? "cursor-progress" : ""
       }`}
       disabled={loading}

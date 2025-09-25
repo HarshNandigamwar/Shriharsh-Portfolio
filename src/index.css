@@ -1,15 +1,55 @@
 @import "tailwindcss";
+@tailwind utilities;
 /* @import url("https://fonts.googleapis.com/css2?family=Average&display=swap"); */
 
 body {
   /* overflow-x: hidden; */
-  background-color: #0a0a0a;
+  background-color: var(--bg-color);
   color: #ffffff;
   font-family: Average, sans-serif;
 }
 html {
   scroll-behavior: smooth;
 }
+
+/* Theme/Mode */
+:root {
+  /* Light-Mode */
+  --bg-color: #ffffff;
+  --maintext-color: #000000;
+  /* Theme */
+  --text-color: #a855f7;
+  --hovertext-color: #000000;
+  --subtext-color: #d8b4fe;
+}
+/* Dark-Mode */
+html.dark {
+  --bg-color: #0a0a0a;
+  --maintext-color: #ffffff;
+  --infotext-color: #d1d5dc;
+}
+/* Theme */
+[data-theme="orange"] {
+  --text-color: #fdba74;
+  --hovertext-color: #000000;
+  --subtext-color: #ffd6a7;
+}
+[data-theme="blue"] {
+  --text-color: #155dfc;
+  --hovertext-color: #000000;
+  --subtext-color: #3b82f6;
+}
+[data-theme="purple"] {
+  --text-color: #a855f7;
+  --hovertext-color: #000000;
+  --subtext-color: #d8b4fe;
+}
+[data-theme="green"] {
+  --text-color: #05df72;
+  --hovertext-color: #000000;
+  --subtext-color: #86efac;
+}
+
 /* For Webkit browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
   width: 6px; /* very thin */

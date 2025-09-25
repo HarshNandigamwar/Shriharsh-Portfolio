@@ -98,7 +98,7 @@ function ProjectCard({ project, index }) {
 
   return (
     <motion.div
-      className="bg-[#1e1e1e]/20 rounded-xl shadow-xl overflow-hidden border border-purple-500/50 hover:border-purple-500 flex flex-col transform-none"
+      className="bg-black/30 rounded-xl shadow-xl overflow-hidden border border-[var(--text-color)] flex flex-col transform-none"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -123,13 +123,13 @@ function ProjectCard({ project, index }) {
           onClick={prevSlide}
           className="absolute top-1/2 left-2 -translate-y-1/2 bg-black/50 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
         >
-          <ChevronLeft className="text-purple-400 w-5 h-5 cursor-pointer" />
+          <ChevronLeft className="text-[var(--text-color)] w-5 h-5 cursor-pointer" />
         </button>
         <button
           onClick={nextSlide}
           className="absolute top-1/2 right-2 -translate-y-1/2 bg-black/50 p-2 rounded-full opacity-0 group-hover:opacity-100 transition"
         >
-          <ChevronRight className="text-purple-400 w-5 h-5 cursor-pointer" />
+          <ChevronRight className="text-[var(--text-color)] w-5 h-5 cursor-pointer" />
         </button>
 
         {/* Dots */}
@@ -139,7 +139,7 @@ function ProjectCard({ project, index }) {
               key={i}
               onClick={() => setCurrent(i)}
               className={`w-2.5 h-2.5 rounded-full transition border ${
-                i === current ? "bg-purple-400" : "bg-gray-800"
+                i === current ? "bg-[var(--text-color)]" : "bg-gray-800"
               }`}
             />
           ))}
@@ -148,10 +148,10 @@ function ProjectCard({ project, index }) {
 
       {/* Content */}
       <div className="p-5 flex flex-col flex-grow">
-        <h2 className="text-xl text-purple-400 md:text-2xl font-bold mb-3">
+        <h2 className="text-xl text-[var(--text-color)] md:text-2xl font-bold mb-3">
           {project.title}
         </h2>
-        <p className="text-[#A1A1AA] text-sm md:text-base mb-4">
+        <p className="text-[var(--maintext-color)] text-sm md:text-base mb-4">
           {project.description}
         </p>
 
@@ -160,7 +160,7 @@ function ProjectCard({ project, index }) {
           {project.tech.map((t, i) => (
             <span
               key={i}
-              className="bg-gray-900 text-[#A1A1AA] text-xs px-3 py-1 rounded-full border border-purple-400"
+              className="bg-gray-900 text-[#A1A1AA] text-xs px-3 py-1 rounded-full border border-[var(--text-color)]"
             >
               {t}
             </span>
@@ -174,7 +174,7 @@ function ProjectCard({ project, index }) {
             target="_blank"
             rel="noopener noreferrer"
             title="Live Demo"
-            className="flex-1 text-center bg-purple-400 text-[#000000] py-2 px-4 rounded-[8px] border border-gray-500/10 font-medium transition-all duration-150 active:scale-95 hover:scale-102"
+            className="flex-1 text-center bg-[var(--text-color)] text-[#000000] py-2 px-4 rounded-[8px] border border-gray-500/10 font-medium transition-all duration-150 active:scale-95 hover:scale-102"
           >
             Live Demo
           </a>
@@ -204,13 +204,13 @@ export default function ProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-[35px] md:text-[40px] lg:text-6xl font-bold text-purple-500">
+          <h3 className="text-[35px] md:text-[40px] lg:text-6xl font-bold text-[var(--text-color)]">
             My Projects
           </h3>
         </motion.div>
 
         <motion.p
-          className="text-base md:text-lg text-[#A1A1AA] max-w-2xl mx-auto"
+          className="text-base md:text-lg text-[var(--maintext-color)] max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}

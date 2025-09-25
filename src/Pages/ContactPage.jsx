@@ -40,11 +40,11 @@ const ContactPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-purple-500 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-[var(--text-color)] mb-4">
             Get In Touch
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto"></div>
-          <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+          <p className="text-[var(--maintext-color)] mt-4 max-w-2xl mx-auto">
             Have a project in mind? Let's work together to create something
             amazing!
           </p>
@@ -60,10 +60,10 @@ const ContactPage = () => {
                   <div className="text-accent text-xl">💌</div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">Email</h3>
+                  <h3 className="text-lg font-semibold mb-1 text-[var(--maintext-color)]">Email</h3>
                   <a
                     href="mailto:nandigamwarharsh@gmail.com"
-                    className="text-gray-400"
+                    className="text-[var(--maintext-color)]"
                   >
                     nandiganwarharsh@gmail.com
                   </a>
@@ -75,15 +75,15 @@ const ContactPage = () => {
                   <div className="text-accent text-xl">📱</div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                  <p className="text-gray-400">+91 7517246260</p>
+                  <h3 className="text-lg font-semibold mb-1 text-[var(--maintext-color)]">Phone</h3>
+                  <p className="text-[var(--maintext-color)]">+91 7517246260</p>
                 </div>
               </div>
 
               <div className="pt-8">
                 <h3 className="text-lg font-semibold mb-4">Follow Me</h3>
                 {/* Social media link  */}
-                <div className="flex space-x-4">
+                <div className="flex space-x-4 text-[var(--maintext-color)]">
                   {/* Linkedin  */}
                   <a
                     href="https://www.linkedin.com/in/shriharsh-nandigamwar-b106702b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
@@ -127,7 +127,7 @@ const ContactPage = () => {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm text-purple-500 font-medium mb-2"
+                      className="block text-sm text-[var(--text-color)] font-medium mb-2"
                     >
                       Name
                     </label>
@@ -136,7 +136,7 @@ const ContactPage = () => {
                       type="text"
                       name="name"
                       required
-                      className="w-full px-4 py-3 bg-dark border border-gray-700 hover:border-purple-500 rounded-lg"
+                      className="w-full px-4 py-3 bg-dark border border-gray-700 hover:border-[var(--text-color)] rounded-lg text-[var(--maintext-color)]"
                     />
                   </div>
 
@@ -144,7 +144,7 @@ const ContactPage = () => {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm text-purple-500 font-medium mb-2"
+                      className="block text-sm text-[var(--text-color)] font-medium mb-2"
                     >
                       Email
                     </label>
@@ -153,7 +153,7 @@ const ContactPage = () => {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg hover:border-purple-500"
+                      className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg hover:border-[var(--text-color)] text-[var(--maintext-color)]"
                     />
                   </div>
                 </div>
@@ -162,7 +162,7 @@ const ContactPage = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm text-purple-500 font-medium mb-2"
+                    className="block text-sm text-[var(--text-color)] font-medium mb-2"
                   >
                     Message
                   </label>
@@ -171,7 +171,7 @@ const ContactPage = () => {
                     name="message"
                     rows="5"
                     required
-                    className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg hover:border-purple-500"
+                    className="w-full px-4 py-3 bg-dark border border-gray-700 rounded-lg hover:border-[var(--text-color)] text-[var(--maintext-color)]"
                   ></textarea>
                 </div>
                 {/* Error */}

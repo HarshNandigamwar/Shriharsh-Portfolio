@@ -153,7 +153,7 @@ const SkillPage = () => {
         id="skill"
         className="w-full h-auto overflow-x-hidden overflow-y-hidden flex flex-col gap-10 items-center justify-evenly px-4 py-[50px] lg:px-[100px] relative mt-0 md:mt-[50px]"
       >
-        <h1 className="text-3xl sm:text-4xl lg:text-6xl text-purple-500 font-bold mb-4">
+        <h1 className="text-3xl sm:text-4xl lg:text-6xl text-[var(--text-color)] font-bold mb-4">
           Skills & technologies
         </h1>
 
@@ -164,22 +164,24 @@ const SkillPage = () => {
             { title: "Tools", skills: tools },
           ].map((section, idx) => (
             <div className="flex flex-col gap-3 px-3 md:px-5" key={idx}>
-              <h1 className="text-3xl md:text-4xl russo-one-regular text-purple-500">
+              <h1 className="text-3xl md:text-4xl russo-one-regular text-[var(--text-color)]">
                 {section.title}
               </h1>
               <MotionWrapper key={idx}>
-              <div className="flex gap-5 flex-wrap w-[100%] ">
-                {section.skills.map((data) => (
-                  <div
-                    className="border-2 border-purple-500 w-auto h-15 text-center flex items-center justify-evenly p-2 xl:px-3 rounded-[12px] gap-2 lg:gap-1 cursor-pointer hover:scale-105 hover:shadow-[0px_0px_10px_#9f4aef] transition-all  "
-                    key={data.name}
-                    title={data.name}
-                  >
-                    {data.logo}
-                    <p className="text-[15px] md:text-[17px]">{data.name}</p>
-                  </div>
-                ))}
-              </div>
+                <div className="flex gap-5 flex-wrap w-[100%] ">
+                  {section.skills.map((data) => (
+                    <div
+                      className="border-2 border-[var(--text-color)] w-auto h-15 text-center flex items-center bg-black/30 justify-evenly p-2 xl:px-3 rounded-[12px] gap-2 lg:gap-1 cursor-pointer hover:scale-105 hover:shadow-[0px_0px_10px_var(--text-color)] transition-all  "
+                      key={data.name}
+                      title={data.name}
+                    >
+                      {data.logo}
+                      <p className="text-[15px] md:text-[17px] text-[var(--maintext-color)]">
+                        {data.name}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </MotionWrapper>
             </div>
           ))}

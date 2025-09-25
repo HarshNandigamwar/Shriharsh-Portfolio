@@ -20,16 +20,16 @@ const HomePage = () => {
           <div className="max-w-3xl md:h-[55vh] text-center homeData relative xl:top-7">
             {/* My Info */}
             <div className="Intro">
-              <p className="text-3xl md:text-5xl xl:text-4xl mb-2 applyFontBold">
+              <p className="text-3xl md:text-5xl xl:text-4xl mb-2 text-[var(--maintext-color)]">
                 Hello, I'm
               </p>
-              <h1 className="myName text-4xl md:text-6xl font-bold mb-4 text-purple-500 ">
+              <h1 className="myName text-4xl md:text-6xl font-bold mb-4 text-[var(--text-color)] ">
                 Shriharsh Nandigamwar
               </h1>
-              <h2 className="text-xl md:text-4xl font-medium text-[#D8B4FE] mb-6">
+              <h2 className="text-xl md:text-4xl font-medium text-[var(--subtext-color)] mb-6">
                 FullStack Developer
               </h2>
-              <p className="text-[18px] md:text-[25px] lg:text-[22px]  text-gray-400 mb-8">
+              <p className="text-[18px] md:text-[25px] lg:text-[22px]  text-[var(--maintext-color)] mb-8">
                 A Full Stack Developer passionate about crafting seamless
                 digital experiences. Always excited to tackle new challenges
                 where I can create value and grow as a coder. Let&apos;s connect
@@ -42,7 +42,7 @@ const HomePage = () => {
               <motion.a
                 whileTap={{ scale: 0.9 }}
                 href="#project"
-                className="seeMyWorkBtn hover:bg-purple-500 border border-purple-500 text-purple-500 hover:text-white h-10 w-40 flex items-center justify-center px-6 py-3 rounded-full transition"
+                className="seeMyWorkBtn hover:bg-[var(--text-color)] border border-text-[var(--text-color)] text-[var(--text-color)] hover:text-[var(--hovertext-color)] h-10 w-40 flex items-center justify-center px-6 py-3 rounded-full transition"
               >
                 See My Work
               </motion.a>
@@ -50,7 +50,7 @@ const HomePage = () => {
               <motion.a
                 whileTap={{ scale: 0.9 }}
                 href="#contact"
-                className="border border-purple-500 hover:bg-purple-500 h-10 w-40 flex items-center justify-center text-purple-500 hover:text-white px-6 py-3 rounded-full transition"
+                className="border border-text-[var(--text-color)] hover:bg-[var(--text-color)] h-10 w-40 flex items-center justify-center text-[var(--text-color)] hover:text-[var(--hovertext-color)] px-6 py-3 rounded-full transition"
               >
                 Let's Connect
               </motion.a>

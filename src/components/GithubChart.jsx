@@ -14,7 +14,7 @@ const GithubChart = () => {
     <div>
       <MotionWrapper direction="y">
         <div className="py-10 flex flex-col items-center gap-y-10">
-          <div className="border w-85 h-30 rounded-[8px] border-purple-500 flex flex-col items-center justify-center p-2.5">
+          <div className="border w-85 h-30 rounded-[8px] border-[var(--text-color)] flex flex-col items-center justify-center p-2.5 text-[var(--maintext-color)]">
             <h1>Loading GitChart Just for you . . .</h1>
             <div className="mt-2 animate-spin"> ⌛ </div>
           </div>
@@ -27,15 +27,15 @@ const GithubChart = () => {
         <div>
           <div className="py-10 flex flex-col items-center gap-y-10">
             <div className="space-y-2 items-center">
-              <h3 className="text-[35px] md:text-[40px] lg:text-6xl font-bold aladin-regular text-purple-500 text-center">
+              <h3 className="text-[35px] md:text-[40px] lg:text-6xl font-bold aladin-regular text-[var(--text-color)] text-center">
                 GitHub Contributions
               </h3>
-              <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-center">
+              <p className="text-[var(--maintext-color)] mt-4 max-w-2xl mx-auto text-center">
                 When I look back at where I started, the progress feels both
                 inspiring, & deeply motivating to continue.
               </p>
             </div>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center text-[var(--maintext-color)]">
               <img
                 src="https://ghchart.rshah.org/00ff00/Harshnandigamwar"
                 alt="Oops GitHub API Error ＞﹏＜ "
@@ -61,7 +61,7 @@ const GithubChart = () => {
                 className="mt-4"
                 target="_blank"
               >
-                <button className="flex items-center gap-2 cursor-pointer w-50 h-8 border py-2 border-purple-500 rounded-md justify-center">
+                <button className="flex items-center gap-2 cursor-pointer w-50 h-8 border py-2 border-[var(--text-color)] rounded-md justify-center">
                   {" "}
                   <FaGithub /> View Github Profile
                 </button>

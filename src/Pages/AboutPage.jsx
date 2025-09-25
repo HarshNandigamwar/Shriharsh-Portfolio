@@ -6,7 +6,7 @@ const AboutPage = () => {
       <section id="About" className="py-20 bg-dark-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-6xl text-purple-500 font-bold mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl text-[var(--text-color)] font-bold mb-4">
               About Me
             </h2>
             <div className="w-20 h-1 bg-accent mx-auto"></div>
@@ -22,27 +22,33 @@ const AboutPage = () => {
             {/* Right Info */}
             <MotionWrapper direction="x">
               <div>
-                <h3 className="text-2xl font-semibold text-accent mb-5">
+                <h3 className="text-2xl font-semibold text-accent mb-5 text-[var(--maintext-color)]">
                   I’m{" "}
-                  <span className="font-bold text-purple-500">
+                  <span className="font-bold text-[var(--text-color)]">
                     Shriharsh Nandigamwar
                   </span>
                 </h3>
-                <p className="text-white leading-relaxed">
+                <p className="text-[var(--maintext-color)] leading-relaxed">
                   A dedicated Full Stack Developer with a strong passion for
                   building fast, functional, and visually engaging web
                   applications.
                   <br />I enjoy working across the modern web stack from
                   creating clean, responsive user interfaces with{" "}
-                  <span className="text-purple-500 font-semibold">
+                  <span className="text-[var(--text-color)] font-semibold">
                     React.js
                   </span>{" "}
                   to developing secure and scalable backend systems using{" "}
-                  <span className="text-purple-500 font-semibold">Node.js</span>
+                  <span className="text-[var(--text-color)] font-semibold">
+                    Node.js
+                  </span>
                   ,{" "}
-                  <span className="text-purple-500 font-semibold">Express</span>
+                  <span className="text-[var(--text-color)] font-semibold">
+                    Express
+                  </span>
                   , and{" "}
-                  <span className="text-purple-500 font-semibold">MongoDB</span>
+                  <span className="text-[var(--text-color)] font-semibold">
+                    MongoDB
+                  </span>
                   .
                   <br />I have a keen interest in building real-world projects,
                   solving meaningful problems through code, and collaborating
@@ -52,24 +58,26 @@ const AboutPage = () => {
                 </p>
                 <div className="grid grid-cols-2 gap-6 pt-6">
                   <div>
-                    <h4 className="font-semibold text-accent mb-2">
+                    <h4 className="font-semibold text-accent mb-2 text-[var(--maintext-color)]">
                       Experience
                     </h4>
-                    <p className="text-gray-300">2+ Years</p>
+                    <p className="text-[var(--maintext-color)]">2+ Years</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-accent mb-2">Projects</h4>
-                    <p className="text-gray-300">8+ Completed</p>
+                    <h4 className="font-semibold text-accent mb-2 text-[var(--maintext-color)]">
+                      Projects
+                    </h4>
+                    <p className="text-[var(--maintext-color)]">8+ Completed</p>
                   </div>
                   {/* <div>
                   <h4 className="font-semibold text-accent mb-2">Clients</h4>
-                  <p className="text-gray-300">30+ Happy</p>
+                  <p className="text-[var(--maintext-color)]">30+ Happy</p>
                 </div> */}
                   <div>
-                    <h4 className="font-semibold text-accent mb-2">
+                    <h4 className="font-semibold text-accent mb-2 text-[var(--maintext-color)]">
                       Certifications
                     </h4>
-                    <p className="text-gray-300">3+ Won</p>
+                    <p className="text-[var(--maintext-color)]">3+ Won</p>
                   </div>
                 </div>
               </div>
