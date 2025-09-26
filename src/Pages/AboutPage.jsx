@@ -1,6 +1,22 @@
 import React from "react";
 import MotionWrapper from "../utils/MotionWrapper";
+import { useLenis } from "../Hooks/SmoothScroll";
+import { useNavigate } from "react-router-dom";
+import { ChevronsRight } from "../components/ChevronsRight";
 const AboutPage = () => {
+  const lenis = useLenis();
+  const handleScroll = (id) => {
+    const el = document.getElementById(id);
+    if (el && lenis) {
+      lenis.scrollTo(el, {
+        offset: -50, // adjust for navbar height
+        duration: 0.8, // faster scroll just for navbar clicks
+        easing: (t) => t, // linear easing for snappy feel
+      });
+    }
+  };
+
+  const navigate = useNavigate();
   return (
     <div>
       <section id="About" className="py-20 bg-dark-card">
@@ -15,7 +31,12 @@ const AboutPage = () => {
             {/* Left info */}
             <MotionWrapper direction="-x">
               <div className="w-64 h-70 lg:w-74 mx-auto lg:mx-0 rounded-2xl flex items-center justify-center text-6xl font-bold mb-8">
-                <img src="/myImg2.jpg" alt="N/A" className="rounded-2xl" />
+                <img
+                  src="/myImg2.jpg"
+                  alt="N/A"
+                  loading="lazy"
+                  className="rounded-2xl"
+                />
               </div>
             </MotionWrapper>
 
@@ -63,19 +84,29 @@ const AboutPage = () => {
                     </h4>
                     <p className="text-[var(--maintext-color)]">2+ Years</p>
                   </div>
-                  <div>
-                    <h4 className="font-semibold text-accent mb-2 text-[var(--maintext-color)]">
-                      Projects
+                  <div
+                    title="Explore Project"
+                    onClick={() => handleScroll("project")}
+                  >
+                    <h4 className="font-semibold text-accent mb-2 text-[var(--maintext-color)] flex items-center ">
+                      Projects{" "}
+                      <ChevronsRight
+                        stroke="var(--text-color)"
+                        height={"15px"}
+                      />
                     </h4>
-                    <p className="text-[var(--maintext-color)]">8+ Completed</p>
+                    <p className="text-[var(--maintext-color)]">4+ Completed</p>
                   </div>
-                  {/* <div>
-                  <h4 className="font-semibold text-accent mb-2">Clients</h4>
-                  <p className="text-[var(--maintext-color)]">30+ Happy</p>
-                </div> */}
-                  <div>
-                    <h4 className="font-semibold text-accent mb-2 text-[var(--maintext-color)]">
+                  <div
+                    title="Explore certification"
+                    onClick={() => navigate("/certification")}
+                  >
+                    <h4 className="font-semibold text-accent mb-2 text-[var(--maintext-color)] flex items-center ">
                       Certifications
+                      <ChevronsRight
+                        stroke="var(--text-color)"
+                        height={"15px"}
+                      />
                     </h4>
                     <p className="text-[var(--maintext-color)]">3+ Won</p>
                   </div>

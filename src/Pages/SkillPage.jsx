@@ -66,7 +66,8 @@ const SkillPage = () => {
       logo: (
         <img
           src="https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png"
-          className="w-[30px] md:w-[35px]"
+          className="w-[30px] md:w-[35px]" 
+          loading="lazy"
         />
       ),
     },
@@ -94,13 +95,14 @@ const SkillPage = () => {
       logo: (
         <img
           src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/480/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png"
-          className="h-6 w-6"
+          className="h-6 w-6" 
+          loading="lazy"
         />
       ),
     },
     {
       name: "Thunder Client",
-      logo: <img src={thunder} className="h-7 w-8" />,
+      logo: <img src={thunder} className="h-7 w-8" loading="lazy" />,
     },
     {
       name: "VS Code",
@@ -109,13 +111,13 @@ const SkillPage = () => {
     {
       name: "Vercel",
       logo: (
-        <img src="https://skillicons.dev/icons?i=vercel" className="h-6 w-6" />
+        <img src="https://skillicons.dev/icons?i=vercel" className="h-6 w-6" loading="lazy" />
       ),
     },
     {
       name: "Netlify",
       logo: (
-        <img src="https://skillicons.dev/icons?i=netlify" className="h-6 w-6" />
+        <img src="https://skillicons.dev/icons?i=netlify" className="h-6 w-6" loading="lazy" />
       ),
     },
   ];
@@ -186,11 +188,6 @@ const SkillPage = () => {
             </div>
           ))}
         </div>
-
-        {/* <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[20%] left-[10%]" />
-        <div className="hidden md:flex absolute w-[200px] h-[200px] bg-purple-700 opacity-40 rounded-full blur-[150px] top-[60%] left-[70%]" />
-        <div className="flex md:hidden absolute w-[200px] h-[200px] bg-purple-700 opacity-40 rounded-full blur-[150px] top-[40%] left-[70%]" />
-        <div className="absolute w-[200px] h-[200px] bg-purple-700 opacity-30 rounded-full blur-[150px] top-[70%] left-[10%]" /> */}
       </div>
     </div>
   );

@@ -110,6 +110,7 @@ function ProjectCard({ project, index }) {
             key={current}
             src={project.images[current]}
             alt={project.title}
+            loading="lazy"
             className="absolute top-0 left-0 w-full h-full object-cover"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

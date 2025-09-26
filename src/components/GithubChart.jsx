@@ -38,7 +38,8 @@ const GithubChart = () => {
             <div className="flex flex-col items-center text-[var(--maintext-color)]">
               <img
                 src="https://ghchart.rshah.org/00ff00/Harshnandigamwar"
-                alt="Oops GitHub API Error ＞﹏＜ "
+                alt="Oops GitHub API Error ＞﹏＜ " 
+                loading="lazy"
               />
               <div className="px-4 py-2 text-[13px] text-[#A1A1AA] rounded-sm ">
                 Contributions in 2025
