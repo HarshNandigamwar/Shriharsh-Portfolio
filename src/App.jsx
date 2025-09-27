@@ -1,18 +1,18 @@
 // Import from react
 import React from "react";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 // Import from Components
 import Layout from "./Layout/Layout";
 import { Route, Router, Routes } from "react-router-dom";
 // Import from pages
 import Certifications from "./Pages/Certifications";
 import Experience from "./Pages/Experience";
+// Import from sonner
+import { Toaster } from "sonner";
 
 const App = () => {
   return (
     <>
-      <ToastContainer position="top-center" theme="dark" />
+      <Toaster position="top-center" richColors theme="dark" />
       <Routes>
         <Route path="/" element={<Layout />} />
         <Route path="/experience" element={<Experience />} />

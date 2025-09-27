@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import LoadingButton from "../components/LoadingButton";
-import { toast } from "react-toastify";
+import { toast } from "sonner";
 import MotionWrapper from "../utils/MotionWrapper";
 import { Globe } from "../components/Globe";
 import { ChevronsRight } from "../components/ChevronsRight";
@@ -24,12 +24,18 @@ const ContactPage = () => {
 
     if (data.success) {
       setLoading(false);
-      toast.success("Form submitted successfully", { autoClose: 3000 });
+      toast.success("🎉 Form submitted successfully", {
+        duration: 3000,
+        description: "Your data has been send.",
+      });
       event.target.reset();
     } else {
       console.log("Error", data);
       setResult(data.message);
-      toast.error("Form submission failed.", { autoClose: 3000 });
+      toast.error(" Form submission failed.", {
+        duration: 3000,
+        description: "Please try again.",
+      });
       setLoading(false);
       setTimeout(() => {
         setResult("");
