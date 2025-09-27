@@ -31,12 +31,7 @@ const AboutPage = () => {
             {/* Left info */}
             <MotionWrapper direction="-x">
               <div className="w-64 h-70 lg:w-74 mx-auto lg:mx-0 rounded-2xl flex items-center justify-center text-6xl font-bold mb-8">
-                <img
-                  src="/myImg2.jpg"
-                  alt="N/A"
-                  loading="lazy"
-                  className="rounded-2xl"
-                />
+                <img src="/myImg2.jpg" alt="N/A" className="rounded-2xl" />
               </div>
             </MotionWrapper>
 
@@ -78,12 +73,21 @@ const AboutPage = () => {
                   practices in the ever-changing tech world.
                 </p>
                 <div className="grid grid-cols-2 gap-6 pt-6">
-                  <div>
-                    <h4 className="font-semibold text-accent mb-2 text-[var(--maintext-color)]">
-                      Experience
+                  {/* Experience */}
+                  <div
+                    title="Explore Experience"
+                    onClick={() => navigate("experience")}
+                  >
+                    <h4 className="font-semibold text-accent mb-2 text-[var(--maintext-color)] flex items-center">
+                      Experience{" "}
+                      <ChevronsRight
+                        stroke="var(--text-color)"
+                        height={"15px"}
+                      />
                     </h4>
-                    <p className="text-[var(--maintext-color)]">2+ Years</p>
+                    <p className="text-[var(--maintext-color)]">1 Internship</p>
                   </div>
+                  {/* Project */}
                   <div
                     title="Explore Project"
                     onClick={() => handleScroll("project")}
@@ -97,6 +101,7 @@ const AboutPage = () => {
                     </h4>
                     <p className="text-[var(--maintext-color)]">4+ Completed</p>
                   </div>
+                  {/* Certification */}
                   <div
                     title="Explore certification"
                     onClick={() => navigate("/certification")}

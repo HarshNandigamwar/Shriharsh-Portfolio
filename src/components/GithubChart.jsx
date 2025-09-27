@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import GitBox from "./GitBox";
-import { FaGithub } from "react-icons/fa";
 import MotionWrapper from "../utils/MotionWrapper";
 import { motion } from "framer-motion";
+import { ChevronsRight } from "./ChevronsRight";
 const GithubChart = () => {
   const [GitChartLoader, setGitChartLoader] = useState(true);
 
@@ -38,7 +38,7 @@ const GithubChart = () => {
             <div className="flex flex-col items-center text-[var(--maintext-color)]">
               <img
                 src="https://ghchart.rshah.org/00ff00/Harshnandigamwar"
-                alt="Oops GitHub API Error ＞﹏＜ " 
+                alt="Oops GitHub API Problem ＞﹏＜ "
                 loading="lazy"
               />
               <div className="px-4 py-2 text-[13px] text-[#A1A1AA] rounded-sm ">
@@ -55,16 +55,15 @@ const GithubChart = () => {
                 <GitBox color="#216e39" />
                 <span className="text-[#A1A1AA]">More</span>{" "}
               </div>
-
               <motion.a
                 href="https://github.com/HarshNandigamwar"
                 whileTap={{ scale: 0.9 }}
                 className="mt-4"
                 target="_blank"
               >
-                <button className="flex items-center gap-2 cursor-pointer w-50 h-8 border py-2 border-[var(--text-color)] rounded-md justify-center">
+                <button className="flex items-center gap-2 cursor-pointer w-50 h-8 border py-2 border-[var(--text-color)] rounded-md justify-center pl-2">
                   {" "}
-                  <FaGithub /> View Github Profile
+                  View Github Profile <ChevronsRight height="15px" />
                 </button>
               </motion.a>
             </div>

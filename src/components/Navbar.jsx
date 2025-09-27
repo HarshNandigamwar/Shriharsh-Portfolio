@@ -34,10 +34,10 @@ const Navbar = () => {
   const [theme, setTheme] = useState("Purple");
   const [open, setOpen] = useState(false);
   const themes = [
-    { name: "Orange", value: "orange", color: "orange" },
-    { name: "Blue", value: "blue", color: "blue" },
-    { name: "Purple", value: "purple", color: "purple" },
-    { name: "Green", value: "green", color: "green" },
+    { name: "Orange", value: "orange", color: "#ffa500" },
+    { name: "Blue", value: "blue", color: "#0000ff" },
+    { name: "Purple", value: "purple", color: "#a855f7" },
+    { name: "Green", value: "green", color: "#00ff00" },
   ];
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
@@ -282,108 +282,6 @@ const Navbar = () => {
             </div>
           </div>
         </motion.div>
-
-        // <div className="absolute md:hidden bg-[var(--bg-color)] w-[50%] right-0 h-screen p-5 pt-6 text-xl text-[var(--text-color)] ">
-        //   {/* Home */}
-        //   <div
-        //     onClick={() => {
-        //       handleScroll("intro");
-        //       setIsOpen(false);
-        //     }}
-        //     className="flex gap-2 items-center mt-3 p-2 "
-        //   >
-        //     <RiHomeLine /> <span>Home</span>{" "}
-        //   </div>
-        //   {/* About me */}
-        //   <div
-        //     onClick={() => {
-        //       handleScroll("About");
-        //       setIsOpen(false);
-        //     }}
-        //     className="flex gap-2 items-center mt-3 p-2 "
-        //   >
-        //     <RiInformationLine /> <span>About </span>{" "}
-        //   </div>
-        //   {/* Skill */}
-        //   <div
-        //     onClick={() => {
-        //       handleScroll("skill");
-        //       setIsOpen(false);
-        //     }}
-        //     className="flex gap-2 items-center mt-3 p-2 "
-        //   >
-        //     <RiCodeSSlashLine /> <span> Skills</span>{" "}
-        //   </div>
-        //   {/* Projects */}
-        //   <div
-        //     onClick={() => {
-        //       handleScroll("project");
-        //       setIsOpen(false);
-        //     }}
-        //     className="flex gap-2 items-center mt-3 p-2 "
-        //   >
-        //     <RiFolderLine /> <span>Projects </span>{" "}
-        //   </div>
-        //   {/* Contact me */}
-        //   <div
-        //     onClick={() => {
-        //       handleScroll("contact");
-        //       setIsOpen(false);
-        //     }}
-        //     className="flex gap-2 items-center mt-3 p-2 "
-        //   >
-        //     <RiMailLine /> <span>Contact </span>{" "}
-        //   </div>
-        //   {/* Theme Dark & Light */}
-        //   <button
-        //     onClick={() => setDarkMode(!darkMode)}
-        //     className=" flex gap-2 items-center mt-3 p-2"
-        //   >
-        //     {darkMode ? <FiSun /> : <FiMoon />}{" "}
-        //     <span>{darkMode ? "Light" : "Dark"} </span>
-        //   </button>
-        //   {/* Theme Options List */}
-        //   <div className="flex gap-2 items-center mt-3 p-2">
-        //     <div className="relative">
-        //       {/* Button */}
-        //       <button
-        //         onClick={() => setOpen(!open)}
-        //         className="[var(--bg-color)] p-1 flex items-center"
-        //       >
-        //         Theme
-        //         <ChevronDown
-        //           stroke="var(--text-color)"
-        //           className={`transition-transform duration-300 ${
-        //             open ? "rotate-180" : "rotate-0"
-        //           } `}
-        //         />
-        //       </button>
-        //       {/* theme option */}
-        //       {open && (
-        //         <ul className="absolute mt-2 rounded-md shadow-lg z-10">
-        //           {themes.map((t) => (
-        //             <li
-        //               key={t.value}
-        //               onClick={() => {
-        //                 setTheme(t.value);
-        //                 setOpen(false);
-        //               }}
-        //               className="px-4 py-2 cursor-pointer flex gap-3 items-center"
-        //             >
-        //               <div
-        //                 className={`h-5 w-5 rounded-full`}
-        //                 style={{ backgroundColor: t.color }}
-        //               ></div>
-        //               <span className="text-[var(--maintext-color)]">
-        //                 {t.name}
-        //               </span>
-        //             </li>
-        //           ))}
-        //         </ul>
-        //       )}
-        //     </div>
-        //   </div>
-        // </div>
       )}
     </nav>
   );
