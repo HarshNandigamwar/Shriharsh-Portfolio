@@ -14,7 +14,7 @@ import { useLenis } from "../Hooks/SmoothScroll";
 import { ChevronDown } from "../components/ChevronDown";
 import { ChevronsRight } from "../components/ChevronsRight";
 // Import from motion
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
   const lenis = useLenis();
@@ -52,7 +52,25 @@ const Navbar = () => {
       document.documentElement.classList.remove("dark");
     }
   }, [darkMode]);
-
+  // Animation Variable for Mobile nav
+  const sidebarVariants = {
+    // hidden state
+    hidden: {
+      x: "100%",
+      transition: {
+        type: "tween",
+        duration: 0.2,
+      },
+    },
+    // Visible state
+    visible: {
+      x: "0%",
+      transition: {
+        type: "tween",
+        duration: 0.2,
+      },
+    },
+  };
   return (
     <nav className="fixed top-0 w-full bg-[var(--bg-color)] shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -170,119 +188,131 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <motion.div
-          className="absolute md:hidden bg-[var(--bg-color)] w-[50%] right-0 h-screen p-5 pt-6 text-xl text-[var(--text-color)]"
-          initial={{ x: "100%", opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 100,
-            damping: 20,
-            duration: 0.5,
-          }}
-        >
-          {/* Home */}
-          <div
-            onClick={() => {
-              handleScroll("intro");
-              setIsOpen(false);
-            }}
-            className="flex gap-2 items-center mt-3 p-2 "
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            className="absolute md:hidden w-[100%] h-screen text-xl text-[var(--text-color)] "
+            key="mobile-nav"
+            variants={sidebarVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
           >
-            <RiHomeLine /> <span>Home</span>{" "}
-          </div>
-          {/* About me */}
-          <div
-            onClick={() => {
-              handleScroll("About");
-              setIsOpen(false);
-            }}
-            className="flex gap-2 items-center mt-3 p-2 "
-          >
-            <RiInformationLine /> <span>About </span>{" "}
-          </div>
-          {/* Skill */}
-          <div
-            onClick={() => {
-              handleScroll("skill");
-              setIsOpen(false);
-            }}
-            className="flex gap-2 items-center mt-3 p-2 "
-          >
-            <RiCodeSSlashLine /> <span> Skills</span>{" "}
-          </div>
-          {/* Projects */}
-          <div
-            onClick={() => {
-              handleScroll("project");
-              setIsOpen(false);
-            }}
-            className="flex gap-2 items-center mt-3 p-2 "
-          >
-            <RiFolderLine /> <span>Projects </span>{" "}
-          </div>
-          {/* Contact me */}
-          <div
-            onClick={() => {
-              handleScroll("contact");
-              setIsOpen(false);
-            }}
-            className="flex gap-2 items-center mt-3 p-2 "
-          >
-            <RiMailLine /> <span>Contact </span>{" "}
-          </div>
-          {/* Theme Dark & Light */}
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className=" flex gap-2 items-center mt-3 p-2"
-          >
-            {darkMode ? <FiSun /> : <FiMoon />}{" "}
-            <span>{darkMode ? "Light" : "Dark"} </span>
-          </button>
-          {/* Theme Options List */}
-          <div className="flex gap-2 items-center mt-3 p-2">
-            <div className="relative">
-              {/* Button */}
-              <button
-                onClick={() => setOpen(!open)}
-                className="[var(--bg-color)] p-1 flex items-center"
+            {/* Blur Div */}
+            <motion.div
+              className="absolute w-[50%] h-screen backdrop-blur-sm"
+              key="backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(!isOpen)}
+            ></motion.div>
+
+            {/* Main Div that contain info */}
+            <div className="absolute h-screen p-5 pt-6 w-[50%] right-0 bg-[var(--bg-color)] mt-[-1px]">
+              {/* Home */}
+              <div
+                onClick={() => {
+                  handleScroll("intro");
+                  setIsOpen(false);
+                }}
+                className="flex gap-2 items-center mt-3 p-2 "
               >
-                Theme
-                <ChevronDown
-                  stroke="var(--text-color)"
-                  className={`transition-transform duration-300 ${
-                    open ? "rotate-180" : "rotate-0"
-                  } `}
-                />
+                <RiHomeLine /> <span>Home</span>{" "}
+              </div>
+              {/* About me */}
+              <div
+                onClick={() => {
+                  handleScroll("About");
+                  setIsOpen(false);
+                }}
+                className="flex gap-2 items-center mt-3 p-2 "
+              >
+                <RiInformationLine /> <span>About </span>{" "}
+              </div>
+              {/* Skill */}
+              <div
+                onClick={() => {
+                  handleScroll("skill");
+                  setIsOpen(false);
+                }}
+                className="flex gap-2 items-center mt-3 p-2 "
+              >
+                <RiCodeSSlashLine /> <span> Skills</span>{" "}
+              </div>
+              {/* Projects */}
+              <div
+                onClick={() => {
+                  handleScroll("project");
+                  setIsOpen(false);
+                }}
+                className="flex gap-2 items-center mt-3 p-2 "
+              >
+                <RiFolderLine /> <span>Projects </span>{" "}
+              </div>
+              {/* Contact me */}
+              <div
+                onClick={() => {
+                  handleScroll("contact");
+                  setIsOpen(false);
+                }}
+                className="flex gap-2 items-center mt-3 p-2 "
+              >
+                <RiMailLine /> <span>Contact </span>{" "}
+              </div>
+              {/* Theme Dark & Light */}
+              <button
+                onClick={() => setDarkMode(!darkMode)}
+                className=" flex gap-2 items-center mt-3 p-2"
+              >
+                {darkMode ? <FiSun /> : <FiMoon />}{" "}
+                <span>{darkMode ? "Light" : "Dark"} </span>
               </button>
-              {/* theme option */}
-              {open && (
-                <ul className="absolute mt-2 rounded-md shadow-lg z-10">
-                  {themes.map((t) => (
-                    <li
-                      key={t.value}
-                      onClick={() => {
-                        setTheme(t.value);
-                        setOpen(false);
-                      }}
-                      className="px-4 py-2 cursor-pointer flex gap-3 items-center"
-                    >
-                      <div
-                        className={`h-5 w-5 rounded-full`}
-                        style={{ backgroundColor: t.color }}
-                      ></div>
-                      <span className="text-[var(--maintext-color)]">
-                        {t.name}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              {/* Theme Options List */}
+              <div className="flex gap-2 items-center mt-3 p-2">
+                <div className="relative">
+                  {/* Button */}
+                  <button
+                    onClick={() => setOpen(!open)}
+                    className="[var(--bg-color)] p-1 flex items-center"
+                  >
+                    Theme
+                    <ChevronDown
+                      stroke="var(--text-color)"
+                      className={`transition-transform duration-300 ${
+                        open ? "rotate-180" : "rotate-0"
+                      } `}
+                    />
+                  </button>
+                  {/* theme option */}
+                  {open && (
+                    <ul className="absolute mt-2 rounded-md shadow-lg z-10">
+                      {themes.map((t) => (
+                        <li
+                          key={t.value}
+                          onClick={() => {
+                            setTheme(t.value);
+                            setOpen(false);
+                          }}
+                          className="px-4 py-2 cursor-pointer flex gap-3 items-center"
+                        >
+                          <div
+                            className={`h-5 w-5 rounded-full`}
+                            style={{ backgroundColor: t.color }}
+                          ></div>
+                          <span className="text-[var(--maintext-color)]">
+                            {t.name}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </div>
             </div>
-          </div>
-        </motion.div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };
