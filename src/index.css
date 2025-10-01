@@ -1,9 +1,7 @@
 @import "tailwindcss";
 @tailwind utilities;
-/* @import url("https://fonts.googleapis.com/css2?family=Average&display=swap"); */
 
 body {
-  /* overflow-x: hidden; */
   background-color: var(--bg-color);
   color: #ffffff;
   font-family: Average, sans-serif;
@@ -11,14 +9,14 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
+ 
 /* Theme/Mode */
 :root {
   /* Light-Mode */
   --bg-color: #ffffff;
   --maintext-color: #000000;
   /* Theme */
-  --text-color: #a855f7;
+  --text-color: #9766e3;
   --hovertext-color: #000000;
   --subtext-color: #d8b4fe;
 }
@@ -30,22 +28,22 @@ html.dark {
 }
 /* Theme */
 [data-theme="orange"] {
-  --text-color: #ffa500;
+  --text-color: #f27d05;
   --hovertext-color: #000000;
   --subtext-color: #ffd6a7;
 }
 [data-theme="blue"] {
-  --text-color: #0000ff;
+  --text-color: #5593f6;
   --hovertext-color: #000000;
   --subtext-color: #3b82f6;
 }
 [data-theme="purple"] {
-  --text-color: #a855f7;
+  --text-color: #9766e3;
   --hovertext-color: #000000;
   --subtext-color: #d8b4fe;
 }
 [data-theme="green"] {
-  --text-color: #00ff00;
+  --text-color: #3bde76;
   --hovertext-color: #000000;
   --subtext-color: #86efac;
 }
@@ -75,3 +73,27 @@ html.dark {
   scrollbar-width: thin; /* "auto" or "thin" */
   scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
 }
+
+/* Colors */
+
+/* #5593f6 */
+
+/* #3b32fd */
+
+/* #161c28 bg */
+
+/* #212121 bg-light-mode */
+
+/* #24292d border */
+
+/* #9766e3 */
+
+/* #3bde76 */
+
+/* #f7ba2e */
+
+/* #fac12c */
+
+/* #fac02e */
+
+/* #d5c235 #ef9c24 #f27d05 */

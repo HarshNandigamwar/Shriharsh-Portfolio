@@ -83,7 +83,7 @@ const Experience = () => {
               whileTap={{ scale: 0.9 }}
               href={SCletter}
               download="SkillCraft Tecnology Certificate & Letter of Recommendation.pdf"
-              className="flex items-center justify-center border border-[var(--text-color)] p-3 rounded-md text-xl"
+              className="flex items-center justify-center border border-[var(--text-color)] p-3 rounded-md text-xl text-[var(--text-color)]"
             >
               Download Letter
             </motion.a>
@@ -101,7 +101,7 @@ const Experience = () => {
             stroke="var(--text-color)"
             className={`transition-transform duration-300 rotate-90`}
           />{" "}
-          <span className="mr-2">Back</span>
+          <span className="mr-2 text-[var(--text-color)]">Back</span>
         </button>
       </div>
     </div>

@@ -11,15 +11,15 @@ import { FiMoon, FiSun } from "react-icons/fi";
 //import lenis
 import { useLenis } from "../Hooks/SmoothScroll";
 // Import from Components
-import { ChevronDown } from "../components/ChevronDown";
-import { ChevronsRight } from "../components/ChevronsRight";
+import { ChevronDown } from "./ChevronDown";
+import { ChevronsRight } from "./ChevronsRight";
 // Import from motion
 import { AnimatePresence, motion } from "framer-motion";
-
 const Navbar = () => {
   const lenis = useLenis();
   const [isOpen, setIsOpen] = useState(false);
   const logo = "< Shriharsh />";
+  // Navigation
   const handleScroll = (id) => {
     const el = document.getElementById(id);
     if (el && lenis) {
@@ -32,26 +32,65 @@ const Navbar = () => {
   };
   // Theme
   const [theme, setTheme] = useState("Purple");
+  const saveTheme = localStorage.getItem("theme");
   const [open, setOpen] = useState(false);
   const themes = [
-    { name: "Orange", value: "orange", color: "#ffa500" },
-    { name: "Blue", value: "blue", color: "#0000ff" },
-    { name: "Purple", value: "purple", color: "#a855f7" },
-    { name: "Green", value: "green", color: "#00ff00" },
+    { name: "Orange", value: "orange", color: "#f27d05 " },
+    { name: "Blue", value: "blue", color: "#5593f6" },
+    { name: "Purple", value: "purple", color: "#9766e3 " },
+    { name: "Green", value: "green", color: "#3bde76" },
   ];
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
-  }, [theme]);
-  // Mode
-  const [darkMode, setDarkMode] = useState(true);
-  useEffect(() => {
-    // document.documentElement.setAttribute("data-mode",darkMode?"dark":"light");
-    if (darkMode) {
-      document.documentElement.classList.add("dark");
+    if (saveTheme) {
+      setTheme(saveTheme);
+      if (saveTheme === "orange") {
+        document.documentElement.setAttribute("data-theme", "orange");
+      }
+      if (saveTheme === "blue") {
+        document.documentElement.setAttribute("data-theme", "blue");
+      }
+      if (saveTheme === "purple") {
+        document.documentElement.setAttribute("data-theme", "purple");
+      }
+      if (saveTheme === "green") {
+        document.documentElement.setAttribute("data-theme", "green");
+      }
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.setAttribute("data-theme", "purple");
+      localStorage.setItem("theme", "purple");
     }
-  }, [darkMode]);
+  }, [theme]);
+  const toggleTheme = (e) => {
+    localStorage.setItem("theme", e);
+    document.documentElement.setAttribute("data-theme", e);
+  };
+  // Mode Light & Dark
+  const [Mode, setMode] = useState("dark");
+  const saveMode = localStorage.getItem("mode");
+  useEffect(() => {
+    if (saveMode) {
+      setMode(saveMode);
+      if (saveMode === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("mode", "dark");
+    }
+  }, []);
+  const toggleMode = () => {
+    if (Mode === "light") {
+      setMode("dark");
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("mode", "dark");
+    } else {
+      setMode("light");
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("mode", "light");
+    }
+  };
   // Animation Variable for Mobile nav
   const sidebarVariants = {
     // hidden state
@@ -86,7 +125,6 @@ const Navbar = () => {
           >
             {logo}
           </a>
-
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 text-[var(--maintext-color)] font-medium">
             <button
@@ -140,8 +178,8 @@ const Navbar = () => {
                   {themes.map((t) => (
                     <li
                       key={t.value}
-                      onClick={() => {
-                        setTheme(t.value);
+                      onClick={(e) => {
+                        toggleTheme(t.value);
                         setOpen(false);
                       }}
                       className="px-4 py-2 cursor-pointer flex gap-3 items-center"
@@ -160,14 +198,13 @@ const Navbar = () => {
             </div>
             {/* Mode */}
             <button
-              onClick={() => setDarkMode(!darkMode)}
+              onClick={toggleMode}
               className="flex gap-2 items-center text-[var(--maintext-color)]"
             >
-              {darkMode ? <FiSun /> : <FiMoon />}{" "}
-              <span>{darkMode ? "Light" : "Dark"} </span>
+              {Mode ? <FiSun /> : <FiMoon />}{" "}
+              <span>{Mode ? "Light" : "Dark"} </span>
             </button>
           </div>
-
           {/* Mobile Button */}
           <div className="md:hidden">
             <button
@@ -186,7 +223,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -262,11 +298,11 @@ const Navbar = () => {
               </div>
               {/* Theme Dark & Light */}
               <button
-                onClick={() => setDarkMode(!darkMode)}
+                onClick={toggleMode}
                 className=" flex gap-2 items-center mt-3 p-2"
               >
-                {darkMode ? <FiSun /> : <FiMoon />}{" "}
-                <span>{darkMode ? "Light" : "Dark"} </span>
+                {Mode ? <FiSun /> : <FiMoon />}{" "}
+                <span>{Mode ? "Light" : "Dark"} </span>
               </button>
               {/* Theme Options List */}
               <div className="flex gap-2 items-center mt-3 p-2">
@@ -290,8 +326,8 @@ const Navbar = () => {
                       {themes.map((t) => (
                         <li
                           key={t.value}
-                          onClick={() => {
-                            setTheme(t.value);
+                          onClick={(e) => {
+                            toggleTheme(t.value);
                             setOpen(false);
                           }}
                           className="px-4 py-2 cursor-pointer flex gap-3 items-center"

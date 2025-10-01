@@ -94,7 +94,11 @@ const Certifications = () => {
             onClick={() => navigate("/")}
             className="flex items-center justify-center border border-[var(--text-color)] p-3 rounded-md text-xl"
           >
-            <ChevronDown stroke="var(--text-color)" className={`transition-transform duration-300 rotate-90`} /> <span className="mr-2">Back</span>
+            <ChevronDown
+              stroke="var(--text-color)"
+              className={`transition-transform duration-300 rotate-90`}
+            />{" "}
+            <span className="mr-2 text-[var(--text-color)]">Back</span>
           </button>
         </div>
       </div>
