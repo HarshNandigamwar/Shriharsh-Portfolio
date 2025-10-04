@@ -17,7 +17,7 @@ const Layout = () => {
   return (
     <SmoothScrollProvider>
       <div className="relative ">
-        <FloatingDots count={5} className="-z-50 absolute inset-0" />
+        <FloatingDots count={5} className="z-50 absolute inset-0" />
         <div className="relative z-10">
           <Home />
           <About />

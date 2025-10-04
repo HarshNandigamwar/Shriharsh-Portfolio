@@ -67,6 +67,7 @@ const Navbar = () => {
   // Mode Light & Dark
   const [Mode, setMode] = useState("dark");
   const saveMode = localStorage.getItem("mode");
+  let ModeText;
   useEffect(() => {
     if (saveMode) {
       setMode(saveMode);
@@ -91,6 +92,21 @@ const Navbar = () => {
       localStorage.setItem("mode", "light");
     }
   };
+  if (Mode === "dark") {
+    ModeText = (
+      <span className="flex items-center gap-1">
+        <FiSun />
+        Light
+      </span>
+    );
+  } else {
+    ModeText = (
+      <span className="flex items-center gap-1">
+        <FiMoon />
+        Dark
+      </span>
+    );
+  }
   // Animation Variable for Mobile nav
   const sidebarVariants = {
     // hidden state
@@ -199,10 +215,9 @@ const Navbar = () => {
             {/* Mode */}
             <button
               onClick={toggleMode}
-              className="flex gap-2 items-center text-[var(--maintext-color)]"
+              className="flex items-center text-[var(--maintext-color)]"
             >
-              {Mode ? <FiSun /> : <FiMoon />}{" "}
-              <span>{Mode ? "Light" : "Dark"} </span>
+              {ModeText}
             </button>
           </div>
           {/* Mobile Button */}
@@ -243,7 +258,6 @@ const Navbar = () => {
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(!isOpen)}
             ></motion.div>
-
             {/* Main Div that contain info */}
             <div className="absolute h-screen p-5 pt-6 w-[50%] right-0 bg-[var(--bg-color)] mt-[-1px]">
               {/* Home */}
@@ -301,8 +315,7 @@ const Navbar = () => {
                 onClick={toggleMode}
                 className=" flex gap-2 items-center mt-3 p-2"
               >
-                {Mode ? <FiSun /> : <FiMoon />}{" "}
-                <span>{Mode ? "Light" : "Dark"} </span>
+                {ModeText}
               </button>
               {/* Theme Options List */}
               <div className="flex gap-2 items-center mt-3 p-2">

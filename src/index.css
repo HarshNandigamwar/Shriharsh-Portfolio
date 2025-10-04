@@ -9,7 +9,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
- 
+
 /* Theme/Mode */
 :root {
   /* Light-Mode */
@@ -22,7 +22,7 @@ html {
 }
 /* Dark-Mode */
 html.dark {
-  --bg-color: #0a0a0a;
+  --bg-color: #000000;
   --maintext-color: #ffffff;
   --infotext-color: #d1d5dc;
 }
