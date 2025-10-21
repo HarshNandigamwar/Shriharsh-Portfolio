@@ -1,38 +1,63 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import MotionWrapper from "../utils/MotionWrapper";
 // Import Images
 //E-Commerce app
-import Ecom1 from "../assets/Ecom/Ecom1.png";
-import Ecom2 from "../assets/Ecom/Ecom2.png";
-import Ecom3 from "../assets/Ecom/Ecom3.png";
+const Ecom1 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761028463/Ecom1_tdmejk.png";
+const Ecom2 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761028482/Ecom2_gqko9l.png";
+const Ecom3 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761028459/Ecom3_vrkhk8.png";
+
 // Weather app
-import Weather1 from "../assets/Weather/weather1.png";
-import Weather2 from "../assets/Weather/weather2.png";
-import Weather3 from "../assets/Weather/weather3.jpg";
+const Weather1 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761028369/weather1_uu4lnb.png";
+const Weather2 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761028353/weather2_ygfct9.png";
+const Weather3 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761028344/weather3_jqtyt7.jpg";
+
 //Currency Converter
-import CurrencyConverter1 from "../assets/Currency Converter/Currency Converter1.jpg";
-import CurrencyConverter2 from "../assets/Currency Converter/Currency Converter2.png";
-import CurrencyConverter3 from "../assets/Currency Converter/Currency Converter3.png";
+const CurrencyConverter1 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761028182/Currency_Converter1_cu1e9i.jpg";
+const CurrencyConverter2 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761028243/Currency_Converter2_xi1lkh.png";
+const CurrencyConverter3 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761028249/Currency_Converter3_ivvhfx.png";
+
 //Sigma AI
-import SigmaAI1 from "../assets/Sigma AI/sigma ai1.jpg";
-import SigmaAI2 from "../assets/Sigma AI/Sigma AI2.png";
-import SigmaAI3 from "../assets/Sigma AI/Sigma AI3.png";
+const SigmaAI1 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761028076/sigma_ai1_kg5tpj.jpg";
+const SigmaAI2 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761028076/Sigma_AI2_e5uchs.png";
+const SigmaAI3 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761028080/Sigma_AI3_t3ljgh.png";
+
 //BookStore
-import BookStore1 from "../assets/BookStore/BookStore1.png";
-import BookStore2 from "../assets/BookStore/BookStore2.png";
-import BookStore3 from "../assets/BookStore/BookStore3.png";
+const BookStore1 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761027916/BookStore1_c0urjm.png";
+const BookStore2 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/BookStore2_ffsw3b.png";
+const BookStore3 =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761027917/BookStore3_jxftt5.png";
 
 const projects = [
   // E-Commerce app
   {
     title: "E-Commerce app",
     description:
-      " This is a dynamic E-Commerce web application built with React.js, designed to deliver a smooth and engaging shopping experience.",
+      " This is a FullStack E-Commerce web application built with React.js & Firebase designed to deliver a smooth and engaging shopping experience.",
     LiveLink: "https://sigma-mart.vercel.app/",
-    GithubLink: "https://github.com/HarshNandigamwar/Sigma-mart",
-    tech: ["React.js", "Tailwind CSS", "DummyJSON API"],
+    GithubLink: "https://github.com/HarshNandigamwar/SigmaMart",
+    tech: [
+      "React.js",
+      "Firebase",
+      "Tailwind CSS",
+      "DummyJSON API",
+      "Axios",
+      "Motion",
+    ],
     images: [Ecom1, Ecom2, Ecom3],
   },
   // Weather app
@@ -97,12 +122,7 @@ function ProjectCard({ project, index }) {
   };
 
   return (
-    <motion.div
-      className="bg-black/30 rounded-xl shadow-xl overflow-hidden border border-[var(--text-color)] flex flex-col transform-none"
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.2 }}
-    >
+    <div className="bg-black/30 rounded-xl shadow-xl overflow-hidden border border-[var(--text-color)] flex flex-col transform-none">
       {/* Image Slideshow */}
       <div className="h-44 md:h-52 lg:h-56 w-full overflow-hidden relative group">
         <AnimatePresence mode="wait">
@@ -190,7 +210,7 @@ function ProjectCard({ project, index }) {
           </a>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -225,9 +245,7 @@ export default function ProjectsPage() {
       <section className="px-3 sm:px-6 md:px-12 lg:px-20 pb-16">
         <div className="grid gap-8 sm:gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <MotionWrapper direction="y">
-              <ProjectCard key={index} project={project} index={index} />
-            </MotionWrapper>
+            <ProjectCard project={project} index={index} />
           ))}
         </div>
       </section>

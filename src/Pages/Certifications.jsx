@@ -2,10 +2,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 // Import Images
-import Accenture from "../assets/Certification/Accenture.png";
-import AWS from "../assets/Certification/AWS.png";
-import IBM from "../assets/Certification/IBM.png";
-import Hackathon from "../assets/Certification/Hackathon.png";
+const Accenture = "https://res.cloudinary.com/darmatnf2/image/upload/v1761029046/Accenture_kcoo9d.png";
+const AWS = "https://res.cloudinary.com/darmatnf2/image/upload/v1761029051/AWS_yu4vat.png";
+const IBM = "https://res.cloudinary.com/darmatnf2/image/upload/v1761029055/IBM_yyzqdd.png";
+const Hackathon = "https://res.cloudinary.com/darmatnf2/image/upload/v1761029069/Hackathon_zfgblj.png";
 // MotionWrapper
 import MotionWrapper from "../utils/MotionWrapper";
 // Import from Hooks

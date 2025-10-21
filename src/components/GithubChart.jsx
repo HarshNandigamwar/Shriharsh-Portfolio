@@ -44,7 +44,7 @@ const GithubChart = () => {
               <div className="px-4 py-2 text-[13px] text-[#A1A1AA] rounded-sm ">
                 Contributions in 2025
               </div>
-
+ 
               <div className="flex gap-5 items-center">
                 {" "}
                 <span className="text-[#A1A1AA]">Less</span>

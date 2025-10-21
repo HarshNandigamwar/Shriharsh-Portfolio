@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 // Import from Hooks
 import useScrollToTop from "../Hooks/useScrollToTop";
 // Import images
-import SCcertificate from "../assets/Experience/certificate.png";
+const SCcertificate =
+  "https://res.cloudinary.com/darmatnf2/image/upload/v1761029277/certificate_u1uqqd.png";
 // import from Public
 import SCletter from "/SkillCraft Tecnology Certificate & Letter of Recommendation.pdf";
 // Import from components

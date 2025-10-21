@@ -1,45 +1,49 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import LoadingButton from "../components/LoadingButton";
 import { toast } from "sonner";
 import MotionWrapper from "../utils/MotionWrapper";
 import { Globe } from "../components/Globe";
 import { ChevronsRight } from "../components/ChevronsRight";
+import axios from "axios";
+import playSound from "../Hooks/playSound.js";
 const ContactPage = () => {
-  const form = useRef();
-  const [result, setResult] = React.useState("");
-  const [loading, setLoading] = React.useState(false);
+  const SuccessfulSound = "/Sound/Successful.mp3";
+  const ErrorSound = "/Sound/Error.mp3";
+
+  //Sending data to Web3 using axios
+  const [loading, setLoading] = useState(false);
+  const WEB3FORMS_URL = "https://api.web3forms.com/submit";
+  const ACCESS_KEY = "c9d96e3c-2460-4b34-b239-ec91dd8a8cb0";
+
   const onSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
-    const formData = new FormData(event.target);
-
-    formData.append("access_key", "c9d96e3c-2460-4b34-b239-ec91dd8a8cb0");
-
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    const data = await response.json();
-
-    if (data.success) {
+    try {
+      const formData = new FormData(event.target);
+      formData.append("access_key", ACCESS_KEY);
+      const response = await axios.post(WEB3FORMS_URL, formData);
+      const data = response.data;
+      if (data.success) {
+        // Success Logic
+        toast.success("🎉 Form submitted successfully.");
+        playSound(SuccessfulSound);
+        event.target.reset();
+      } else {
+        console.error("Web3Forms API Error:", data.message);
+        toast.warning(`❌ Form submission failed. Error: ${data.message}.`);
+        playSound(ErrorSound);
+        setLoading(false);
+      }
+    } catch (error) {
+      const errorMessage = error.response
+        ? error.response.data?.message || `HTTP Error ${error.response.status}`
+        : error.message;
+      console.error("Axios Submission Error:", errorMessage);
+      toast.error(`❌ An unexpected error occurred: ${errorMessage}.`);
+      playSound(ErrorSound);
       setLoading(false);
-      toast.success("🎉 Form submitted successfully", {
-        duration: 3000,
-        description: "Your data has been send.",
-      });
-      event.target.reset();
-    } else {
-      console.log("Error", data);
-      setResult(data.message);
-      toast.error(" Form submission failed.", {
-        duration: 3000,
-        description: "Please try again.",
-      });
+    } finally {
       setLoading(false);
-      setTimeout(() => {
-        setResult("");
-      }, 3000);
     }
   };
 
@@ -246,8 +250,6 @@ const ContactPage = () => {
                     className="w-full bg-black/30 px-4 py-3 bg-dark border border-gray-700 rounded-lg hover:border-[var(--text-color)] text-[var(--maintext-color)]"
                   ></textarea>
                 </div>
-                {/* Error */}
-                <span className="text-red-500">{result}</span>
 
                 {/* Submit Button */}
                 <LoadingButton

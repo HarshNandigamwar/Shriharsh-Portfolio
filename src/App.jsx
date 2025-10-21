@@ -13,7 +13,7 @@ const App = () => {
   return (
     <>
       <Toaster position="top-center" richColors theme="dark" />
-      <Routes>
+      <Routes> 
         <Route path="/" element={<Layout />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/certification" element={<Certifications />} />

@@ -66,7 +66,7 @@ const SkillPage = () => {
       logo: (
         <img
           src="https://mongoosejs.com/docs/images/mongoose5_62x30_transparent.png"
-          className="w-[30px] md:w-[35px]" 
+          className="w-[30px] md:w-[35px]"
           loading="lazy"
         />
       ),
@@ -95,7 +95,7 @@ const SkillPage = () => {
       logo: (
         <img
           src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/480/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png"
-          className="h-6 w-6" 
+          className="h-6 w-6"
           loading="lazy"
         />
       ),
@@ -111,43 +111,24 @@ const SkillPage = () => {
     {
       name: "Vercel",
       logo: (
-        <img src="https://skillicons.dev/icons?i=vercel" className="h-6 w-6" loading="lazy" />
+        <img
+          src="https://skillicons.dev/icons?i=vercel"
+          className="h-6 w-6"
+          loading="lazy"
+        />
       ),
     },
     {
       name: "Netlify",
       logo: (
-        <img src="https://skillicons.dev/icons?i=netlify" className="h-6 w-6" loading="lazy" />
+        <img
+          src="https://skillicons.dev/icons?i=netlify"
+          className="h-6 w-6"
+          loading="lazy"
+        />
       ),
     },
   ];
-
-  // const softSkills = [
-  //   {
-  //     name: "Problem Solving",
-  //     logo: "https://img.icons8.com/fluency/480/idea.png",
-  //   },
-  //   {
-  //     name: "Communication",
-  //     logo: "https://img.icons8.com/fluency/480/speech-bubble.png",
-  //   },
-  //   {
-  //     name: "Teamwork",
-  //     logo: "https://img.icons8.com/fluency/480/teamwork.png",
-  //   },
-  //   {
-  //     name: "Time Management",
-  //     logo: "https://img.icons8.com/color/48/time-machine--v1.png",
-  //   },
-  //   {
-  //     name: "Adaptability",
-  //     logo: "https://img.icons8.com/color/480/synchronize.png",
-  //   },
-  //   {
-  //     name: "Self Learning",
-  //     logo: "https://img.icons8.com/fluency/480/mind-map.png",
-  //   },
-  // ];
 
   return (
     <div>

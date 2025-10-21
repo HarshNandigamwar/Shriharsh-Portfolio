@@ -4,7 +4,10 @@ import MotionWrapper from "../../utils/MotionWrapper";
 import Navbar from "../../components/Navbar";
 import "./Home.css";
 import Resume from "/Shriharsh_Nandigamwar_resume.pdf";
+import playSound from "../../Hooks/playSound";
 const HomePage = () => {
+  const SuccessfulSound = "/Sound/Successful.mp3";
+
   return (
     <div>
       <Navbar />
@@ -114,6 +117,7 @@ const HomePage = () => {
                 whileTap={{ scale: 0.9 }}
                 href={Resume}
                 download="ShriharshNandigamwar_FullstackDeveloper.pdf"
+                onClick={() => playSound(SuccessfulSound)}
               >
                 <button className="button">Download CV</button>
               </motion.a>
@@ -124,11 +128,7 @@ const HomePage = () => {
         {/*  Right Image */}
         <div className="w-full h-[30vh] lg:w-[40vw] lg:h-full flex items-center justify-center relative xl:top-7 mt-4 md:mt-0 mb-4 md:mb-0">
           <div className="bodyContainer2">
-            <img
-              src="/shriharsh.jpg"
-              alt="N/A ＞﹏＜"
-              className="myImg"
-            />
+            <img src="/shriharsh.jpg" alt="N/A ＞﹏＜" className="myImg" />
           </div>
         </div>
       </div>
