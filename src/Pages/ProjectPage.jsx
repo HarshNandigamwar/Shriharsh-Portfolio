@@ -122,7 +122,7 @@ function ProjectCard({ project, index }) {
   };
 
   return (
-    <div className="bg-black/30 rounded-xl shadow-xl overflow-hidden border border-[var(--text-color)] flex flex-col transform-none">
+    <div className="bg-black/30 rounded-md shadow-xl overflow-hidden border border-[var(--text-color)] flex flex-col transform-none">
       {/* Image Slideshow */}
       <div className="h-44 md:h-52 lg:h-56 w-full overflow-hidden relative group">
         <AnimatePresence mode="wait">
@@ -190,24 +190,34 @@ function ProjectCard({ project, index }) {
 
         {/* Buttons */}
         <div className="mt-auto flex gap-3">
-          <a
+          <motion.a
             href={project.LiveLink}
             target="_blank"
             rel="noopener noreferrer"
             title="Live Demo"
-            className="flex-1 text-center bg-[var(--text-color)] text-[#000000] py-2 px-4 rounded-[8px] border border-gray-500/10 font-medium transition-all duration-150 active:scale-95 hover:scale-102"
+            className="flex-1 text-center bg-gray-900 text-[#A1A1AA] py-2 px-4 rounded-[8px] border border-gray-500/10 font-medium transition-all duration-150 active:scale-95 hover:scale-102 ease-in-out"
+            whileHover={{
+              backgroundColor: "var(--text-color)",
+              color: "black",
+            }}
+            transition={{ duration: 0.4 }}
           >
             Live Demo
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href={project.GithubLink}
             target="_blank"
             rel="noopener noreferrer"
             title="Source Code"
-            className="flex-1 text-center bg-gray-900 text-[#A1A1AA] py-2 px-4 rounded-[8px] border border-gray-500/10 font-medium transition-all duration-150 active:scale-95 hover:scale-102"
+            className="flex-1 text-center bg-gray-900 text-[#A1A1AA] py-2 px-4 rounded-[8px] border border-gray-500/10 font-medium transition-all duration-150 active:scale-95 hover:scale-102 ease-in-out"
+            whileHover={{
+              backgroundColor: "var(--text-color)",
+              color: "black",
+            }}
+            transition={{ duration: 0.4 }}
           >
             GitHub
-          </a>
+          </motion.a>
         </div>
       </div>
     </div>

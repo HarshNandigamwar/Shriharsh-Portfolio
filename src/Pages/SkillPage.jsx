@@ -154,11 +154,11 @@ const SkillPage = () => {
                 <div className="flex gap-5 flex-wrap w-[100%] ">
                   {section.skills.map((data) => (
                     <div
-                      className="border-2 border-[var(--text-color)] w-auto h-15 text-center flex items-center bg-black/30 justify-evenly p-2 xl:px-3 rounded-[12px] gap-2 lg:gap-1 cursor-pointer hover:scale-105 hover:shadow-[0px_0px_10px_var(--text-color)] transition-all  "
+                      className="border-2 border-[var(--text-color)] w-auto h-15 text-center flex items-center bg-black/30 justify-evenly p-2 xl:px-3 rounded-lg gap-2 lg:gap-1 cursor-pointer hover:scale-105 hover:shadow-[0px_0px_10px_var(--text-color)] transition-all  "
                       key={data.name}
                       title={data.name}
                     >
-                      {data.logo}
+                      {data.logo || "•"}
                       <p className="text-[15px] md:text-[17px] text-[var(--maintext-color)]">
                         {data.name}
                       </p>

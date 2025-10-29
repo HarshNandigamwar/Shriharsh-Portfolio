@@ -15,7 +15,6 @@ import { ChevronDown } from "./ChevronDown";
 import { ChevronsRight } from "./ChevronsRight";
 // Import from motion
 import { AnimatePresence, motion } from "framer-motion";
-import playSound from "../Hooks/playSound";
 const Navbar = () => {
   const lenis = useLenis();
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +34,6 @@ const Navbar = () => {
   const [theme, setTheme] = useState("Purple");
   const saveTheme = localStorage.getItem("theme");
   const [open, setOpen] = useState(false);
-  const SuccessfulSound = "/Sound/Successful.mp3";
   const themes = [
     { name: "Orange", value: "orange", color: "#f27d05 " },
     { name: "Blue", value: "blue", color: "#5593f6" },
@@ -84,7 +82,6 @@ const Navbar = () => {
     }
   }, []);
   const toggleMode = () => {
-    playSound(SuccessfulSound);
     if (Mode === "light") {
       setMode("dark");
       document.documentElement.classList.add("dark");
@@ -200,7 +197,6 @@ const Navbar = () => {
                       onClick={(e) => {
                         toggleTheme(t.value);
                         setOpen(false);
-                        playSound(SuccessfulSound);
                       }}
                       className="px-4 py-2 cursor-pointer flex gap-3 items-center"
                     >
@@ -346,7 +342,6 @@ const Navbar = () => {
                           onClick={(e) => {
                             toggleTheme(t.value);
                             setOpen(false);
-                            playSound(SuccessfulSound);
                           }}
                           className="px-4 py-2 cursor-pointer flex gap-3 items-center"
                         >

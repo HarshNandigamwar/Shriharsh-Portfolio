@@ -4,10 +4,7 @@ import MotionWrapper from "../../utils/MotionWrapper";
 import Navbar from "../../components/Navbar";
 import "./Home.css";
 import Resume from "/Shriharsh_Nandigamwar_resume.pdf";
-import playSound from "../../Hooks/playSound";
 const HomePage = () => {
-  const SuccessfulSound = "/Sound/Successful.mp3";
-
   return (
     <div>
       <Navbar />
@@ -45,7 +42,12 @@ const HomePage = () => {
               <motion.a
                 whileTap={{ scale: 0.9 }}
                 href="#project"
-                className="seeMyWorkBtn hover:bg-[var(--text-color)] border border-text-[var(--text-color)] text-[var(--text-color)] hover:text-[var(--hovertext-color)] h-10 w-40 flex items-center justify-center px-6 py-3 rounded-full transition"
+                className="seeMyWorkBtn border border-text-[var(--text-color)] text-[var(--text-color)] h-10 w-40 flex items-center justify-center px-6 py-3 rounded-full transition ease-in-out"
+                whileHover={{
+                  backgroundColor: "var(--text-color)",
+                  color: "black",
+                }}
+                transition={{ duration: 0.4 }}
               >
                 See My Work
               </motion.a>
@@ -53,7 +55,12 @@ const HomePage = () => {
               <motion.a
                 whileTap={{ scale: 0.9 }}
                 href="#contact"
-                className="border border-text-[var(--text-color)] hover:bg-[var(--text-color)] h-10 w-40 flex items-center justify-center text-[var(--text-color)] hover:text-[var(--hovertext-color)] px-6 py-3 rounded-full transition"
+                className="border border-text-[var(--text-color)] h-10 w-40 flex items-center justify-center text-[var(--text-color)] px-6 py-3 rounded-full transition ease-in-out"
+                whileHover={{
+                  backgroundColor: "var(--text-color)",
+                  color: "black",
+                }}
+                transition={{ duration: 0.4 }}
               >
                 Let's Connect
               </motion.a>
@@ -117,9 +124,8 @@ const HomePage = () => {
                 whileTap={{ scale: 0.9 }}
                 href={Resume}
                 download="ShriharshNandigamwar_FullstackDeveloper.pdf"
-                onClick={() => playSound(SuccessfulSound)}
               >
-                <button className="button">Download CV</button>
+                <button className="button rounded-md">Download CV</button>
               </motion.a>
             </div>
           </div>

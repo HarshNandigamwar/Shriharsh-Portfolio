@@ -38,13 +38,13 @@ const GithubChart = () => {
             <div className="flex flex-col items-center text-[var(--maintext-color)]">
               <img
                 src="https://ghchart.rshah.org/00ff00/Harshnandigamwar"
-                alt="Oops GitHub API Problem ＞﹏＜ "
+                alt=" ＞﹏＜ "
                 loading="lazy"
               />
               <div className="px-4 py-2 text-[13px] text-[#A1A1AA] rounded-sm ">
                 Contributions in 2025
               </div>
- 
+
               <div className="flex gap-5 items-center">
                 {" "}
                 <span className="text-[#A1A1AA]">Less</span>
@@ -63,7 +63,8 @@ const GithubChart = () => {
               >
                 <button className="flex items-center gap-2 cursor-pointer w-50 h-8 border py-2 border-[var(--text-color)] rounded-md justify-center pl-2">
                   {" "}
-                  View Github Profile <ChevronsRight height="15px" />
+                  View Github Profile{" "}
+                  <ChevronsRight stroke="var(--text-color)" height="15px" />
                 </button>
               </motion.a>
             </div>

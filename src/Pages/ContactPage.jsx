@@ -7,6 +7,7 @@ import { ChevronsRight } from "../components/ChevronsRight";
 import axios from "axios";
 import playSound from "../Hooks/playSound.js";
 const ContactPage = () => {
+  // Sounds
   const SuccessfulSound = "/Sound/Successful.mp3";
   const ErrorSound = "/Sound/Error.mp3";
 
@@ -30,7 +31,7 @@ const ContactPage = () => {
         event.target.reset();
       } else {
         console.error("Web3Forms API Error:", data.message);
-        toast.warning(`❌ Form submission failed. Error: ${data.message}.`);
+        toast.warning(` Form submission failed. Error: ${data.message}.`);
         playSound(ErrorSound);
         setLoading(false);
       }
@@ -39,7 +40,7 @@ const ContactPage = () => {
         ? error.response.data?.message || `HTTP Error ${error.response.status}`
         : error.message;
       console.error("Axios Submission Error:", errorMessage);
-      toast.error(`❌ An unexpected error occurred: ${errorMessage}.`);
+      toast.warning(` An unexpected error occurred: ${errorMessage}.`);
       playSound(ErrorSound);
       setLoading(false);
     } finally {
