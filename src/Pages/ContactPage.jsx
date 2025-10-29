@@ -13,8 +13,8 @@ const ContactPage = () => {
 
   //Sending data to Web3 using axios
   const [loading, setLoading] = useState(false);
-  const WEB3FORMS_URL = "https://api.web3forms.com/submit";
-  const ACCESS_KEY = "c9d96e3c-2460-4b34-b239-ec91dd8a8cb0";
+  const WEB3FORMS_URL = import.meta.env.VITE_WEB3URL;
+  const ACCESS_KEY = import.meta.env.VITE_WEB3KEY;
 
   const onSubmit = async (event) => {
     event.preventDefault();
