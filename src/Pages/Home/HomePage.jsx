@@ -42,7 +42,7 @@ const HomePage = () => {
               <motion.a
                 whileTap={{ scale: 0.9 }}
                 href="#project"
-                className="seeMyWorkBtn border border-text-[var(--text-color)] text-[var(--text-color)] h-10 w-40 flex items-center justify-center px-6 py-3 rounded-full transition ease-in-out"
+                className="seeMyWorkBtn border border-[var(--text-color)] text-[var(--text-color)] h-10 w-40 flex items-center justify-center px-6 py-3 rounded-full transition ease-in-out"
                 whileHover={{
                   backgroundColor: "var(--text-color)",
                   color: "black",
@@ -55,7 +55,7 @@ const HomePage = () => {
               <motion.a
                 whileTap={{ scale: 0.9 }}
                 href="#contact"
-                className="border border-text-[var(--text-color)] h-10 w-40 flex items-center justify-center text-[var(--text-color)] px-6 py-3 rounded-full transition ease-in-out"
+                className="border border-[var(--text-color)] h-10 w-40 flex items-center justify-center text-[var(--text-color)] px-6 py-3 rounded-full transition ease-in-out"
                 whileHover={{
                   backgroundColor: "var(--text-color)",
                   color: "black",
